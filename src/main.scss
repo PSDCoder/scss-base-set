@@ -1,14 +1,9 @@
-.test {
-  width: 100%;
-}
-
-
 //Variables
 @import 'variables';
 
 //functions
 @import
-//  'vendors/include-media/include-media',
+  'vendors/include-media/include-media',
   'utils/functions/_shade',
   'utils/functions/_tint';
 
@@ -43,6 +38,7 @@
   'utils/animations/zoom-out-right',
   'utils/animations/zoom-out-up';
 
+
 //mixins
 @import 'utils/mixins/clearfix';
 
@@ -51,7 +47,6 @@
   'base/normalize',
   'base/common',
   'base/typography';
-  //'base/icons';
 
 //blocks
 @import
