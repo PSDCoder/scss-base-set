@@ -1,0 +1,11 @@
+.grid__row {
+    margin-bottom: 20px;
+}
+
+[class*="grid__col"] {
+    background-color: #e8e8e8;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+
+}

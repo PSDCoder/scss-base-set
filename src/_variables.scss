@@ -1,0 +1,185 @@
+@import
+'utils/functions/shade',
+'utils/functions/tint';
+
+//===== COLORS =====
+$theme-color-primary:                       #6695b7 !default;
+$theme-color-success:                       #6bc160 !default;
+$theme-color-warning:                       #f09e46 !default;
+$theme-color-danger:                        #e85d4d !default;
+$theme-color-info:                          #47b6de !default;
+
+//===== HELPERS =====
+$z-index: (
+        'dropdown':                               1000,
+        'popover':                                1060,
+        'tooltip':                                1070,
+        'modal':                                  1040,
+) !default;
+
+//===== RESPONSIVENESS =====
+$breakpoints: (
+        'xs':                                     480px,
+        'sm':                                     768px,
+        'md':                                     992px,
+        'lg':                                     1200px,
+) !default;
+
+
+//===== COMPONENTS =====
+//grid
+$grid-columns:                              12 !default;
+$grid-gutter:                               30px !default;
+$grid-containers: (
+        'xs':                                     map_get($breakpoints, 'xs') - $grid-gutter,
+        'sm':                                     map_get($breakpoints, 'sm') - $grid-gutter,
+        'md':                                     map_get($breakpoints, 'md') - $grid-gutter,
+        'lg':                                     map_get($breakpoints, 'lg') - $grid-gutter,
+) !default;
+
+
+
+//===== PARTS =====
+//typography
+$typography-font-family-sans-serif:         'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$typography-font-family-serif:              Georgia, 'Times New Roman', Times, serif !default;
+$typography-font-family-monospace:          Menlo, Monaco, Consolas, 'Courier New', monospace !default;
+
+$typography-font-size-base:                 14px !default;
+$typography-font-size-h1:                   floor(($typography-font-size-base * 2.6)) !default;
+$typography-font-size-h2:                   floor(($typography-font-size-base * 2.15)) !default;
+$typography-font-size-h3:                   ceil(($typography-font-size-base * 1.7)) !default;
+$typography-font-size-h4:                   ceil(($typography-font-size-base * 1.25)) !default;
+$typography-font-size-h5:                   $typography-font-size-base !default;
+$typography-font-size-h6:                   ceil(($typography-font-size-base * 0.85)) !default;
+
+$typography-line-height-base:               1.428571429 !default; // 20/14
+$typography-line-height-computed:           floor(($typography-line-height-base * $typography-font-size-base)) !default;
+
+$typography-headings-font-family:           inherit !default;
+$typography-headings-font-weight:           500 !default;
+$typography-headings-line-height:           1.1 !default;
+$typography-headings-color:                 inherit !default;
+
+
+//links
+$link-color:                                $theme-color-primary !default;
+$link-color_hover:                          shade($link-color, 15%) !default;
+$link-color_focus:                          shade($link-color, 7%) !default;
+$link-color_active:                         shade($link-color, 25%) !default;
+$link-hover-decoration:                     underline !default;
+
+//forms
+
+
+
+//tables
+
+
+//buttons
+
+
+//===== GLOBAL =====
+$main-bg-color:                           #fff !default;
+$main-color:                              #202020 !default;
+$main-font-family:                        $typography-font-family-sans-serif !default;
+$main-font-size:                          $typography-font-size-base !default;
+$main-line-height:                        $typography-line-height-base !default;
+
+
+////== Tables
+////
+////## Customizes the `.table` component with basic values, each used across all table variations.
+//
+////** Padding for `<th>`s and `<td>`s.
+//$table-cell-padding:            8px !default;
+////** Padding for cells in `.table-condensed`.
+//$table-condensed-cell-padding:  5px !default;
+//
+////** Default background color used for all tables.
+//$table-bg:                      transparent !default;
+////** Background color used for `.table-striped`.
+//$table-bg-accent:               #f9f9f9 !default;
+////** Background color used for `.table-hover`.
+//$table-bg-hover:                #f5f5f5 !default;
+//$table-bg-active:               $table-bg-hover !default;
+//
+////** Border color for table and cell borders.
+//$table-border-color:            #ddd !default;
+//
+//
+////== Buttons
+////
+////## For each of Bootstrap's buttons, define text, background and border color.
+//
+//$btn-font-weight:                normal !default;
+//
+//$btn-default-color:              #333 !default;
+//$btn-default-bg:                 #fff !default;
+//$btn-default-border:             #ccc !default;
+//
+//$btn-primary-color:              #fff !default;
+//$btn-primary-bg:                 $brand-primary !default;
+//$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+//
+//$btn-success-color:              #fff !default;
+//$btn-success-bg:                 $brand-success !default;
+//$btn-success-border:             darken($btn-success-bg, 5%) !default;
+//
+//$btn-info-color:                 #fff !default;
+//$btn-info-bg:                    $brand-info !default;
+//$btn-info-border:                darken($btn-info-bg, 5%) !default;
+//
+//$btn-warning-color:              #fff !default;
+//$btn-warning-bg:                 $brand-warning !default;
+//$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
+//
+//$btn-danger-color:               #fff !default;
+//$btn-danger-bg:                  $brand-danger !default;
+//$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+//
+//$btn-link-disabled-color:        $gray-light !default;
+//
+//
+////== Forms
+////
+////##
+//
+////** `<input>` background color
+//$input-bg:                       #fff !default;
+////** `<input disabled>` background color
+//$input-bg-disabled:              $gray-lighter !default;
+//
+////** Text color for `<input>`s
+//$input-color:                    $gray !default;
+////** `<input>` border color
+//$input-border:                   #ccc !default;
+//
+////** Default `.form-control` border radius
+//// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+//$input-border-radius:            $border-radius-base !default;
+////** Large `.form-control` border radius
+//$input-border-radius-large:      $border-radius-large !default;
+////** Small `.form-control` border radius
+//$input-border-radius-small:      $border-radius-small !default;
+//
+////** Border color for inputs on focus
+//$input-border-focus:             #66afe9 !default;
+//
+////** Placeholder text color
+//$input-color-placeholder:        #999 !default;
+//
+////** Default `.form-control` height
+//$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+////** Large `.form-control` height
+//$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+////** Small `.form-control` height
+//$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+//
+//$legend-color:                   $gray-dark !default;
+//$legend-border-color:            #e5e5e5 !default;
+//
+////** Background color for textual input addons
+//$input-group-addon-bg:           $gray-lighter !default;
+////** Border color for textual input addons
+//$input-group-addon-border-color: $input-border !default;

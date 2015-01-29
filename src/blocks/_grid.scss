@@ -1,0 +1,48 @@
+@import 'mixins/grid';
+$block: grid;
+
+
+
+.#{$block} {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $grid-gutter / 2;
+  padding-right: $grid-gutter / 2;
+  @include clearfix;
+  @include grid-containers();
+
+  &_edge {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &_fluid {
+    max-width: none;
+  }
+
+  &__row {
+    margin-left: -($grid-gutter / 2);
+    margin-right: -($grid-gutter / 2);
+    @include clearfix;
+  }
+
+
+
+
+}
+
+//rows
+
+//columns
+[class*="#{$block}__col"] {
+  position: relative;
+  min-height: 1px; //fix for empty cells
+  width: 100%;
+  float: left;
+  padding: 0 $grid-gutter / 2;
+}
+
+@include grid-columns($block, 'xs');
+@include grid-columns($block, 'sm');
+@include grid-columns($block, 'md');
+@include grid-columns($block, 'lg');

@@ -1,0 +1,20 @@
+@mixin grid-containers() {
+  @each $breakpoint, $breakpoint-value in $breakpoints {
+    @include media('>=' + $breakpoint) {
+      width: $breakpoint-value;
+    }
+  }
+}
+
+
+@mixin grid-columns($block, $breakpoint) {
+  @include media('>=' + $breakpoint) {
+    @for $i from 1 to $grid-columns + 1 {
+      $grid-column-width: 100% / $grid-columns;
+
+      .#{$block}__col_#{$breakpoint}-#{$i} {
+        width: $grid-column-width * $i;
+      }
+    }
+  }
+}
