@@ -11,18 +11,18 @@ $theme-color-info:                          #47b6de !default;
 
 //===== HELPERS =====
 $z-index: (
-        'dropdown':                               1000,
-        'popover':                                1060,
-        'tooltip':                                1070,
-        'modal':                                  1040,
+  'dropdown':                               1000,
+  'popover':                                1060,
+  'tooltip':                                1070,
+  'modal':                                  1040,
 ) !default;
 
 //===== RESPONSIVENESS =====
 $breakpoints: (
-        'xs':                                     480px,
-        'sm':                                     768px,
-        'md':                                     992px,
-        'lg':                                     1200px,
+  'xs':                                     480px,
+  'sm':                                     768px,
+  'md':                                     992px,
+  'lg':                                     1200px,
 ) !default;
 
 
@@ -31,10 +31,10 @@ $breakpoints: (
 $grid-columns:                              12 !default;
 $grid-gutter:                               30px !default;
 $grid-containers: (
-        'xs':                                     map_get($breakpoints, 'xs') - $grid-gutter,
-        'sm':                                     map_get($breakpoints, 'sm') - $grid-gutter,
-        'md':                                     map_get($breakpoints, 'md') - $grid-gutter,
-        'lg':                                     map_get($breakpoints, 'lg') - $grid-gutter,
+  'xs':                                     auto,
+  'sm':                                     720 + $grid-gutter,
+  'md':                                     940 + $grid-gutter,
+  'lg':                                     1140 + $grid-gutter,
 ) !default;
 
 

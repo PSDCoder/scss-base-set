@@ -17,12 +17,10 @@ $block: grid;
   }
 
   &_fluid {
-    max-width: none;
+    width: auto;
   }
 
   &__row {
-    margin-left: -($grid-gutter / 2);
-    margin-right: -($grid-gutter / 2);
     @include clearfix;
   }
 

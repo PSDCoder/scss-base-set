@@ -1170,29 +1170,26 @@ img {
     clear: both; }
   @media (min-width: 480px) {
     .grid {
-      width: 480px; } }
+      width: auto; } }
   @media (min-width: 768px) {
     .grid {
-      width: 768px; } }
+      width: 750px; } }
   @media (min-width: 992px) {
     .grid {
-      width: 992px; } }
+      width: 970px; } }
   @media (min-width: 1200px) {
     .grid {
-      width: 1200px; } }
+      width: 1170px; } }
   .grid_edge {
     padding-left: 0;
     padding-right: 0; }
   .grid_fluid {
-    max-width: none; }
-  .grid__row {
-    margin-left: -15px;
-    margin-right: -15px; }
-    .grid__row:before, .grid__row:after {
-      content: " ";
-      display: table; }
-    .grid__row:after {
-      clear: both; }
+    width: auto; }
+  .grid__row:before, .grid__row:after {
+    content: " ";
+    display: table; }
+  .grid__row:after {
+    clear: both; }
 
 [class*="grid__col"] {
   position: relative;
