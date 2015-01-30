@@ -15,6 +15,18 @@
       .#{$block}__col_#{$breakpoint}-#{$i} {
         width: $grid-column-width * $i;
       }
+
+      .#{$block}__col_#{$breakpoint}-offset-#{$i} {
+        margin-left: $grid-column-width * $i;
+      }
+
+      .#{$block}__col_#{$breakpoint}-pull-#{$i} {
+        right: $grid-column-width * $i;
+      }
+
+      .#{$block}__col_#{$breakpoint}-push-#{$i} {
+        left: $grid-column-width * $i;
+      }
     }
   }
 }

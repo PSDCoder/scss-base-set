@@ -6,9 +6,28 @@
     <link rel="stylesheet" href="../dist/main.css"/>
     <link rel="stylesheet" href="demo.css"/>
 </head>
-<body>
+<body class="demo">
     <section>
+        <h1>Responsiveness</h1>
+        <ul>
+            <li>
+                4 breakpoins:
+                <ol>
+                    <li><b>xs:</b> >=480px</li>
+                    <li><b>sm:</b> >=768</li>
+                    <li><b>md:</b> >=992px</li>
+                    <li><b>lg:</b> >=1200px</li>
+                </ol>
+            </li>
+        </ul>
         <h1>Grid</h1>
+        <ul>
+            <li>Grid has 12 columns</li>
+            <li>Container class: <b>.grid</b></li>
+            <li>Row class: <b>grid__row</b></li>
+            <li>Cell class: <b>grid__col_%breakpoint%-%size%</b></li>
+        </ul>
+        <h3>Stacked columns</h3>
         <div class="grid">
             <div class="grid__row">
                 <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
@@ -41,6 +60,27 @@
             <div class="grid__row">
                 <div class="grid__col_md-8">.grid__col_md-8</div>
                 <div class="grid__col_md-4">.grid__col_md-6</div>
+            </div>
+        </div>
+        <h3>Offseting columns:</h3>
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__col_md-4">.grid__col_md-4</div>
+                <div class="grid__col_md-4 grid__col_md-offset-4">.grid__col_md-4 .grid__col_md-offset-4</div>
+            </div>
+            <div class="grid__row">
+                <div class="grid__col_md-3 grid__col_md-offset-3">.grid__col_md-3 .grid__col_md-offset-3</div>
+                <div class="grid__col_md-3 grid__col_md-offset-3">.grid__col_md-3 .grid__col_md-offset-3</div>
+            </div>
+            <div class="grid__row">
+                <div class="grid__col_md-6 grid__col_md-offset-3">.grid__col_md-6 .grid__col_md-offset-3</div>
+            </div>
+        </div>
+        <h3>Ordering columns:</h3>
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__col_md-9 grid__col_md-push-3">.grid__col_md-9 .grid__col_md-push-3</div>
+                <div class="grid__col_md-3 grid__col_md-pull-9">.grid__col_md-3 .grid__col_md-pull-9</div>
             </div>
         </div>
         <h3>Fluid & no edges container:</h3>
