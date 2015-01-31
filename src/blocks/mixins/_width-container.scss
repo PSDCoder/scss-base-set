@@ -1,0 +1,7 @@
+@mixin width-containers() {
+  @each $breakpoint, $breakpoint-value in $breakpoints {
+    @include media('>=' + $breakpoint) {
+      width: map-get($grid-containers, $breakpoint);
+    }
+  }
+}

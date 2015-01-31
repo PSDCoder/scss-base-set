@@ -1,0 +1,12 @@
+@import 'mixins/width-container';
+$block: 'width-container';
+
+.#{$block} {
+  margin-right: auto;
+  margin-left: auto;
+  @include width-containers();
+
+  &_fluid {
+    width: auto;
+  }
+}

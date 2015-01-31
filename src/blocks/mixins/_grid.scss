@@ -1,32 +1,38 @@
-@mixin grid-containers() {
-  @each $breakpoint, $breakpoint-value in $breakpoints {
-    @include media('>=' + $breakpoint) {
-      width: map-get($grid-containers, $breakpoint);
+@mixin grid-columns-extensions($breakpoint, $grid-column-width) {
+  @for $i from 1 to $grid-columns + 1 {
+    .#{$block}__col_#{$breakpoint}-offset-#{$i} {
+      margin-left: $grid-column-width * $i;
+    }
+
+    .#{$block}__col_#{$breakpoint}-pull-#{$i} {
+      right: $grid-column-width * $i;
+    }
+
+    .#{$block}__col_#{$breakpoint}-push-#{$i} {
+      left: $grid-column-width * $i;
     }
   }
 }
 
+@mixin grid-columns($block, $breakpoint, $next-breakpoint: null) {
+  $grid-column-width: 100% / $grid-columns;
 
-@mixin grid-columns($block, $breakpoint) {
-  @include media('>=' + $breakpoint) {
+  @include media('>=#{$breakpoint}') {
     @for $i from 1 to $grid-columns + 1 {
-      $grid-column-width: 100% / $grid-columns;
-
       .#{$block}__col_#{$breakpoint}-#{$i} {
         width: $grid-column-width * $i;
       }
+    }
 
-      .#{$block}__col_#{$breakpoint}-offset-#{$i} {
-        margin-left: $grid-column-width * $i;
-      }
+    @if not $next-breakpoint {
+      @include grid-columns-extensions($breakpoint, $grid-column-width);
+    }
+  }
 
-      .#{$block}__col_#{$breakpoint}-pull-#{$i} {
-        right: $grid-column-width * $i;
-      }
-
-      .#{$block}__col_#{$breakpoint}-push-#{$i} {
-        left: $grid-column-width * $i;
-      }
+  @if $next-breakpoint {
+    @include media('>=#{$breakpoint}', '<#{$next-breakpoint}') {
+      @include grid-columns-extensions($breakpoint, $grid-column-width);
     }
   }
 }
+
