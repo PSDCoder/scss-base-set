@@ -1155,8 +1155,91 @@ input, button, select, textarea {
   font-size: inherit;
   line-height: inherit; }
 
+a {
+  color: #5b86a4;
+  text-decoration: none; }
+  a:hover {
+    color: #486b83;
+    text-decoration: underline; }
+  a:focus {
+    color: #517893;
+    text-decoration: underline; }
+  a:active {
+    color: #365062;
+    text-decoration: underline; }
+
+figure {
+  margin: 0; }
+
 img {
   vertical-align: middle; }
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid #e6e6e6; }
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px; }
+
+th {
+  text-align: left; }
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0; }
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #999;
+  border: 0;
+  border-bottom: 1px solid #999; }
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold; }
+
+input[type="search"] {
+  -webkit-appearance: none; }
+
+input[type="file"] {
+  display: block; }
+
+input[type="range"] {
+  display: block;
+  width: 100%; }
+
+select[multiple], select[size] {
+  height: auto; }
+
+input[type="radio"], input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal; }
+  input[type="radio"][disabled], fieldset[disabled] input[type="radio"], input[type="checkbox"][disabled], fieldset[disabled] input[type="checkbox"] {
+    cursor: not-allowed; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+pre {
+  border: 1px solid #DFDFDF;
+  border-radius: 3px;
+  padding: 0 15px;
+  background-color: #fff; }
 
 .width-container {
   margin-right: auto;

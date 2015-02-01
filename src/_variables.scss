@@ -9,6 +9,8 @@ $theme-color-warning:                       #f09e46 !default;
 $theme-color-danger:                        #e85d4d !default;
 $theme-color-info:                          #47b6de !default;
 
+$text-muted:                                #999 !default;
+
 //===== HELPERS =====
 $z-index: (
   'dropdown':                               1000,
@@ -63,11 +65,14 @@ $typography-headings-color:                 inherit !default;
 
 
 //links
-$link-color:                                $theme-color-primary !default;
-$link-color_hover:                          shade($link-color, 15%) !default;
-$link-color_focus:                          shade($link-color, 7%) !default;
-$link-color_active:                         shade($link-color, 25%) !default;
-$link-hover-decoration:                     underline !default;
+$link-color:                                shade($theme-color-primary, 10%) !default;
+$link-color-hover:                          shade($link-color, 20%) !default;
+$link-color-focus:                          shade($link-color, 10%) !default;
+$link-color-active:                         shade($link-color, 40%) !default;
+$link-decoration:                           none !default;
+$link-decoration-hover:                     underline !default;
+$link-decoration-focus:                     underline !default;
+$link-decoration-active:                     underline !default;
 
 //forms
 
@@ -82,6 +87,7 @@ $link-hover-decoration:                     underline !default;
 //===== GLOBAL =====
 $main-bg-color:                           #fff !default;
 $main-color:                              #202020 !default;
+$main-border-color:                       #e6e6e6 !default;
 $main-font-family:                        $typography-font-family-sans-serif !default;
 $main-font-size:                          $typography-font-size-base !default;
 $main-line-height:                        $typography-line-height-base !default;
