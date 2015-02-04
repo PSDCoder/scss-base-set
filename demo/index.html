@@ -7,8 +7,34 @@
     <link rel="stylesheet" href="../dist/main.css"/>
     <link rel="stylesheet" href="demo.css"/>
 </head>
-<body class="demo">
-    <section>
+<body class="demo demo-width-container">
+    <div class="demo-items">
+        <button class="demo-items__button button">Go to #</button>
+        <ul class="demo-items__list">
+            <li>
+                <a class="demo-items__list-link" href="#demo-typography">Typography</a>
+            </li>
+            <li>
+                <a class="demo-items__list-link" href="#demo-grid">Grid</a>
+            </li>
+        </ul>
+    </div>
+    <section id="demo-typography">
+        <h1>Typography</h1>
+        <a href="#">Some link</a>
+        <hr/>
+        <table>
+            <tr>
+                <th>Left column</th>
+                <th>Right column</th>
+            </tr>
+            <tr>
+                <td>Left column content</td>
+                <td>Right column content</td>
+            </tr>
+        </table>
+    </section>
+    <section id="demo-grid">
         <h1>Responsiveness</h1>
         <ul>
             <li>
@@ -28,9 +54,13 @@
             <li>Row class: <b>grid__row</b></li>
             <li>Cell class: <b>grid__col_%breakpoint%-%size%</b></li>
         </ul>
-        <h3>Stacked columns</h3>
         <div class="width-container">
             <div class="grid">
+                <div class="grid__row grid__row-demo-header">
+                    <div class="grid__col_sm-12">
+                        <h3>Stacked columns</h3>
+                    </div>
+                </div>
                 <div class="grid__row">
                     <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
                     <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
@@ -54,22 +84,13 @@
                 </div>
             </div>
         </div>
-        <div class="width-container width-container_fluid">
-            <h3>With fluid container:</h3>
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
-                    <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
-                </div>
-                <div class="grid__row">
-                    <div class="grid__col_md-8">.grid__col_md-8</div>
-                    <div class="grid__col_md-4">.grid__col_md-6</div>
-                </div>
-            </div>
-        </div>
         <div class="width-container">
-            <h3>Offseting columns:</h3>
             <div class="grid">
+                <div class="grid__row grid__row-demo-header">
+                    <div class="grid__col_sm-12">
+                        <h3>Offseting columns:</h3>
+                    </div>
+                </div>
                 <div class="grid__row">
                     <div class="grid__col_md-4">.grid__col_md-4</div>
                     <div class="grid__col_md-4 grid__col_md-offset-4">.grid__col_md-4 .grid__col_md-offset-4</div>
@@ -79,33 +100,28 @@
                     <div class="grid__col_md-3 grid__col_md-offset-3">.grid__col_md-3 .grid__col_md-offset-3</div>
                 </div>
                 <div class="grid__row">
-                    <div class="grid__col_md-6 grid__col_md-offset-3">.grid__col_md-6 .grid__col_md-offset-3</div>
+                    <div class="grid__col_md-6 grid__col_md-offset-3 grid__col_lg-offset-6">.grid__col_md-6 .grid__col_md-offset-3 .grid__col_lg-offset-6</div>
                 </div>
             </div>
-            <h3>Ordering columns:</h3>
             <div class="grid">
+                <div class="grid__row grid__row-demo-header">
+                    <div class="grid__col_sm-12">
+                        <h3>Ordering columns:</h3>
+                    </div>
+                </div>
                 <div class="grid__row">
                     <div class="grid__col_md-9 grid__col_md-push-3">.grid__col_md-9 .grid__col_md-push-3</div>
                     <div class="grid__col_md-3 grid__col_md-pull-9">.grid__col_md-3 .grid__col_md-pull-9</div>
                 </div>
             </div>
         </div>
-        <div class="width-container width-container_fluid">
-            <h3>Fluid container & no edges grid:</h3>
-            <div class="grid grid_edge">
-                <div class="grid__row">
-                    <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
-                    <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
-                </div>
-                <div class="grid__row">
-                    <div class="grid__col_md-8">.grid__col_md-8</div>
-                    <div class="grid__col_md-4">.grid__col_md-6</div>
-                </div>
-            </div>
-        </div>
         <div class="width-container">
-            <h3>Nesting columns:</h3>
             <div class="grid grid_edge">
+                <div class="grid__row grid__row-demo-header">
+                    <div class="grid__col_sm-12">
+                        <h3>Nesting columns && no edges grid:</h3>
+                    </div>
+                </div>
                 <div class="grid__row">
                     <div class="grid__col_md-8">
                         <div class="grid__row">
@@ -117,24 +133,41 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section>
-        <h1>Typography</h1>
-        <div class="width-container">
-
-            <a href="#">Some link</a>
-            <hr/>
-            <table>
-                <tr>
-                    <th>Left column</th>
-                    <th>Right column</th>
-                </tr>
-                <tr>
-                    <td>Left column content</td>
-                    <td>Right column content</td>
-                </tr>
-            </table>
+        <div class="width-container width-container_fluid">
+            <div class="grid">
+                <div class="grid__row grid__row-demo-header">
+                    <div class="grid__col_sm-12">
+                        <h3>With fluid container:</h3>
+                    </div>
+                </div>
+                <div class="grid__row">
+                    <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
+                    <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
+                </div>
+                <div class="grid__row">
+                    <div class="grid__col_md-8">.grid__col_md-8</div>
+                    <div class="grid__col_md-4">.grid__col_md-6</div>
+                </div>
+            </div>
+        </div>
+        <div class="width-container width-container_fluid">
+            <div class="grid grid_edge">
+                <div class="grid__row grid__row-demo-header">
+                    <div class="grid__col_sm-12">
+                        <h3>Fluid container && no edges grid:</h3>
+                    </div>
+                </div>
+                <div class="grid__row">
+                    <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
+                    <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
+                </div>
+                <div class="grid__row">
+                    <div class="grid__col_md-8">.grid__col_md-8</div>
+                    <div class="grid__col_md-4">.grid__col_md-6</div>
+                </div>
+            </div>
         </div>
     </section>
+    <script src="demo.js"></script>
 </body>
 </html>

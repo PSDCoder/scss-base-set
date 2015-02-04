@@ -1,0 +1,87 @@
+.demo-items {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+
+  &__button {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    color: #fff;
+    border: #232323;
+    background-color: #222;
+    text-align: left;
+
+    &:focus,
+    &:hover {
+      background-color: #282828;
+      outline: none;
+    }
+  }
+
+  &__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &_state_show {
+      display: block;
+    }
+  }
+
+  &__list-link {
+    display: block;
+    padding: 10px;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: #f1f1f1;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.3);
+
+    }
+  }
+}
+
+.demo-width-container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+#demo-grid {
+  $grid-margins: 20px;
+
+  .width-container {
+    background-color: #f6f6f6;
+    padding-top: $grid-margins;
+    margin-bottom: $grid-margins;
+  }
+
+  .grid__row {
+    margin-bottom: $grid-margins;
+
+    .grid__row {
+      margin-bottom: 0;
+    }
+  }
+
+  .grid__row {
+    [class*="grid__col"] {
+      background-color: #e8e8e8;
+      padding: 10px;
+      border: 1px solid #d3d3d3;
+    }
+  }
+
+  .grid__row.grid__row-demo-header {
+    [class*="grid__col"] {
+      background: none;
+      padding: 0;
+      border: none;
+    }
+  }
+}
