@@ -1,6 +1,6 @@
 @import
-'utils/functions/shade',
-'utils/functions/tint';
+  'utils/functions/shade',
+  'utils/functions/tint';
 
 //===== COLORS =====
 $theme-color-primary:                       #6695b7 !default;
@@ -9,6 +9,9 @@ $theme-color-warning:                       #f09e46 !default;
 $theme-color-danger:                        #e85d4d !default;
 $theme-color-info:                          #47b6de !default;
 
+$text-main: #202020 !default;
+$text-header: #272727 !default;
+$text-small: #2e2e2e !default;
 $text-muted:                                #999 !default;
 
 //===== HELPERS =====
@@ -48,6 +51,7 @@ $typography-font-family-serif:              Georgia, 'Times New Roman', Times, s
 $typography-font-family-monospace:          Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 
 $typography-font-size-base:                 14px !default;
+$typography-font-size-small:                 12px !default;
 $typography-font-size-h1:                   floor(($typography-font-size-base * 2.6)) !default;
 $typography-font-size-h2:                   floor(($typography-font-size-base * 2.15)) !default;
 $typography-font-size-h3:                   ceil(($typography-font-size-base * 1.7)) !default;
@@ -61,8 +65,11 @@ $typography-line-height-computed:           floor(($typography-line-height-base 
 $typography-headings-font-family:           inherit !default;
 $typography-headings-font-weight:           500 !default;
 $typography-headings-line-height:           1.1 !default;
-$typography-headings-color:                 inherit !default;
+$typography-headings-color:                 $text-header !default;
 
+$typography-blockquote-font-size:           $typography-font-size-base * 1.5;
+$typography-blockquote-line-height:         floor($typography-line-height-base * 1.5);
+$typography-blockquote-border-color:        $text-muted;
 
 //links
 $link-color:                                shade($theme-color-primary, 10%) !default;
@@ -86,7 +93,6 @@ $link-decoration-active:                     underline !default;
 
 //===== GLOBAL =====
 $main-bg-color:                           #fff !default;
-$main-color:                              #202020 !default;
 $main-border-color:                       #e6e6e6 !default;
 $main-font-family:                        $typography-font-family-sans-serif !default;
 $main-font-size:                          $typography-font-size-base !default;

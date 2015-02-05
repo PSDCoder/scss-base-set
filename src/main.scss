@@ -40,7 +40,10 @@
 
 
 //mixins
-@import 'utils/mixins/clearfix';
+@import
+  'utils/mixins/clearfix',
+  'utils/mixins/ellipsis',
+  'utils/mixins/list-unstyled';
 
 //base
 @import
@@ -51,5 +54,6 @@
 //blocks
 @import
   'blocks/width-container',
-  'blocks/grid';
+  'blocks/grid',
+  'blocks/text';
 
