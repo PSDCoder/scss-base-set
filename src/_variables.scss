@@ -67,9 +67,22 @@ $typography-headings-font-weight:           500 !default;
 $typography-headings-line-height:           1.1 !default;
 $typography-headings-color:                 $text-header !default;
 
-$typography-blockquote-font-size:           $typography-font-size-base * 1.5;
-$typography-blockquote-line-height:         floor($typography-line-height-base * 1.5);
-$typography-blockquote-border-color:        $text-muted;
+$typography-blockquote-font-size:           $typography-font-size-base * 1.2 !default;
+$typography-blockquote-line-height:         floor($typography-line-height-base * 1.2) !default;
+$typography-blockquote-border-color:        #eee !default;
+
+$typography-small-color:                    tint($text-main, 30%) !default;
+$typography-mark-bg-color:                  #fdf8da !default;
+
+$typography-code-color:                     #28ed3d !default;
+$typography-code-bg-color:                  rgba(0, 0, 0, .7) !default;
+
+$typography-kbd-color:                      #fff !default;
+$typography-kbd-bg-color:                   #333 !default;
+
+$typography-pre-color: #414141 !default;
+$typography-pre-bg-color: #f9f9f9 !default;
+$typography-pre-border-color: #e4e4e4 !default;
 
 //links
 $link-color:                                shade($theme-color-primary, 10%) !default;
@@ -79,7 +92,7 @@ $link-color-active:                         shade($link-color, 40%) !default;
 $link-decoration:                           none !default;
 $link-decoration-hover:                     underline !default;
 $link-decoration-focus:                     underline !default;
-$link-decoration-active:                     underline !default;
+$link-decoration-active:                    underline !default;
 
 //forms
 
@@ -93,6 +106,7 @@ $link-decoration-active:                     underline !default;
 
 //===== GLOBAL =====
 $main-bg-color:                           #fff !default;
+$main-border-radius:                      3px !default;
 $main-border-color:                       #e6e6e6 !default;
 $main-font-family:                        $typography-font-family-sans-serif !default;
 $main-font-size:                          $typography-font-size-base !default;

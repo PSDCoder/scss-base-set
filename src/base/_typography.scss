@@ -1,4 +1,9 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $typography-font-family-sans-serif;
   font-weight: $typography-headings-font-weight;
   line-height: $typography-headings-line-height;
@@ -11,7 +16,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin-top: $typography-line-height-computed;
   margin-bottom: $typography-line-height-computed / 2;
 
@@ -20,7 +27,9 @@ h1, h2, h3 {
   }
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   margin-top: $typography-line-height-computed / 2;
   margin-bottom: $typography-line-height-computed / 2;
 
@@ -57,14 +66,27 @@ p {
 }
 
 small {
+  color: $typography-small-color;
   font-size: floor(100% * $typography-font-size-small / $typography-font-size-base);
 }
 
-ul, ol {
+abbr[title] {
+  cursor: help;
+}
+
+mark {
+  background-color: #fff;
+  padding: $typography-font-size-base / 4;
+  background-color: $typography-mark-bg-color;
+}
+
+ul,
+ol {
   margin-top: 0;
   margin-bottom: $typography-line-height-computed / 2;
 
-  ul, ol {
+  ul,
+  ol {
     margin-bottom: 0;
   }
 }
@@ -74,7 +96,8 @@ dl {
   margin-bottom: $typography-line-height-computed;
 }
 
-dt, dd {
+dt,
+dd {
   line-height: $typography-line-height-base;
 }
 
