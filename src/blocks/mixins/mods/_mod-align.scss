@@ -1,0 +1,17 @@
+@mixin mod-align() {
+  &_align_left {
+    text-align: left;
+  }
+
+  &_align_right {
+    text-align: right;
+  }
+
+  &_align_center {
+    text-align: center;
+  }
+
+  &_align_justify {
+    text-align: justify;
+  }
+}

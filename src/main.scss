@@ -41,6 +41,9 @@
 
 //mixins
 @import
+  'blocks/mixins/mods/mod-align',
+  'blocks/mixins/mods/mod-position',
+
   'utils/mixins/clearfix',
   'utils/mixins/ellipsis',
   'utils/mixins/list-unstyled';
@@ -56,5 +59,6 @@
 @import
   'blocks/width-container',
   'blocks/grid',
-  'blocks/text';
+  'blocks/text',
+  'blocks/icon';
 

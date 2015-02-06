@@ -1,0 +1,9 @@
+@mixin mod-position() {
+  &_position_left {
+    float: left;
+  }
+
+  &_position_right {
+    float: right;
+  }
+}
