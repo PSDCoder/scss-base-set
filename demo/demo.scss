@@ -1,3 +1,30 @@
+.demo-section {
+  &__header {
+    color: #818181;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f1f1;
+  }
+
+  &__subheader {
+    color: #5a5a5a;
+    padding-left: 10px;
+    border-left: 3px solid #f1f1f1;
+  }
+}
+
+.demo-example {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+
+  border: 1px solid #eaeaea;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+
+  > * {
+    margin-bottom: 0;
+  }
+}
+
 .demo-items {
   position: fixed;
   top: 0;
@@ -25,7 +52,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
 
     &_state_show {
       display: block;

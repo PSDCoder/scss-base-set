@@ -109,6 +109,10 @@ dd {
   margin-left: 0;
 }
 
+dd + dt {
+  margin-top: $typography-line-height-computed;
+}
+
 blockquote {
   padding: ($typography-line-height-computed / 2) $typography-line-height-computed;
   margin: 0 0 $typography-line-height-computed;
