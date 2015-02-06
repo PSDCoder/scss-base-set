@@ -2,6 +2,7 @@
   &__header {
     color: #818181;
     padding-bottom: 10px;
+    margin-top: 60px;
     border-bottom: 2px solid #f1f1f1;
   }
 
@@ -23,12 +24,17 @@
   > * {
     margin-bottom: 0;
   }
+
+  &_no-bg {
+    background-color: transparent;
+  }
 }
 
 .demo-items {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 10;
   width: 200px;
 
   &__button {
@@ -75,7 +81,7 @@
 }
 
 .demo-width-container {
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -110,5 +116,12 @@
       padding: 0;
       border: none;
     }
+  }
+}
+
+//media
+@media (max-width: 1400px) {
+  .demo-width-container {
+    margin: 0 15px;
   }
 }

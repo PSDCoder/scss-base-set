@@ -80,9 +80,9 @@ $typography-code-bg-color:                  rgba(0, 0, 0, .7) !default;
 $typography-kbd-color:                      #fff !default;
 $typography-kbd-bg-color:                   #333 !default;
 
-$typography-pre-color: #414141 !default;
-$typography-pre-bg-color: #f9f9f9 !default;
-$typography-pre-border-color: #e4e4e4 !default;
+$typography-pre-color:                      #414141 !default;
+$typography-pre-bg-color:                   #f9f9f9 !default;
+$typography-pre-border-color:               #e4e4e4 !default;
 
 //links
 $link-color:                                shade($theme-color-primary, 10%) !default;
@@ -99,7 +99,12 @@ $link-decoration-active:                    underline !default;
 
 
 //tables
-
+$table-cell-padding:                        8px !default;
+$table-bg:                                  transparent !default;
+$table-bg-accent:                           #f9f9f9 !default;
+$table-bg-hover:                            #f5f5f5 !default;
+$table-bg-active:                           $table-bg-hover !default;
+$table-border-color:                        #ddd !default;
 
 //buttons
 
@@ -112,28 +117,6 @@ $main-font-family:                        $typography-font-family-sans-serif !de
 $main-font-size:                          $typography-font-size-base !default;
 $main-line-height:                        $typography-line-height-base !default;
 
-
-////== Tables
-////
-////## Customizes the `.table` component with basic values, each used across all table variations.
-//
-////** Padding for `<th>`s and `<td>`s.
-//$table-cell-padding:            8px !default;
-////** Padding for cells in `.table-condensed`.
-//$table-condensed-cell-padding:  5px !default;
-//
-////** Default background color used for all tables.
-//$table-bg:                      transparent !default;
-////** Background color used for `.table-striped`.
-//$table-bg-accent:               #f9f9f9 !default;
-////** Background color used for `.table-hover`.
-//$table-bg-hover:                #f5f5f5 !default;
-//$table-bg-active:               $table-bg-hover !default;
-//
-////** Border color for table and cell borders.
-//$table-border-color:            #ddd !default;
-//
-//
 ////== Buttons
 ////
 ////## For each of Bootstrap's buttons, define text, background and border color.
