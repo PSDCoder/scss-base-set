@@ -1,0 +1,36 @@
+@import '../../../variables';
+
+@mixin button-style(
+  $btn-color,   $btn-color-hover,   $btn-color-focus,     $btn-color-active,  $btn-color-disabled,
+  $btn-bg,      $btn-bg-hover,      $btn-bg-focus,        $btn-bg-active,     $btn-bg-disabled,
+  $btn-border,  $btn-border-hover,  $btn-border-focus,    $btn-border-active, $btn-border-disabled
+) {
+  color:                    $btn-color;
+  background-color:         $btn-bg;
+  border-color:             $btn-border;
+
+  &:focus {
+    color:                  $btn-color-focus;
+    background-color:       $btn-bg-focus;
+    border-color:           $btn-border-focus;
+  }
+
+  &:hover {
+    color:                  $btn-color-hover;
+    background-color:       $btn-bg-hover;
+    border-color:           $btn-border-hover;
+  }
+
+  &:active {
+    color:                  $btn-color-active;
+    background-color:       $btn-bg-active;
+    border-color:           $btn-border-active;
+  }
+
+  &[disabled] {
+    color:                  $btn-color-disabled;
+    background-color:       $btn-bg-disabled;
+    border-color:           $btn-border-disabled;
+    cursor:                 not-allowed;
+  }
+}

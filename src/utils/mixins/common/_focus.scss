@@ -1,0 +1,5 @@
+@mixin focus {
+  outline-width: 1px;
+  outline-style: dotted;
+  outline-color: $main-outline-color;
+}

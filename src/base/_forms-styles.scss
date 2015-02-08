@@ -26,7 +26,6 @@ input[type="tel"],
 input[type="url"],
 textarea,
 select  {
-  height: $input-height-base;
   padding: $main-padding-base-vertical $main-padding-base-horizontal;
   border: 1px solid $input-border;
   border-radius: $main-border-radius;
@@ -34,6 +33,7 @@ select  {
   color: $input-color;
   background-color: $input-bg;
   box-shadow: $input-shadow;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -55,6 +55,7 @@ select  {
     border-color: $input-border-disabled;
     background-color: $input-bg-disabled;
     box-shadow: $input-shadow-disabled;
+    cursor: not-allowed;
   }
 
   @include placeholder($input-color-placeholder);

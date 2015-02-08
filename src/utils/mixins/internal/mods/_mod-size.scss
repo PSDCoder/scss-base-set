@@ -1,0 +1,9 @@
+@mixin mod-size() {
+  &_size_small {
+    padding: $main-padding-small-vertical $main-padding-small-horizontal;
+  }
+
+  &_size_large {
+    padding: $main-padding-large-vertical $main-padding-large-horizontal;
+  }
+}

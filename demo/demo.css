@@ -14,7 +14,7 @@
   border: 1px solid #eaeaea;
   background-color: #fbfbfb;
   border-radius: 5px; }
-  .demo-example > * {
+  .demo-example > *:last-child {
     margin-bottom: 0; }
   .demo-example_no-bg {
     background-color: transparent; }

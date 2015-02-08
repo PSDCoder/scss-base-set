@@ -1,4 +1,4 @@
-@import 'mixins/width-container';
+@import '../utils/mixins/internal/width-container';
 $block: 'width-container';
 
 .#{$block} {

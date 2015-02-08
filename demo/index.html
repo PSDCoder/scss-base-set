@@ -27,6 +27,9 @@
                 <a class="demo-items__list-link" href="#demo-grid">Grid</a>
             </li>
             <li>
+                <a class="demo-items__list-link" href="#demo-buttons">Buttons</a>
+            </li>
+            <li>
                 <a class="demo-items__list-link" href="#demo-forms">Forms</a>
             </li>
         </ul>
@@ -368,6 +371,32 @@
             <li><b>md:</b> >=992px</li>
             <li><b>lg:</b> >=1200px</li>
         </ul>
+        <h3 class="demo-section__subheader">Media mixin</h3>
+        <p>
+            <a href="https://github.com/eduardoboucas/include-media" target="_blank">include-media</a> - handful mixin for build responsive layouts
+        </p>
+        <h3 class="demo-section__subheader">Responsiveness container for embed</h3>
+        <ul>
+            <li>Main class: <code>.embed</code></li>
+            <li>
+                Proportion classes:
+                <ul>
+                    <li>16 by 9: <code>.embed_proportion_16x9</code></li>
+                    <li>4 by 3: <code>.embed_proportion_4x3</code></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="demo-example">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__col_md-6 grid__col_md-offset-3">
+                        <div class="embed embed_proportion_16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/0vrdgDdPApQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="demo-section" id="demo-grid">
         <h1 class="demo-section__header">Grid</h1>
@@ -503,6 +532,42 @@
             </div>
         </div>
     </section>
+    <section class="demo-section" id="demo-buttons">
+        <h1 class="demo-section__header">Buttons</h1>
+        <h3 class="demo-section__subheader">Styles: default</h3>
+        <div class="demo-example">
+            <button type="submit" class="button">Button</button>
+            <button type="submit" class="button" disabled>Button</button>
+        </div>
+        <h3 class="demo-section__subheader">Styles: primary</h3>
+        <div class="demo-example">
+            <button type="submit" class="button button_style_primary">Button</button>
+            <button type="submit" class="button button_style_primary" disabled>Button</button>
+        </div>
+        <h3 class="demo-section__subheader">Sizes</h3>
+        <div class="demo-example">
+            <p>
+                <button type="submit" class="button button_size_small">Button</button>
+                <button type="submit" class="button">Button</button>
+                <button type="submit" class="button button_size_large">Button</button>
+            </p>
+            <p>
+                <button type="submit" class="button button_size_small" disabled>Button</button>
+                <button type="submit" class="button" disabled>Button</button>
+                <button type="submit" class="button button_size_large" disabled>Button</button>
+            </p>
+            <p>
+                <button type="submit" class="button button_style_primary button_size_small">Button</button>
+                <button type="submit" class="button button_style_primary">Button</button>
+                <button type="submit" class="button button_style_primary button_size_large">Button</button>
+            </p>
+            <p>
+                <button type="submit" class="button button_style_primary button_size_small" disabled>Button</button>
+                <button type="submit" class="button button_style_primary" disabled>Button</button>
+                <button type="submit" class="button button_style_primary button_size_large" disabled>Button</button>
+            </p>
+        </div>
+    </section>
     <section class="demo-section" id="demo-forms">
         <h1 class="demo-section__header">Forms</h1>
         <h3 class="demo-section__subheader">Basic example</h3>
@@ -515,6 +580,7 @@
                     <input id="inline-remember" type="checkbox"> Remember me
                 </label>
                 <button type="submit" class="button button_style_primary">Sign in</button>
+                <button type="submit" class="button">Cancel</button>
             </fieldset>
         </div>
         <h3 class="demo-section__subheader"></h3>
@@ -566,6 +632,7 @@
                     <div class="grid__row">
                         <div class="grid__col_sm-12 grid__col_md-9 grid__col_md-offset-3">
                             <button type="submit" class="button button_style_primary">Sign in</button>
+                            <button type="submit" class="button">Cancel</button>
                         </div>
                     </div>
                 </div>

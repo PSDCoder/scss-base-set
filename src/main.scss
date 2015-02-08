@@ -41,13 +41,16 @@
 
 //mixins
 @import
-  'blocks/mixins/mods/mod-align',
-  'blocks/mixins/mods/mod-position',
+  'utils/mixins/internal/mods/mod-align',
+  'utils/mixins/internal/mods/mod-position',
+  'utils/mixins/internal/mods/mod-size',
+  'utils/mixins/internal/button-style',
 
-  'utils/mixins/clearfix',
-  'utils/mixins/ellipsis',
-  'utils/mixins/list-unstyled',
-  'utils/mixins/placeholder';
+  'utils/mixins/common/clearfix',
+  'utils/mixins/common/ellipsis',
+  'utils/mixins/common/list-unstyled',
+  'utils/mixins/common/placeholder',
+  'utils/mixins/common/focus';
 
 //base
 @import

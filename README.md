@@ -11,7 +11,7 @@ Base scss set for simple start developing new website layouts.
 * Base set assembled from base Twitter Bootstrap code
 * Grid in BEM-notation
 * List of useful mixins, eg.:
-    - **[include-media](https://github.com/eduardoboucas/include-media)** - for simplify doing responsive layouts
+    - **[include-media](https://github.com/eduardoboucas/include-media)** - for handful building responsive layouts
     - **clearfix** - clearfix reset from Twitter Bootstrap
     - **ellipsis** - for adding dots on long text string
     - **list-unstyled** - for disable list-style and default padding

@@ -30,6 +30,7 @@ label {
   display: inline-block;
   max-width: 100%;
   font-weight: bold;
+  cursor: pointer;
 }
 
 input[type="search"] {
@@ -40,6 +41,7 @@ input[type="search"] {
 input[type="radio"],
 input[type="checkbox"] {
   line-height: normal;
+  cursor: pointer;
 }
 
 input[type="file"] {
@@ -76,6 +78,6 @@ input[type="radio"],
 input[type="checkbox"] {
   &[disabled],
   fieldset[disabled] & {
-    cursor: $cursor-disabled;
+    cursor: not-allowed;
   }
 }
