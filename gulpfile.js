@@ -20,6 +20,11 @@ gulp
         $.livereload.listen();
         gulp.watch('src/**/*.scss', ['scss']);
         gulp.watch(demoScss, ['demo-scss']);
+
+        gulp.watch('demo/index.html')
+            .on('change', function (e) {
+                $.livereload.changed(e.path);
+            });
     });
 
 function sassBuild(sassMainPath, distPath) {
