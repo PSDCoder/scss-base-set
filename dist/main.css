@@ -1540,12 +1540,12 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     border-color: #30719a; }
     .button_style_primary:focus {
       color: #fff;
-      background-color: #3986b7;
-      border-color: #2d6b92; }
+      background-color: #3884b3;
+      border-color: #2c698f; }
     .button_style_primary:hover {
       color: #fff;
-      background-color: #3781af;
-      border-color: #2b668c; }
+      background-color: #357ca9;
+      border-color: #2a6387; }
     .button_style_primary:active {
       color: #fff;
       background-color: #30719a;

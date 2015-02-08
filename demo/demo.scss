@@ -89,9 +89,23 @@
   $grid-margins: 20px;
 
   .width-container {
+    position: relative;
     background-color: #f6f6f6;
     padding-top: $grid-margins;
     margin-bottom: $grid-margins;
+    
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      padding: 4px 10px;
+      content: '.width-container';
+      font-size: 12px;
+      font-weight: bold;
+      background-color: #ebebeb;
+      color: #8b8b8b;
+    }
   }
 
   .grid__row {

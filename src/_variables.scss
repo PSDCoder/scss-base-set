@@ -189,13 +189,13 @@ $button-border-width:                       1px !default;
   $button-primary-color-disabled:           shade($button-primary-color, 10%) !default;
 
   $button-primary-bg:                       $theme-color-primary !default;
-  $button-primary-bg-hover:                 shade($button-primary-bg, 9%) !default;
-  $button-primary-bg-focus:                 shade($button-primary-bg, 5%) !default;
+  $button-primary-bg-hover:                 shade($button-primary-bg, 12%) !default;
+  $button-primary-bg-focus:                 shade($button-primary-bg, 7%) !default;
   $button-primary-bg-active:                shade($button-primary-bg, 20%) !default;
   $button-primary-bg-disabled:              tint($button-primary-bg, 30%) !default;
 
   $button-primary-border:                   shade($theme-color-primary, 20%) !default;
-  $button-primary-border-hover:             shade($button-primary-border, 9%) !default;
-  $button-primary-border-focus:             shade($button-primary-border, 5%) !default;
+  $button-primary-border-hover:             shade($button-primary-border, 12%) !default;
+  $button-primary-border-focus:             shade($button-primary-border, 7%) !default;
   $button-primary-border-active:            shade($button-primary-border, 20%) !default;
   $button-primary-border-disabled:          tint($button-primary-border, 30%) !default;

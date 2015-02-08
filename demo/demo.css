@@ -58,9 +58,21 @@
   margin: 0 auto; }
 
 #demo-grid .width-container {
+  position: relative;
   background-color: #f6f6f6;
   padding-top: 20px;
   margin-bottom: 20px; }
+  #demo-grid .width-container:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    padding: 4px 10px;
+    content: '.width-container';
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #ebebeb;
+    color: #8b8b8b; }
 #demo-grid .grid__row {
   margin-bottom: 20px; }
   #demo-grid .grid__row .grid__row {
