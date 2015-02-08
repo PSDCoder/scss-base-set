@@ -1,0 +1,40 @@
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $typography-line-height-computed;
+  background-color: $table-bg;
+
+  table {
+    background-color: $main-bg-color;
+  }
+}
+
+caption {
+  padding-top: $table-cell-padding;
+  padding-bottom: $table-cell-padding;
+  color: $text-muted;
+  text-align: left;
+}
+
+th {
+  text-align: left;
+}
+
+thead {
+  th,
+  td {
+    border-top: 0;
+  }
+}
+
+tbody {
+  border-top: 2px solid $table-border-color;
+}
+
+th,
+td {
+  padding: $table-cell-padding;
+  line-height: $typography-line-height-base;
+  vertical-align: top;
+  border-top: 1px solid $table-border-color;
+}
