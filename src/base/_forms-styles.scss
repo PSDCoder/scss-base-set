@@ -1,0 +1,72 @@
+label {
+  line-height: $input-height-base;
+  vertical-align: middle;
+}
+
+label {
+  input[type="checkbox"],
+  input[type="radio"] {
+    vertical-align: middle;
+    margin-top: -1px;
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="range"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select  {
+  height: $input-height-base;
+  padding: $main-padding-base-vertical $main-padding-base-horizontal;
+  border: 1px solid $input-border;
+  border-radius: $main-border-radius;
+
+  color: $input-color;
+  background-color: $input-bg;
+  box-shadow: $input-shadow;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    border-color: $input-border-hover;
+    box-shadow: $input-shadow-hover;
+  }
+
+  &:focus {
+    border-color: $input-border-focus;
+    box-shadow: $input-shadow-focus;
+  }
+
+  &[disabled] {
+    color: $input-color-disabled;
+    border-color: $input-border-disabled;
+    background-color: $input-bg-disabled;
+    box-shadow: $input-shadow-disabled;
+  }
+
+  @include placeholder($input-color-placeholder);
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline-color: $theme-color-primary;
+}
+
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+}

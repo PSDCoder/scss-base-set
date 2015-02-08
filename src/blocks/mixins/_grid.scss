@@ -1,14 +1,14 @@
-@mixin grid-columns-extensions($breakpoint, $grid-column-width) {
+@mixin grid-columns-extensions($breakpoint, $grid-column-width, $breakpoint-suffix: '') {
   @for $i from 1 to $grid-columns + 1 {
-    .#{$block}__col_#{$breakpoint}-offset-#{$i} {
+    .#{$block}__col_#{$breakpoint}#{$breakpoint-suffix}-offset-#{$i} {
       margin-left: $grid-column-width * $i;
     }
 
-    .#{$block}__col_#{$breakpoint}-pull-#{$i} {
+    .#{$block}__col_#{$breakpoint}#{$breakpoint-suffix}-pull-#{$i} {
       right: $grid-column-width * $i;
     }
 
-    .#{$block}__col_#{$breakpoint}-push-#{$i} {
+    .#{$block}__col_#{$breakpoint}#{$breakpoint-suffix}-push-#{$i} {
       left: $grid-column-width * $i;
     }
   }
@@ -24,14 +24,12 @@
       }
     }
 
-    @if not $next-breakpoint {
-      @include grid-columns-extensions($breakpoint, $grid-column-width);
-    }
+    @include grid-columns-extensions($breakpoint, $grid-column-width);
   }
 
   @if $next-breakpoint {
     @include media('>=#{$breakpoint}', '<#{$next-breakpoint}') {
-      @include grid-columns-extensions($breakpoint, $grid-column-width);
+      @include grid-columns-extensions($breakpoint, $grid-column-width, '-only');
     }
   }
 }

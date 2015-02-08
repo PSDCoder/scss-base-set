@@ -13,6 +13,10 @@ $block: grid;
 
   &__row {
     @include clearfix;
+
+    &_padding_bottom {
+      margin-bottom: $grid-gutter / 2;
+    }
   }
 }
 

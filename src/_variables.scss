@@ -3,7 +3,7 @@
   'utils/functions/tint';
 
 //===== COLORS =====
-$theme-color-primary:                       #6695b7 !default;
+$theme-color-primary: #82a4d1 !default;
 $theme-color-success:                       #6bc160 !default;
 $theme-color-warning:                       #f09e46 !default;
 $theme-color-danger:                        #e85d4d !default;
@@ -43,15 +43,38 @@ $grid-containers: (
 ) !default;
 
 
+//===== GLOBAL =====
+$main-bg-color:                           #fff !default;
+$main-border-color:                       #e6e6e6 !default;
+
+$main-font-family:                        'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$main-font-size:                          14px !default;
+$main-line-height:                        1.428571429 !default;
+$main-line-height-large:                  1.3333333 !default;
+$main-line-height-small:                  1.5 !default;
+
+$main-border-radius:                      3px !default;
+$main-border-radius-large:                2px !default;
+$main-border-radius-small:                5px !default;
+
+$main-padding-base-vertical:              6px !default;
+$main-padding-base-horizontal:            12px !default;
+$main-padding-large-vertical:             10px !default;
+$main-padding-large-horizontal:           16px !default;
+$main-padding-small-vertical:             5px !default;
+$main-padding-small-horizontal:           10px !default;
+
+
 
 //===== PARTS =====
 //typography
-$typography-font-family-sans-serif:         'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$typography-font-family-sans-serif:         $main-font-family !default;
 $typography-font-family-serif:              Georgia, 'Times New Roman', Times, serif !default;
 $typography-font-family-monospace:          Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 
-$typography-font-size-base:                 14px !default;
-$typography-font-size-small:                 12px !default;
+$typography-font-size-base:                 $main-font-size !default;
+$typography-font-size-large:                ceil(($typography-font-size-base * 1.25)) !default; // ~18px
+$typography-font-size-small:                ceil(($typography-font-size-base * 0.85)) !default; // ~12px
 $typography-font-size-h1:                   floor(($typography-font-size-base * 2.6)) !default;
 $typography-font-size-h2:                   floor(($typography-font-size-base * 2.15)) !default;
 $typography-font-size-h3:                   ceil(($typography-font-size-base * 1.7)) !default;
@@ -59,7 +82,7 @@ $typography-font-size-h4:                   ceil(($typography-font-size-base * 1
 $typography-font-size-h5:                   $typography-font-size-base !default;
 $typography-font-size-h6:                   ceil(($typography-font-size-base * 0.85)) !default;
 
-$typography-line-height-base:               1.428571429 !default; // 20/14
+$typography-line-height-base:               $main-line-height !default; // 20/14
 $typography-line-height-computed:           floor(($typography-line-height-base * $typography-font-size-base)) !default;
 
 $typography-headings-font-family:           inherit !default;
@@ -84,6 +107,7 @@ $typography-pre-color:                      #414141 !default;
 $typography-pre-bg-color:                   #f9f9f9 !default;
 $typography-pre-border-color:               #e4e4e4 !default;
 
+
 //links
 $link-color:                                shade($theme-color-primary, 10%) !default;
 $link-color-hover:                          shade($link-color, 20%) !default;
@@ -94,8 +118,37 @@ $link-decoration-hover:                     underline !default;
 $link-decoration-focus:                     underline !default;
 $link-decoration-active:                    underline !default;
 
-//forms
 
+//forms
+$input-bg:                                  #fff !default;
+$input-bg-disabled:                         #f0f0f0 !default;
+
+$input-color:                               #555 !default;
+$input-color-disabled:                      tint($input-color, 15%) !default;
+$input-color-placeholder:                   #999 !default;
+
+$input-shadow:                              inset 0 1px 3px 0 rgba(0, 0, 0, .15) !default;
+$input-shadow-hover:                        inset 0 1px 4px 0 rgba(0, 0, 0, .2) !default;
+$input-shadow-focus:                        inset 0 1px 4px 0 rgba(0, 0, 0, .3), 0 0 6px rgba($theme-color-primary, .5) !default;
+$input-shadow-disabled:                     inset 0 1px 0 0 rgba(0, 0, 0, .15) !default;
+
+$input-border:                              #ccc !default;
+$input-border-disabled:                     tint($input-border, 15%) !default;
+$input-border-hover:                        shade($theme-color-primary, 15%) !default;
+$input-border-focus:                        $theme-color-primary !default;
+
+$input-border-radius:                       $main-border-radius !default;
+$input-border-radius-large:                 $main-border-radius-large !default;
+$input-border-radius-small:                 $main-border-radius-small !default;
+
+$input-height-base:                         ($typography-line-height-computed + ($main-padding-base-vertical * 2) + 2) !default;
+$input-height-large:                        (ceil($typography-font-size-large * $main-line-height-large) + ($main-padding-large-vertical * 2) + 2) !default;
+$input-height-small:                        (floor($typography-font-size-small * $main-line-height-small) + ($main-padding-small-vertical * 2) + 2) !default;
+
+$legend-color:                              #333 !default;
+$legend-border-color:                       #e5e5e5 !default;
+
+$cursor-disabled:                           not-allowed !default;
 
 
 //tables
@@ -107,88 +160,12 @@ $table-bg-active:                           $table-bg-hover !default;
 $table-border-color:                        #ddd !default;
 
 //buttons
+$btn-font-weight:                           normal !default;
 
+$btn-default-color:                         #333 !default;
+$btn-default-bg:                            #fff !default;
+$btn-default-border:                        #ccc !default;
 
-//===== GLOBAL =====
-$main-bg-color:                           #fff !default;
-$main-border-radius:                      3px !default;
-$main-border-color:                       #e6e6e6 !default;
-$main-font-family:                        $typography-font-family-sans-serif !default;
-$main-font-size:                          $typography-font-size-base !default;
-$main-line-height:                        $typography-line-height-base !default;
-
-////== Buttons
-////
-////## For each of Bootstrap's buttons, define text, background and border color.
-//
-//$btn-font-weight:                normal !default;
-//
-//$btn-default-color:              #333 !default;
-//$btn-default-bg:                 #fff !default;
-//$btn-default-border:             #ccc !default;
-//
-//$btn-primary-color:              #fff !default;
-//$btn-primary-bg:                 $brand-primary !default;
-//$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
-//
-//$btn-success-color:              #fff !default;
-//$btn-success-bg:                 $brand-success !default;
-//$btn-success-border:             darken($btn-success-bg, 5%) !default;
-//
-//$btn-info-color:                 #fff !default;
-//$btn-info-bg:                    $brand-info !default;
-//$btn-info-border:                darken($btn-info-bg, 5%) !default;
-//
-//$btn-warning-color:              #fff !default;
-//$btn-warning-bg:                 $brand-warning !default;
-//$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
-//
-//$btn-danger-color:               #fff !default;
-//$btn-danger-bg:                  $brand-danger !default;
-//$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
-//
-//$btn-link-disabled-color:        $gray-light !default;
-//
-//
-////== Forms
-////
-////##
-//
-////** `<input>` background color
-//$input-bg:                       #fff !default;
-////** `<input disabled>` background color
-//$input-bg-disabled:              $gray-lighter !default;
-//
-////** Text color for `<input>`s
-//$input-color:                    $gray !default;
-////** `<input>` border color
-//$input-border:                   #ccc !default;
-//
-////** Default `.form-control` border radius
-//// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
-//$input-border-radius:            $border-radius-base !default;
-////** Large `.form-control` border radius
-//$input-border-radius-large:      $border-radius-large !default;
-////** Small `.form-control` border radius
-//$input-border-radius-small:      $border-radius-small !default;
-//
-////** Border color for inputs on focus
-//$input-border-focus:             #66afe9 !default;
-//
-////** Placeholder text color
-//$input-color-placeholder:        #999 !default;
-//
-////** Default `.form-control` height
-//$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
-////** Large `.form-control` height
-//$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
-////** Small `.form-control` height
-//$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
-//
-//$legend-color:                   $gray-dark !default;
-//$legend-border-color:            #e5e5e5 !default;
-//
-////** Background color for textual input addons
-//$input-group-addon-bg:           $gray-lighter !default;
-////** Border color for textual input addons
-//$input-group-addon-border-color: $input-border !default;
+$btn-primary-color:                         #fff !default;
+$btn-primary-bg:                            $theme-color-primary !default;
+$btn-primary-border:                        darken($btn-primary-bg, 5%) !default;

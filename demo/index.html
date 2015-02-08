@@ -26,8 +26,10 @@
             <li>
                 <a class="demo-items__list-link" href="#demo-grid">Grid</a>
             </li>
+            <li>
+                <a class="demo-items__list-link" href="#demo-forms">Forms</a>
+            </li>
         </ul>
-
     </div>
     <section class="demo-section" id="demo-typography">
         <h1 class="demo-section__header">Typography</h1>
@@ -377,6 +379,15 @@
             <li>Offset class: <b>grid__col_%breakpoint%-offset-%size%</b></li>
             <li>Pull class: <b>grid__col_%breakpoint%-pull-%size%</b></li>
             <li>Push class: <b>grid__col_%breakpoint%-push-%size%</b></li>
+
+            <li>
+                Or if you need only for one breakpoint:
+                <ul>
+                    <li>Offset class: <b>grid__col_%breakpoint%-only-offset-%size%</b></li>
+                    <li>Pull class: <b>grid__col_%breakpoint%-only-pull-%size%</b></li>
+                    <li>Push class: <b>grid__col_%breakpoint%-only-push-%size%</b></li>
+                </ul>
+            </li>
         </ul>
         <div class="width-container">
             <div class="grid">
@@ -450,7 +461,7 @@
                     <div class="grid__col_md-8">
                         <div class="grid__row">
                             <div class="grid__col_sm-12 grid__col_md-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_lg-6</div>
-                            <div class="grid__col_sm-12 grid__col_md-4 grid__col_md-offset-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_md-offset-4 .grid__col_lg-6</div>
+                            <div class="grid__col_sm-12 grid__col_md-4 grid__col_md-only-offset-4 grid__col_lg-6">.grid__col_sm-12 .grid__col_md-4 .grid__col_md-only-offset-4 .grid__col_lg-6</div>
                         </div>
                     </div>
                     <div class="grid__col_md-4">.grid__col_md-6</div>
@@ -490,6 +501,75 @@
                     <div class="grid__col_md-4">.grid__col_md-6</div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="demo-section" id="demo-forms">
+        <h1 class="demo-section__header">Forms</h1>
+        <h3 class="demo-section__subheader">Basic example</h3>
+        <div class="demo-example">
+            <fieldset>
+                <legend>A compact inline form</legend>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password" disabled>
+                <label for="inline-remember">
+                    <input id="inline-remember" type="checkbox"> Remember me
+                </label>
+                <button type="submit" class="button button_style_primary">Sign in</button>
+            </fieldset>
+        </div>
+        <h3 class="demo-section__subheader"></h3>
+        <div class="demo-example">
+            <fieldset>
+                <legend>Form in grid</legend>
+                <div class="grid">
+                    <div class="grid__row grid__row_padding_bottom">
+                        <div class="grid__col_sm-12 grid__col_md-3">
+                            <p class="text text_align_right">
+                                <label class="text_align_right" for="inform-email">Email</label>
+                            </p>
+                        </div>
+                        <div class="grid__col_sm-12 grid__col_md-9">
+                            <input id="inform-email" type="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="grid__row grid__row_padding_bottom">
+                        <div class="grid__col_sm-12 grid__col_md-3">
+                            <p class="text text_align_right">
+                                <label class="text_align_right" for="inform-password">Password</label>
+                            </p>
+                        </div>
+                        <div class="grid__col_sm-12 grid__col_md-9">
+                            <input id="inform-password" type="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="grid__row grid__row_padding_bottom">
+                        <div class="grid__col_sm-12 grid__col_md-3">
+                            <p class="text text_align_right">
+                                <label for="inform-state">State</label>
+                            </p>
+                        </div>
+                        <div class="grid__col_sm-12 grid__col_md-9">
+                            <select id="inform-state">
+                                <option>AL</option>
+                                <option>CA</option>
+                                <option>IL</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid__row grid__row_padding_bottom">
+                        <div class="grid__col_sm-12 grid__col_md-9 grid__col_md-offset-3">
+                            <label for="inform-remember">
+                                <input id="inform-remember" type="checkbox"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                    <div class="grid__row">
+                        <div class="grid__col_sm-12 grid__col_md-9 grid__col_md-offset-3">
+                            <button type="submit" class="button button_style_primary">Sign in</button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
         </div>
     </section>
     <script src="demo.js"></script>

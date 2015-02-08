@@ -133,3 +133,23 @@ address {
   font-style: normal;
   line-height: $typography-line-height-base;
 }
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: $link-decoration-hover;
+  }
+
+  &:focus {
+    color: $link-color-focus;
+    text-decoration: $link-decoration-focus;
+  }
+
+  &:active {
+    color: $link-color-active;
+    text-decoration: $link-decoration-active;
+  }
+}
