@@ -1447,12 +1447,14 @@ label input[type="checkbox"], label input[type="radio"] {
   margin-top: -1px; }
 
 input[type="text"], input[type="password"], input[type="search"], input[type="number"], input[type="date"], input[type="range"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="email"], input[type="tel"], input[type="url"], textarea, select {
+  height: 34px;
   padding: 6px 12px;
   border: 1px solid #cbcbcb;
   border-radius: 3px;
   color: #555;
   background-color: #fff;
   box-shadow: none;
+  vertical-align: middle;
   cursor: pointer; }
   input[type="text"]:hover, input[type="text"]:focus, input[type="password"]:hover, input[type="password"]:focus, input[type="search"]:hover, input[type="search"]:focus, input[type="number"]:hover, input[type="number"]:focus, input[type="date"]:hover, input[type="date"]:focus, input[type="range"]:hover, input[type="range"]:focus, input[type="month"]:hover, input[type="month"]:focus, input[type="week"]:hover, input[type="week"]:focus, input[type="time"]:hover, input[type="time"]:focus, input[type="datetime"]:hover, input[type="datetime"]:focus, input[type="email"]:hover, input[type="email"]:focus, input[type="tel"]:hover, input[type="tel"]:focus, input[type="url"]:hover, input[type="url"]:focus, textarea:hover, textarea:focus, select:hover, select:focus {
     outline: none; }
@@ -1496,6 +1498,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   cursor: pointer; }
 
 .button {
+  height: 34px;
   padding: 6px 12px;
   border-width: 1px;
   border-style: solid;
@@ -1509,8 +1512,10 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     .button_type_block + .button_type_block {
       margin-top: 17px; }
   .button_size_small {
+    height: 26px;
     padding: 3px 8px; }
   .button_size_large {
+    height: 46px;
     padding: 10px 16px; }
   .button:focus {
     color: #555;

@@ -26,6 +26,7 @@ input[type="tel"],
 input[type="url"],
 textarea,
 select  {
+  height: $input-height-base;
   padding: $main-padding-base-vertical $main-padding-base-horizontal;
   border: 1px solid $input-border;
   border-radius: $main-border-radius;
@@ -33,6 +34,7 @@ select  {
   color: $input-color;
   background-color: $input-bg;
   box-shadow: $input-shadow;
+  vertical-align: middle;
   cursor: pointer;
 
   &:hover,

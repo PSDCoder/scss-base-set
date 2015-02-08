@@ -1,6 +1,7 @@
 @import '../utils/mixins/internal/button-style';
 
 .button {
+  height: $input-height-base;
   padding: $main-padding-base-vertical $main-padding-base-horizontal;
   border-width: $button-border-width;
   border-style: solid;
