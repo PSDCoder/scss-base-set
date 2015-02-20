@@ -8,6 +8,18 @@
   padding-left: 10px;
   border-left: 3px solid #f1f1f1; }
 
+.demo-about {
+  margin: 40px 0;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center; }
+
+.demo-footer {
+  margin: 40px 0 20px;
+  overflow: hidden; }
+  .demo-footer__text {
+    float: right; }
+
 .demo-example {
   padding: 10px 20px;
   margin-bottom: 20px;
