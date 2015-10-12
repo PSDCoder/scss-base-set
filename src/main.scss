@@ -3,6 +3,7 @@
 
 //functions
 @import
+  'vendors/normalize/normalize',
   'vendors/include-media/include-media',
   'utils/functions/_shade',
   'utils/functions/_tint';
@@ -54,7 +55,6 @@
 
 //base
 @import
-  'base/normalize',
   'base/common',
   'base/typography',
   'base/code',
