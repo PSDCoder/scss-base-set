@@ -1,0 +1,17 @@
+@function type-scale($level, $multiplier: $typography-font-size-multiplier) {
+  $result: 1;
+
+  @if $level > 0 {
+    @while $level > 0 {
+      $result: $result * $multiplier;
+      $level: $level - 1;
+    }
+  } @else if $level < 0 {
+    @while $level < 0 {
+      $result: $result / $multiplier;
+      $level: $level + 1;
+    }
+  }
+
+  @return ceil($result * $typography-font-size-base);
+}

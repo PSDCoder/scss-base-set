@@ -1,0 +1,12 @@
+@function type-line-height-rhythm($level) {
+  $font-size: type-scale($level);
+  $iterator: 1;
+  $line-height: $global-rhythm * $iterator;
+
+  @while ($line-height <= $font-size) {
+    $iterator: $iterator + 1;
+    $line-height: $global-rhythm * $iterator;
+  }
+
+  @return $line-height;
+}

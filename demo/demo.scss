@@ -1,22 +1,71 @@
+@import '../src/variables';
+@import '../src/common/functions';
+
+.vertical-rhythm-toggler {
+  position: absolute;
+  top: rhythm(1);
+  left: rhythm(1);
+  height: rhythm(2);
+  padding: 0 rhythm(1);
+  z-index: 100;
+
+  &_enabled {
+    .vertical-rhythm-toggler__icon_type_on {
+      display: inline-block;
+    }
+
+    .vertical-rhythm-toggler__icon_type_off {
+      display: none;
+    }
+  }
+
+  &_disabled {
+    .vertical-rhythm-toggler__icon_type_on {
+      display: none;
+    }
+
+    .vertical-rhythm-toggler__icon_type_off {
+      display: inline-block;
+    }
+  }
+}
+
+.vertical-rhythm-guidelines {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1000vh;
+  z-index: -1;
+  background-image: linear-gradient(rgba(0, 255, 255, 0.5) 0%, transparent 5%, transparent 100%);
+  background-repeat: repeat;
+  background-size: 100% 24px;
+
+  &_disabled {
+    display: none;
+  }
+}
+
+
 .demo-section {
   &__header {
     color: #818181;
-    padding-bottom: 10px;
-    margin-top: 60px;
+    margin-top: rhythm(3);
+    padding-bottom: rhythm(1) - 2px;
     border-bottom: 2px solid #f1f1f1;
   }
 
   &__subheader {
     color: #5a5a5a;
-    padding-left: 10px;
+    padding-left: rhythm(1);
     border-left: 3px solid #f1f1f1;
   }
 }
 
 .demo-about {
-  margin: 40px 0;
-  font-size: 20px;
-  line-height: 50px;
+  margin: rhythm(2) 0;
+  font-size: type-scale(1);
+  line-height: type-line-height-rhythm(2);
   text-align: center;
 }
 
@@ -28,23 +77,19 @@
     float: right;
   }
 }
-
-.demo-example {
-  padding: 10px 20px;
-  margin-bottom: 20px;
-
-  border: 1px solid #eaeaea;
-  background-color: #fbfbfb;
-  border-radius: 5px;
-
-  > *:last-child {
-    margin-bottom: 0;
-  }
-
-  &_no-bg {
-    background-color: transparent;
-  }
-}
+//
+//.demo-example {
+//  padding: 10px 20px;
+//  margin-bottom: 20px;
+//
+//  border: 1px solid #eaeaea;
+//  background-color: #fbfbfb;
+//  border-radius: 5px;
+//
+//  &_no-bg {
+//    background-color: transparent;
+//  }
+//}
 
 .demo-items {
   position: fixed;
@@ -109,7 +154,7 @@
     background-color: #f6f6f6;
     padding-top: $grid-margins;
     margin-bottom: $grid-margins;
-    
+
     &:before {
       position: absolute;
       top: 0;

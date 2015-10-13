@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="demo.css"/>
 </head>
 <body class="demo demo-width-container">
+    <button class="vertical-rhythm-toggler vertical-rhythm-toggler_enabled">
+        <svg class="vertical-rhythm-toggler__icon vertical-rhythm-toggler__icon_type_off"
+             version="1.1"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             width="24"
+             height="24"
+             viewBox="0 0 24 24">
+            <path fill="#444444" d="M20.016 8.016v-4.031h-4.031v4.031h4.031zM20.016 14.016v-4.031h-4.031v4.031h4.031zM20.016 20.016v-4.031h-4.031v4.031h4.031zM14.016 8.016v-4.031h-4.031v4.031h4.031zM14.016 14.016v-4.031h-4.031v4.031h4.031zM14.016 20.016v-4.031h-4.031v4.031h4.031zM8.016 8.016v-4.031h-4.031v4.031h4.031zM8.016 14.016v-4.031h-4.031v4.031h4.031zM8.016 20.016v-4.031h-4.031v4.031h4.031zM20.016 2.016q0.797 0 1.383 0.586t0.586 1.383v16.031q0 0.797-0.586 1.383t-1.383 0.586h-16.031q-0.797 0-1.383-0.586t-0.586-1.383v-16.031q0-0.797 0.586-1.383t1.383-0.586h16.031z"></path>
+        </svg>
+        <svg class="vertical-rhythm-toggler__icon vertical-rhythm-toggler__icon_type_on"
+             version="1.1"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             width="24"
+             height="24"
+             viewBox="0 0 24 24">
+            <path fill="#444444" d="M15.984 20.016h1.453l-1.453-1.453v1.453zM14.016 20.016v-3.469l-0.563-0.563h-3.469v4.031h4.031zM8.016 14.016v-3.469l-0.563-0.563h-3.469v4.031h4.031zM8.016 20.016v-4.031h-4.031v4.031h4.031zM3.984 6.563v1.453h1.453zM9.984 12.563v1.453h1.453zM1.266 1.266l21.469 21.469-1.266 1.266-2.016-2.016h-15.469q-0.797 0-1.383-0.586t-0.586-1.383v-15.469l-2.016-2.016zM15.984 3.984v4.031h4.031v-4.031h-4.031zM8.016 3.984h-1.453l-2.016-1.969h15.469q0.797 0 1.383 0.586t0.586 1.383v15.469l-1.969-2.016v-1.453h-1.453l-2.016-1.969h3.469v-4.031h-4.031v3.469l-1.969-2.016v-1.453h-1.453l-2.016-1.969h3.469v-4.031h-4.031v3.469l-1.969-2.016v-1.453z"></path>
+        </svg>
+    </button>
+    <div class="vertical-rhythm-guidelines vertical-rhythm-guidelines_enabled"></div>
     <div class="demo-items">
         <button class="demo-items__button">Go to #</button>
         <ul class="demo-items__list">
@@ -35,7 +56,7 @@
         </ul>
     </div>
     <section class="demo-about">
-        This boilerplate based on <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, but in <a href="https://bem.info" target="_blank">BEM</a> notation. Also added some useful stuff. You can know more in
+        This boilerplate developed in <a href="https://bem.info" target="_blank">BEM</a> notation. Also added some useful stuff. You can know more in
         <a href="https://github.com/PSDCoder/scss-base-set/blob/master/README.md" target="_blank">README</a> on github.
         <br/>
         You can find project code on <a href="https://github.com/PSDCoder/scss-base-set" class="button button_size_large button_style_primary">github</a>
@@ -51,9 +72,10 @@
             <h5>h5. Heading</h5>
             <h6>h6. Heading</h6>
         </div>
+        <hr/>
         <h3 class="demo-section__subheader">Marked text aligned to the center</h3>
         <div class="demo-example">
-            <p class="text text_align_center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eius est facere labore repudiandae. Aliquam aspernatur, <mark>consequuntur corporis deserunt</mark> dolor doloremque eaque, id inventore laudantium nam, neque nulla tenetur? Tempore.</p>
+            <p class="text text_align_center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eius est facere labore repudiandae. Aliquam aspernatur, <mark>consequuntur corporis deserunt</mark> dolor doloremque eaque, id inventore laudantium nam, neque nulla tenetur? Tempore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consectetur corporis cumque dolorem enim id ipsa nihil non numquam officia praesentium quae, quis reprehenderit repudiandae sapiente unde! Id, placeat.</p>
         </div>
         <h3 class="demo-section__subheader">Deleted text aligned to the right</h3>
         <div class="demo-example">

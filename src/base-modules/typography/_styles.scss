@@ -1,0 +1,150 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $global-font-family-headers;
+  font-weight: $typography-headings-font-weight;
+  color: $typography-headings-color;
+}
+
+h1,
+h2,
+h3 {
+  small {
+    font-size: 0.65em;
+  }
+}
+
+h4,
+h5,
+h6 {
+  small {
+    font-size: 0.75em;
+  }
+}
+
+h1 {
+  @include typo-calc($typography-h1);
+}
+h2 {
+  @include typo-calc($typography-h2);
+}
+h3 {
+  @include typo-calc($typography-h3);
+}
+h4 {
+  @include typo-calc($typography-h4);
+}
+h5 {
+  @include typo-calc($typography-h5);
+}
+h6 {
+  @include typo-calc($typography-h6);
+}
+
+p {
+  margin: rhythm(1) 0;
+}
+
+small {
+  color: $typography-small-color;
+  font-size: $typography-small;
+}
+
+abbr[title] {
+  cursor: help;
+}
+
+mark {
+  padding: rhythm(0.25);
+  background-color: $typography-mark-bg-color;
+}
+
+ul,
+ol {
+  margin: rhythm(1) 0;
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: rhythm(1);
+}
+
+dt,
+dd {
+  line-height: rhythm(1);
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+dd + dt {
+  margin-top: rhythm(1);
+}
+
+blockquote {
+  @include typo-calc($typography-blockquote);
+
+  padding: rhythm(1);
+  border-left: 5px solid $typography-blockquote-border-color;
+  color: $typography-blockquote-color;
+
+  p,
+  ul,
+  ol {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+address {
+  margin-bottom: rhythm(1);
+  font-style: normal;
+  line-height: rhythm(1);
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: $link-decoration-hover;
+  }
+
+  &:focus {
+    color: $link-color-focus;
+    text-decoration: $link-decoration-focus;
+  }
+
+  &:active {
+    color: $link-color-active;
+    text-decoration: $link-decoration-active;
+  }
+}
+
+hr {
+  $height-half: rhythm(1);
+
+  margin-top: $height-half - floor($typography-hr-width / 2);
+  margin-bottom: $height-half - ceil($typography-hr-width / 2);
+  border: 0;
+  border-top: $typography-hr-width solid $main-border-color;
+}
