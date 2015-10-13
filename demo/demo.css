@@ -1,5 +1,12 @@
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  height: 100%; }
+
 .vertical-rhythm-toggler {
-  position: absolute;
+  position: fixed;
   top: 24px;
   left: 24px;
   height: 48px;
@@ -18,8 +25,8 @@
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
   left: 0;
-  height: 1000vh;
   z-index: -1;
   background-image: -webkit-linear-gradient(rgba(0, 255, 255, 0.5) 0%, transparent 5%, transparent 100%);
   background-image: linear-gradient(rgba(0, 255, 255, 0.5) 0%, transparent 5%, transparent 100%);
@@ -41,14 +48,22 @@
 
 .demo-about {
   margin: 48px 0;
-  font-size: type-scale(1);
-  line-height: type-line-height-rhythm(2);
+  font-size: text-scale(1);
+  line-height: text-line-height-rhythm(2);
   text-align: center; }
 
 .demo-footer {
-  margin: 40px 0 20px;
+  margin: 0;
   overflow: hidden; }
-  .demo-footer__text {
+  .demo-footer__github-buttons,
+  .demo-footer__created {
+    font-size: 14px;
+    margin: 24px 0;
+    line-height: 24px;
+    vertical-align: middle; }
+  .demo-footer__github-buttons {
+    float: left; }
+  .demo-footer__created {
     float: right; }
 
 .demo-items {

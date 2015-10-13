@@ -1,8 +1,17 @@
 @import '../src/variables';
 @import '../src/common/functions';
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
 .vertical-rhythm-toggler {
-  position: absolute;
+  position: fixed;
   top: rhythm(1);
   left: rhythm(1);
   height: rhythm(2);
@@ -17,6 +26,7 @@
     .vertical-rhythm-toggler__icon_type_off {
       display: none;
     }
+
   }
 
   &_disabled {
@@ -34,12 +44,12 @@
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
   left: 0;
-  height: 1000vh;
   z-index: -1;
   background-image: linear-gradient(rgba(0, 255, 255, 0.5) 0%, transparent 5%, transparent 100%);
   background-repeat: repeat;
-  background-size: 100% 24px;
+  background-size: 100% $global-rhythm;
 
   &_disabled {
     display: none;
@@ -64,19 +74,38 @@
 
 .demo-about {
   margin: rhythm(2) 0;
-  font-size: type-scale(1);
-  line-height: type-line-height-rhythm(2);
+  font-size: text-scale(1);
+  line-height: text-line-height-rhythm(2);
   text-align: center;
 }
 
 .demo-footer {
-  margin: 40px 0 20px;
+  margin: 0;
   overflow: hidden;
 
-  &__text {
+  &__github-buttons,
+  &__created {
+    font-size: 14px;
+    margin: rhythm(1) 0;
+    line-height: rhythm(1);
+    vertical-align: middle;
+  }
+
+  &__github-buttons {
+    float: left;
+
+  }
+
+  &__created {
     float: right;
   }
 }
+
+
+
+
+
+
 //
 //.demo-example {
 //  padding: 10px 20px;

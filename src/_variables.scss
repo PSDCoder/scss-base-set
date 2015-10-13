@@ -16,7 +16,8 @@ $global-color-text-muted:                         #999 !default;
 $global-bg-main:                                  #fff !default;
 $global-border-color:                             #e6e6e6 !default;
 
-
+//GEOMETRY
+$global-border-radius:                            0;
 
 
 
@@ -84,16 +85,6 @@ $main-padding-large-horizontal:           16px !default;
 
 
 //===== PARTS =====
-
-//links
-$link-color:                                shade($theme-color-primary, 10%) !default;
-$link-color-hover:                          shade($link-color, 20%) !default;
-$link-color-focus:                          shade($link-color, 10%) !default;
-$link-color-active:                         shade($link-color, 40%) !default;
-$link-decoration:                           none !default;
-$link-decoration-hover:                     underline !default;
-$link-decoration-focus:                     underline !default;
-$link-decoration-active:                    underline !default;
 
 
 //forms

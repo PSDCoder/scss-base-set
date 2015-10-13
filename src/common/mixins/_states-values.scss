@@ -1,0 +1,23 @@
+@mixin states-values($property, $values) {
+  @if (map-has_key($values, 'default')) {
+    #{$property}: map_get($values, 'default');
+  }
+
+  @if (map-has_key($values, 'hover')) {
+    &:hover {
+      #{$property}: map_get($values, 'hover');
+    }
+  }
+
+  @if (map-has_key($values, 'focus')) {
+    &:focus {
+      #{$property}: map_get($values, 'focus');
+    }
+  }
+
+  @if (map-has_key($values, 'active')) {
+    &:active {
+      #{$property}: map_get($values, 'active');
+    }
+  }
+}

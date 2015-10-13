@@ -1,4 +1,4 @@
-@function type-scale($level, $multiplier: $typography-font-size-multiplier) {
+@function text-scale($level, $multiplier: $typography-font-size-multiplier) {
   $result: 1;
 
   @if $level > 0 {

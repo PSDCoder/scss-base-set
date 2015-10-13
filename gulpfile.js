@@ -1,3 +1,4 @@
+var path = require('path');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var argv = require('minimist')(process.argv.slice(2), {
@@ -53,7 +54,7 @@ gulp
             .on('error', errorHandler);
 
         if (SERVE) {
-            $.watch(['demo/*.*', 'dist/*.*'])
+            $.watch(['demo/*.?(css|html)', 'dist/*.css'])
                 .on('change', browserSync.reload)
                 .on('error', errorHandler)
         }

@@ -1,5 +1,5 @@
-@function type-line-height-rhythm($level) {
-  $font-size: type-scale($level);
+@function text-line-height-rhythm($level) {
+  $font-size: text-scale($level);
   $iterator: 1;
   $line-height: $global-rhythm * $iterator;
 

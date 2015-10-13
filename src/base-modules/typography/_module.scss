@@ -1,9 +1,9 @@
-@import 'functions/type-scale';
-@import 'functions/type-line-height-rhythm';
+@import 'functions/text-scale';
+@import 'functions/text-line-height-rhythm';
 @import 'variables';
 
-@import 'mixins/typo-level';
-@import 'mixins/typo-calc';
+@import 'mixins/text-level';
+@import 'mixins/text-calc';
 
 
 @import 'styles';
