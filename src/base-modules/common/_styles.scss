@@ -32,11 +32,10 @@ img {
 }
 
 hr {
-  $hr-height-half: rhythm(2);
   $hr-width-half: $common-hr-border-width / 2;
 
-  margin-top: $hr-height-half - floor($hr-width-half);
-  margin-bottom: $hr-height-half - ceil($hr-width-half);
+  margin-top: $common-hr-margins-vert - floor($hr-width-half);
+  margin-bottom: $common-hr-margins-vert - ceil($hr-width-half);
   border: 0;
   border-top: $common-hr-border-width solid $common-hr-border-color;
 }

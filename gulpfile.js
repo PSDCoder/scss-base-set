@@ -1,4 +1,3 @@
-var path = require('path');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var argv = require('minimist')(process.argv.slice(2), {

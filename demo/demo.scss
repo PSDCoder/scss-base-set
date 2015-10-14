@@ -74,9 +74,10 @@ body {
 }
 
 .demo-about {
-  margin: rhythm(2) 0;
-  font-size: text-scale(1);
-  line-height: text-line-height-rhythm(2);
+  max-width: 50%;
+  margin: rhythm(2) auto;
+  font-size: rhythm(1);
+  line-height: rhythm(2);
   text-align: center;
 }
 

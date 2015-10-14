@@ -45,7 +45,7 @@ h6 {
 }
 
 p {
-  margin: rhythm(1) 0;
+  margin: $typography-paragraph-margins-vert 0;
 }
 
 small {
@@ -59,13 +59,14 @@ abbr[title] {
 }
 
 mark {
-  padding: rhythm(0.25);
+  padding: $typography-mark-highlight-padding;
   background-color: $typography-mark-bg-color;
 }
 
 ul,
 ol {
-  margin: rhythm(1) 0;
+  margin: $typography-lists-margins-vert 0;
+  line-height: $typography-lists-line-height;
 
   ul,
   ol {
@@ -76,12 +77,12 @@ ol {
 
 dl {
   margin-top: 0;
-  margin-bottom: rhythm(1);
+  margin-bottom: $typography-lists-margins-vert;
 }
 
 dt,
 dd {
-  line-height: rhythm(1);
+  line-height: $typography-lists-line-height;
 }
 
 dt {
@@ -93,14 +94,14 @@ dd {
 }
 
 dd + dt {
-  margin-top: rhythm(1);
+  margin-top: $typography-lists-margins-vert;
 }
 
 blockquote {
   @include text-calc-all($typography-blockquote);
 
-  padding: rhythm(1);
-  border-left: 5px solid $typography-blockquote-border-color;
+  padding: $typography-blockquote-paddings;
+  border-left: $typography-blockquote-border-width solid $typography-blockquote-border-color;
   color: $typography-blockquote-color;
 
   p,
@@ -117,9 +118,9 @@ blockquote {
 }
 
 address {
-  margin-bottom: rhythm(1);
+  margin: $typography-address-margins-vert 0;
   font-style: normal;
-  line-height: rhythm(1);
+  line-height: $typography-address-line-height;
 }
 
 code,
@@ -130,37 +131,35 @@ samp {
 }
 
 code {
-  padding: 2px 4px;
-  font-size: 90%;
+  padding: $typography-code-paddings-vert $typography-code-paddings-hor;
+  border-radius: $global-border-radius;
+  font-size: $typography-code-font-size;
   color: $typography-code-color;
   background-color: $typography-code-bg-color;
-  border-radius: $global-border-radius;
   vertical-align: middle;
 }
 
 kbd {
-  padding: 2px 4px;
-  font-size: 90%;
+  padding: $typography-kbd-paddings-vert $typography-kbd-paddings-hor;
+  font-size: $typography-kdb-font-size;
   color: $typography-kbd-color;
   background-color: $typography-kbd-bg-color;
   border-radius: $global-border-radius;
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
   vertical-align: middle;
 
   kbd {
     padding: 0;
     font-size: 100%;
     font-weight: bold;
-    box-shadow: none;
   }
 }
 
 pre {
   display: block;
-  padding: rhythm(0.5) - $typography-pre-border-width;
-  margin: rhythm(1) 0;
-  font-size: text-scale(-1);
-  line-height: text-line-height-rhythm(-1);
+  padding: $typography-pre-paddings - $typography-pre-border-width;
+  margin: $typography-pre-margins-vert 0;
+  font-size: $typography-pre-font-size;
+  line-height: $typography-pre-line-height;
   word-break: break-all;
   word-wrap: break-word;
   color: $typography-pre-color;

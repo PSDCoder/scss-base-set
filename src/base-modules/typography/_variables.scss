@@ -18,25 +18,49 @@ $typography-small:                                  (scale: -2, top: 1, bottom: 
 $typography-headings-font-weight:                   500 !default;
 $typography-headings-color:                         $global-color-text-header !default;
 
+//===== PARAGRAPHS =====
+$typography-paragraph-margins-vert:                 rhythm(1) !default;
+
+//===== LISTS =====
+$typography-lists-margins-vert:                     rhythm(1) !default;
+$typography-lists-line-height:                      rhythm(1) !default;
+
 //===== BLOCKQUOTE =====
 $typography-blockquote:                             (scale: 1, top: 1, bottom: 1) !default;
+$typography-blockquote-paddings:                    rhythm(1) !default;
 $typography-blockquote-color:                       #6f6f6f !default;
+$typography-blockquote-border-width:                5px !default;
 $typography-blockquote-border-color:                $global-border-color !default;
 
-//===== SMALL & MARK =====
+//===== ADDRESS =====
+$typography-address-margins-vert:                   rhythm(1) !default;
+$typography-address-line-height:                    rhythm(1) !default;
+
+  //===== SMALL & MARK =====
 $typography-small-color:                            $global-color-text-small !default;
 $typography-mark-bg-color:                          #fdf8da !default;
+$typography-mark-highlight-padding:                 rhythm(0.25) !default;
 
 //===== CODE =====
+$typography-code-font-size:                         90% !default;
 $typography-code-color:                             #2a7eed !default;
 $typography-code-bg-color:                          #bcdbed !default;
+$typography-code-paddings-vert:                     2px !default;
+$typography-code-paddings-hor:                      4px !default;
 
 //===== KBD =====
+$typography-kdb-font-size:                          90% !default;
 $typography-kbd-color:                              #fff !default;
 $typography-kbd-bg-color:                           #333 !default;
+$typography-kbd-paddings-vert:                      2px !default;
+$typography-kbd-paddings-hor:                       4px !default;
 
 //===== PRE =====
 $typography-pre-color:                              #414141 !default;
+$typography-pre-font-size:                          text-scale(-1) !default;
+$typography-pre-line-height:                        text-line-height-rhythm(-1) !default;
 $typography-pre-bg-color:                           #f9f9f9 !default;
+$typography-pre-paddings:                           rhythm(0.5) !default;
+$typography-pre-margins-vert:                       rhythm(1) !default;
 $typography-pre-border-color:                       $global-border-color !default;
 $typography-pre-border-width:                       1px !default;
