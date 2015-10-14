@@ -1,0 +1,14 @@
+$tables-caption-padding:                            rhythm(0.5) !default;
+$tables-caption-color:                              $global-color-text-muted !default;
+
+$tables-bg:                                         transparent !default;
+$tables-border-color:                               $global-border-color !default;
+
+$tables-head-color:                                 $global-color-text-header !default;
+$tables-head-padding-vert:                          0 !default;
+$tables-head-padding-hor:                           rhythm(0.5) !default;
+$tables-head-border-bottom-width:                   2px !default;
+
+$tables-cell-padding-vert:                          rhythm(0.5) !default;
+$tables-cell-padding-hor:                           rhythm(0.5) !default;
+$tables-cell-border-top-width:                      1px !default;

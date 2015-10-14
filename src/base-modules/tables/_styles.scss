@@ -1,0 +1,45 @@
+table {
+  width: 100%;
+  max-width: 100%;
+  margin: rhythm(1) 0;
+  background-color: $tables-bg;
+}
+
+caption {
+  padding-top: $tables-caption-padding;
+  padding-bottom: $tables-caption-padding;
+  color: $tables-caption-color;
+  text-align: left;
+}
+
+thead {
+  border-bottom: $tables-head-border-bottom-width solid $tables-border-color;
+}
+
+th {
+  border-top: 0;
+  padding: $tables-head-padding-vert $tables-head-padding-hor if($tables-head-padding-vert == 0, 0, $tables-head-padding-vert - $tables-head-border-bottom-width);
+  @if ($tables-head-padding-vert == 0) {
+    line-height: rhythm(1) - $tables-head-border-bottom-width;
+  }
+
+  color: $tables-head-color;
+  text-align: left;
+}
+
+td {
+  padding: $tables-cell-padding-vert $tables-cell-padding-hor if($tables-cell-padding-vert == 0, 0, $tables-cell-padding-vert - $tables-cell-border-top-width);
+  @if ($tables-cell-padding-vert == 0) {
+    line-height: rhythm(1) - $tables-cell-border-top-width;
+  }
+  vertical-align: top;
+  border-bottom: $tables-cell-border-top-width solid $tables-border-color;
+}
+
+tr:last-child > td {
+  border-bottom: 0;
+  padding-bottom: $tables-cell-padding-vert;
+  @if ($tables-cell-padding-vert == 0) {
+    line-height: rhythm(1);
+  }
+}

@@ -26,22 +26,22 @@ h6 {
 }
 
 h1 {
-  @include text-calc($typography-h1);
+  @include text-calc-all($typography-h1);
 }
 h2 {
-  @include text-calc($typography-h2);
+  @include text-calc-all($typography-h2);
 }
 h3 {
-  @include text-calc($typography-h3);
+  @include text-calc-all($typography-h3);
 }
 h4 {
-  @include text-calc($typography-h4);
+  @include text-calc-all($typography-h4);
 }
 h5 {
-  @include text-calc($typography-h5);
+  @include text-calc-all($typography-h5);
 }
 h6 {
-  @include text-calc($typography-h6);
+  @include text-calc-all($typography-h6);
 }
 
 p {
@@ -49,8 +49,9 @@ p {
 }
 
 small {
-  @include text-calc($typography-small);
+  @include text-calc-all($typography-small);
   color: $typography-small-color;
+  vertical-align: top;
 }
 
 abbr[title] {
@@ -96,7 +97,7 @@ dd + dt {
 }
 
 blockquote {
-  @include text-calc($typography-blockquote);
+  @include text-calc-all($typography-blockquote);
 
   padding: rhythm(1);
   border-left: 5px solid $typography-blockquote-border-color;

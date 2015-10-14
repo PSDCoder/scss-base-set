@@ -38,8 +38,9 @@ body {
 .demo-section__header {
   color: #818181;
   margin-top: 72px;
-  padding-bottom: 22px;
-  border-bottom: 2px solid #f1f1f1; }
+  padding-bottom: 6px;
+  border-bottom: 2px solid #f1f1f1;
+  margin-bottom: 40px; }
 
 .demo-section__subheader {
   color: #5a5a5a;

@@ -1,8 +1,7 @@
-@mixin text-calc($heading-map) {
+@mixin text-calc-all($heading-map) {
   $scale: map_get($heading-map, 'scale');
 
-  font-size: text-scale($scale);
-  line-height: text-line-height-rhythm($scale);
+  @include text-level($scale);
   margin-top: rhythm(map_get($heading-map, 'top'));
   margin-bottom: rhythm(map_get($heading-map, 'bottom'));
 }
