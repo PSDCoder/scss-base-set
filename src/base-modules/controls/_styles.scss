@@ -28,6 +28,7 @@ textarea {
   @include states-values('border-color', $controls-border-color);
 
   border-width: $controls-border-width;
+  border-style: solid;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
