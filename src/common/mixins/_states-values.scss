@@ -20,4 +20,10 @@
       #{$property}: map_get($values, 'active');
     }
   }
+
+  @if (map-has_key($values, 'disabled')) {
+    &[disabled] {
+      #{$property}: map_get($values, 'active');
+    }
+  }
 }

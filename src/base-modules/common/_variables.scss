@@ -1,10 +1,5 @@
 //===== LINKS =====
-$common-link-colors:                              (
-                                                    default: red,
-                                                    hover: mix(#000, red, 10%),
-                                                    focus: mix(#000, red, 20%),
-                                                    active: mix(#000, red, 30%),
-                                                  ) !default;
+$common-link-colors:                              $global-link-colors !default;
 $common-link-decorations:                         (
                                                     default: underline,
                                                     hover: underline,

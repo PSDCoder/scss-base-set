@@ -77,7 +77,6 @@ body {
   .demo-items__button {
     display: block;
     width: 100%;
-    padding: 5px 10px;
     color: #fff;
     border: #232323;
     background-color: #222;
@@ -96,7 +95,7 @@ body {
       display: block; }
   .demo-items__list-link {
     display: block;
-    padding: 10px;
+    padding: 12px;
     color: #fff; }
     .demo-items__list-link:hover,
     .demo-items__list-link:focus {

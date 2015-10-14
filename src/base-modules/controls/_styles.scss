@@ -2,13 +2,19 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  @include states-values('background-color', $controls-button-bg);
+  @include states-values('border-color', $controls-border-color);
+
   display: inline-block;
+  height: $controls-height;
+  padding-left: $controls-paddings-hor;
+  padding-right: $controls-paddings-hor;
   margin-bottom: 0;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
   background-image: none;
-  border: 1px solid transparent;
+  border: $controls-button-border-width solid transparent;
   white-space: nowrap;
   -webkit-appearance: button;
   cursor: pointer;
@@ -19,6 +25,9 @@ input,
 button,
 select,
 textarea {
+  @include states-values('border-color', $controls-border-color);
+
+  border-width: $controls-border-width;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -34,20 +43,40 @@ fieldset {
 legend {
   display: block;
   width: 100%;
+  margin: $controls-legend-margins-vert 0;
   padding: 0;
-  margin-bottom: $typography-line-height-computed;
-  font-size: ($typography-font-size-base * 1.5);
-  line-height: inherit;
+  font-size: $controls-legend-font-size;
+  line-height: $controls-legend-line-height - $controls-legend-border-width;
   color: $legend-color;
   border: 0;
-  border-bottom: 1px solid $legend-border-color;
+  border-bottom: $controls-legend-border-width solid $controls-legend-border-color
 }
 
 label {
   display: inline-block;
+  margin: $controls-label-margins-vert 0;
   max-width: 100%;
   font-weight: bold;
   cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  height: $controls-height;
+  padding-left: $controls-paddings-hor;
+  padding-right: $controls-paddings-hor;
 }
 
 input[type="search"] {
@@ -68,6 +97,12 @@ input[type="file"] {
 input[type="range"] {
   display: block;
   width: 100%;
+}
+
+select {
+  height: $controls-height;
+  padding-left: $controls-paddings-hor;
+  padding-right: $controls-paddings-hor;
 }
 
 select[multiple],

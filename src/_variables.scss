@@ -12,6 +12,14 @@ $global-color-text-header:                        #272727 !default;
 $global-color-text-small:                         #2e2e2e !default;
 $global-color-text-muted:                         #999 !default;
 
+$global-link-colors-base:                          #3ea3d7 !default;
+$global-link-colors:                              (
+                                                    default: $global-link-colors-base,
+                                                    hover: tint($global-link-colors-base, 20%),
+                                                    focus: tint($global-link-colors-base, 10%),
+                                                    active: shade($global-link-colors-base, 20%),
+                                                  ) !default;
+
 //BACKGROUNDS
 $global-bg-main:                                  #fff !default;
 $global-border-color:                             #e6e6e6 !default;
@@ -20,6 +28,33 @@ $global-border-color:                             #e6e6e6 !default;
 $global-border-radius:                            0;
 
 
+$global-controls-border-color-base:               $global-border-color;
+$global-controls-border-color:                    (
+                                                    default: $global-controls-border-color-base,
+                                                    hover: shade($global-controls-border-color-base, 10%),
+                                                    focus: shade($global-controls-border-color-base, 10%),
+                                                    active: shade($global-controls-border-color-base, 20%),
+                                                    disabled: desaturate($global-controls-border-color-base, 100%),
+                                                  ) !default;
+
+$global-button-base:                              #dedede !default;
+$global-button-bg:                                (
+                                                    default: $global-button-base,
+                                                    hover: tint($global-controls-border-color-base, 10%),
+                                                    focus: tint($global-controls-border-color-base, 10%),
+                                                    active: shade($global-controls-border-color-base, 20%),
+                                                    disabled: desaturate($global-controls-border-color-base, 100%),
+                                                  ) !default;
+
+
+
+
+
+$button-default-color:                    #555 !default;
+$button-default-color-hover:              $button-default-color !default;
+$button-default-color-focus:              $button-default-color !default;
+$button-default-color-active:             $button-default-color !default;
+$button-default-color-disabled:           tint($button-default-color, 30%) !default;
 
 
 
