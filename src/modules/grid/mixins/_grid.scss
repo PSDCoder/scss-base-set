@@ -1,36 +1,35 @@
-@mixin grid-columns-extensions($breakpoint, $grid-column-width, $breakpoint-suffix: '') {
-  @for $i from 1 to $grid-columns + 1 {
-    .#{$block}__col_#{$breakpoint}#{$breakpoint-suffix}-offset-#{$i} {
-      margin-left: $grid-column-width * $i;
-    }
+@mixin grid() {
+  .#{$grid-block-name} {
+    @include clearfix();
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: ($grid-gutter / 2);
+    padding-right: ($grid-gutter / 2);
 
-    .#{$block}__col_#{$breakpoint}#{$breakpoint-suffix}-pull-#{$i} {
-      right: $grid-column-width * $i;
+    &_fixed {
+      width: $grid-container-width;
     }
+  }
 
-    .#{$block}__col_#{$breakpoint}#{$breakpoint-suffix}-push-#{$i} {
-      left: $grid-column-width * $i;
+  .#{$grid-block-name}__#{$grid-row-name} {
+    @include clearfix();
+    box-sizing: border-box;
+    margin-left: -($grid-gutter / 2);
+    margin-right: -($grid-gutter / 2);
+    padding:0;
+
+    &_offset {
+      margin-bottom: $grid-offset-margin;
     }
+  }
+
+  .#{$grid-block-name}__#{$grid-cell-name} {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: $grid-gutter / 2;
+    padding-right: $grid-gutter / 2;
   }
 }
-
-@mixin grid-columns($block, $breakpoint, $next-breakpoint: null) {
-  $grid-column-width: 100% / $grid-columns;
-
-  @include media('>=#{$breakpoint}') {
-    @for $i from 1 to $grid-columns + 1 {
-      .#{$block}__col_#{$breakpoint}-#{$i} {
-        width: $grid-column-width * $i;
-      }
-    }
-
-    @include grid-columns-extensions($breakpoint, $grid-column-width);
-  }
-
-  @if $next-breakpoint {
-    @include media('>=#{$breakpoint}', '<#{$next-breakpoint}') {
-      @include grid-columns-extensions($breakpoint, $grid-column-width, '-only');
-    }
-  }
-}
-

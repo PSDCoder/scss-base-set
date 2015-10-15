@@ -1,0 +1,11 @@
+//===== GRID =====
+$grid-block-name:                                     'grid' !default;
+$grid-row-name:                                       'row' !default;
+$grid-cell-name:                                      'col' !default;
+
+$grid-columns:                                        12 !default;
+$grid-column-width:                                   100 / $grid-columns * 1%;
+$grid-gutter:                                         rhythm(1) !default;
+$grid-container-width:                                880px;
+$grid-offset-margin:                                  rhythm(1) !default;
+$grid-breakpoints:                                    $global-breakpoints !default;

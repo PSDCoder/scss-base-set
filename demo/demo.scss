@@ -58,6 +58,8 @@ body {
 
 
 .demo-section {
+  //padding: 0 rhythm(2);
+
   &__header {
     color: #818181;
     margin-top: rhythm(3);
@@ -171,33 +173,28 @@ body {
   }
 }
 
-.demo-width-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
 #demo-grid {
-  $grid-margins: 20px;
+  $grid-margins: rhythm(1);
 
-  .width-container {
-    position: relative;
-    background-color: #f6f6f6;
-    padding-top: $grid-margins;
-    margin-bottom: $grid-margins;
-
-    &:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      padding: 4px 10px;
-      content: '.width-container';
-      font-size: 12px;
-      font-weight: bold;
-      background-color: #ebebeb;
-      color: #8b8b8b;
-    }
-  }
+  //.width-container {
+  //  position: relative;
+  //  background-color: #f6f6f6;
+  //  padding-top: $grid-margins;
+  //  margin-bottom: $grid-margins;
+  //
+  //  &:before {
+  //    position: absolute;
+  //    top: 0;
+  //    left: 0;
+  //    display: block;
+  //    padding: 4px 10px;
+  //    content: '.width-container';
+  //    font-size: 12px;
+  //    font-weight: bold;
+  //    background-color: #ebebeb;
+  //    color: #8b8b8b;
+  //  }
+  //}
 
   .grid__row {
     margin-bottom: $grid-margins;
@@ -207,26 +204,26 @@ body {
     }
   }
 
-  .grid__row {
+  .grid {
     [class*="grid__col"] {
-      background-color: #e8e8e8;
-      padding: 10px;
-      border: 1px solid #d3d3d3;
+
     }
   }
 
-  .grid__row.grid__row-demo-header {
+  .grid__col {
+    $border-width: 1px;
+
+    background-color: #e8e8e8;
+    border: $border-width solid #d3d3d3;
+    min-height: rhythm(4);
+    padding: rhythm(1) - $border-width;
+  }
+
+  .grid.grid-demo-header {
     [class*="grid__col"] {
       background: none;
-      padding: 0;
       border: none;
     }
   }
 }
 
-//media
-@media (max-width: 1400px) {
-  .demo-width-container {
-    margin: 0 15px;
-  }
-}

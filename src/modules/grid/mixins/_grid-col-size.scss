@@ -1,0 +1,6 @@
+@mixin grid-col-size($index, $breakpoint-name: null) {
+  .#{$grid-block-name}__#{$grid-cell-name}_size_#{grid-breakpoint-prefix($breakpoint-name)}#{$index} {
+    box-sizing: border-box;
+    width: $grid-column-width * $index;
+  }
+}

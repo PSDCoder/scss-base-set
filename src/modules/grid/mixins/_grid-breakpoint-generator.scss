@@ -1,0 +1,30 @@
+@mixin grid-breakpoint-generator($breakpoint-name: null, $breakpoint-size: null) {
+  @if ($breakpoint-name != null and $breakpoint-size != null) {
+    @media (min-width: #{$breakpoint-size}) {
+      @for $i from 1 to $grid-columns + 1 {
+        @include grid-col-size($i, $breakpoint-name);
+      }
+
+      @for $i from 1 to $grid-columns + 1 {
+        @include grid-col-offset($i, $breakpoint-name);
+      }
+
+      @for $i from 1 to $grid-columns + 1 {
+        @include grid-col-push($i, $breakpoint-name);
+      }
+
+      @for $i from 1 to $grid-columns + 1 {
+        @include grid-col-pull($i, $breakpoint-name);
+      }
+    }
+  } @else {
+    @for $i from 1 to $grid-columns + 1 {
+      @include grid-col-size($i);
+      @include grid-col-offset($i);
+      @include grid-col-push($i);
+      @include grid-col-pull($i);
+
+      @include grid-col-hidden($i);
+    }
+  }
+}

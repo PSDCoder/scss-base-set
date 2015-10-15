@@ -1,0 +1,5 @@
+@mixin grid-col-offset($offset, $breakpoint-name: null) {
+  .#{$grid-block-name}__#{$grid-cell-name}_offset_#{grid-breakpoint-prefix($breakpoint-name)}#{$offset} {
+    margin-left: $grid-column-width * $offset;
+  }
+}

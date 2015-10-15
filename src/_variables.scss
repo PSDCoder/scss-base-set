@@ -28,6 +28,7 @@ $global-border-color:                             #e6e6e6 !default;
 $global-border-radius:                            0;
 
 
+//BASE CONTROLS STYLES
 $global-controls-border-color-base:               $global-border-color;
 $global-controls-border-color:                    (
                                                     default: $global-controls-border-color-base,
@@ -46,17 +47,13 @@ $global-button-bg:                                (
                                                     disabled: desaturate($global-controls-border-color-base, 100%),
                                                   ) !default;
 
-
-
-
-
-$button-default-color:                    #555 !default;
-$button-default-color-hover:              $button-default-color !default;
-$button-default-color-focus:              $button-default-color !default;
-$button-default-color-active:             $button-default-color !default;
-$button-default-color-disabled:           tint($button-default-color, 30%) !default;
-
-
+//RESPONSIVENESS
+$global-breakpoints:                              (
+                                                    'xs': 544px,
+                                                    'sm': 768px,
+                                                    'md': 992px,
+                                                    'lg': 1200px,
+                                                  ) !default;
 
 
 
@@ -75,27 +72,6 @@ $z-index: (
   'modal':                                  1040,
   'tooltip':                                1070,
 ) !default;
-
-//===== RESPONSIVENESS =====
-$breakpoints: (
-  'xs':                                     480px,
-  'sm':                                     768px,
-  'md':                                     992px,
-  'lg':                                     1200px,
-) !default;
-
-
-//===== COMPONENTS =====
-//grid
-$grid-columns:                              12 !default;
-$grid-gutter:                               30px !default;
-$grid-containers: (
-  'xs':                                     auto,
-  'sm':                                     720 + $grid-gutter,
-  'md':                                     940 + $grid-gutter,
-  'lg':                                     1140 + $grid-gutter,
-) !default;
-
 
 //===== GLOBAL =====
 $main-bg-color:                           #fff !default;
