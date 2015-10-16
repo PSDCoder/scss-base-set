@@ -29,6 +29,10 @@ $global-border-radius:                            0;
 
 
 //BASE CONTROLS STYLES
+$global-controls-bg:                              (
+                                                    default: #fff,
+                                                    disabled: shade(#fff, 12%),
+                                                  ) !default;
 $global-controls-border-color-base:               $global-border-color;
 $global-controls-border-color:                    (
                                                     default: $global-controls-border-color-base,

@@ -35,7 +35,7 @@
 
     @if (map_has_key($values, 'disabled')) {
       &[disabled] {
-        #{$property}: map_get($values, 'active');
+        #{$property}: map_get($values, 'disabled');
       }
     }
   }
