@@ -44,7 +44,7 @@ fieldset {
 legend {
   display: block;
   width: 100%;
-  margin: $controls-legend-margins-vert 0;
+  margin: 0 0 $controls-legend-margins-vert 0;
   padding: 0;
   font-size: $controls-legend-font-size;
   line-height: $controls-legend-line-height - $controls-legend-border-width;
@@ -55,7 +55,7 @@ legend {
 
 label {
   display: inline-block;
-  margin: $controls-label-margins-vert 0;
+  margin: 0 0 $controls-label-margins-vert 0;
   max-width: 100%;
   font-weight: bold;
   cursor: pointer;

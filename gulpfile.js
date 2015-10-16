@@ -1,3 +1,4 @@
+var path = require('path');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var argv = require('minimist')(process.argv.slice(2), {
@@ -17,8 +18,11 @@ var TUNNEL = !!argv.tunnel;
 
 var sassMainPath = 'src/main.scss';
 var distPath = 'dist';
-var demoScss = 'demo/demo.scss';
 var demoFolder = 'demo';
+var demoAssetsFolder = path.join(demoFolder, 'assets');
+var demoScss = 'demo/assets/demo.scss';
+var demoTemplatesRootFolder = path.join(demoFolder, 'templates');
+var demoTemplatesFolder = path.join(demoTemplatesRootFolder, 'pages', '*.swig.html');
 
 gulp
     .task('default', function (cb) {
@@ -37,13 +41,21 @@ gulp
         runSequence.apply(runSequence, tasksList);
     })
     .task('build', function (cb) {
-        runSequence('scss', 'demo-scss', cb);
+        runSequence(['scss', 'demo-scss', 'demo-templates'], cb);
     })
     .task('scss', function() {
         return sassBuild(sassMainPath, distPath);
     })
     .task('demo-scss', function() {
-        return sassBuild(demoScss, demoFolder);
+        return sassBuild(demoScss, demoAssetsFolder);
+    })
+    .task('demo-templates', function () {
+        return gulp.src(demoTemplatesFolder)
+            .pipe($.swig({ defaults: { cache: false }}))
+            .pipe($.rename(function (path) {
+                path.basename = path.basename.replace('.swig', '');
+            }))
+            .pipe(gulp.dest(demoFolder))
     })
     .task('watch', function () {
         $.watch('src/**/*.scss', function () { runSequence('scss'); })
@@ -52,8 +64,15 @@ gulp
         $.watch(demoScss, function () { runSequence('demo-scss'); })
             .on('error', errorHandler);
 
+        $.watch(path.join(demoTemplatesRootFolder, '**', '*.swig.html'), function () { runSequence('demo-templates'); })
+            .on('error', errorHandler);
+
         if (SERVE) {
-            $.watch(['demo/*.?(css|html)', 'dist/*.css'])
+            $.watch([
+                    path.join(demoFolder, '*.html'),
+                    path.join(demoAssetsFolder, '*.?(css|js)'),
+                    path.join(distPath, '*.css')
+                ])
                 .on('change', browserSync.reload)
                 .on('error', errorHandler)
         }

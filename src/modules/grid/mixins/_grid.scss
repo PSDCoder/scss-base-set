@@ -7,7 +7,7 @@
     padding-right: ($grid-gutter / 2);
 
     &_fixed {
-      width: $grid-container-width;
+      max-width: $grid-container-width;
     }
   }
 

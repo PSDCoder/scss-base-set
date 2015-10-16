@@ -1,29 +1,42 @@
 @mixin states-values($property, $values) {
-  @if (map-has_key($values, 'default')) {
-    #{$property}: map_get($values, 'default');
-  }
+  @if (map_has_key($values, 'all')) {
+    $value: map_get($values, 'all');
 
-  @if (map-has_key($values, 'hover')) {
-    &:hover {
-      #{$property}: map_get($values, 'hover');
-    }
-  }
+    #{$property}: $value;
 
-  @if (map-has_key($values, 'focus')) {
-    &:focus {
-      #{$property}: map_get($values, 'focus');
-    }
-  }
-
-  @if (map-has_key($values, 'active')) {
-    &:active {
-      #{$property}: map_get($values, 'active');
-    }
-  }
-
-  @if (map-has_key($values, 'disabled')) {
+    &:hover,
+    &:focus,
+    &:active,
     &[disabled] {
-      #{$property}: map_get($values, 'active');
+      #{$property}: $value;
+    }
+  } @else {
+    @if (map_has_key($values, 'default')) {
+      #{$property}: map_get($values, 'default');
+    }
+
+    @if (map_has_key($values, 'hover')) {
+      &:hover {
+        #{$property}: map_get($values, 'hover');
+      }
+    }
+
+    @if (map_has_key($values, 'focus')) {
+      &:focus {
+        #{$property}: map_get($values, 'focus');
+      }
+    }
+
+    @if (map_has_key($values, 'active')) {
+      &:active {
+        #{$property}: map_get($values, 'active');
+      }
+    }
+
+    @if (map_has_key($values, 'disabled')) {
+      &[disabled] {
+        #{$property}: map_get($values, 'active');
+      }
     }
   }
 }

@@ -45,7 +45,7 @@ h6 {
 }
 
 p {
-  margin: $typography-paragraph-margins-vert 0;
+  margin: 0 0 $typography-paragraph-margins-vert 0;
 }
 
 small {
@@ -65,18 +65,16 @@ mark {
 
 ul,
 ol {
-  margin: $typography-lists-margins-vert 0;
+  margin: 0 0 $typography-lists-margins-vert 0;
   line-height: $typography-lists-line-height;
 
   ul,
   ol {
-    margin-top: 0;
     margin-bottom: 0;
   }
 }
 
 dl {
-  margin-top: 0;
   margin-bottom: $typography-lists-margins-vert;
 }
 
@@ -93,10 +91,6 @@ dd {
   margin-left: 0;
 }
 
-dd + dt {
-  margin-top: $typography-lists-margins-vert;
-}
-
 blockquote {
   @include text-calc-all($typography-blockquote);
 
@@ -107,10 +101,6 @@ blockquote {
   p,
   ul,
   ol {
-    &:first-child {
-      margin-top: 0;
-    }
-
     &:last-child {
       margin-bottom: 0;
     }
@@ -118,7 +108,7 @@ blockquote {
 }
 
 address {
-  margin: $typography-address-margins-vert 0;
+  margin: 0 0 $typography-address-margins-vert 0;
   font-style: normal;
   line-height: $typography-address-line-height;
 }
@@ -158,7 +148,7 @@ kbd {
 pre {
   display: block;
   padding: $typography-pre-paddings - $typography-pre-border-width;
-  margin: $typography-pre-margins-vert 0;
+  margin: 0 0 $typography-pre-margins-vert 0;
   font-size: $typography-pre-font-size;
   line-height: $typography-pre-line-height;
   word-break: break-all;
