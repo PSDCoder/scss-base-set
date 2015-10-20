@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>scss-base-set - Main page</title>
+    <title>{% block title %}scss-base-set{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../dist/main.css"/>
     <link rel="stylesheet" href="assets/demo.css"/>
@@ -118,63 +118,7 @@
                 <use xlink:href="#burger"></use>
             </svg>
         </button>
-        
-<section class="demo-section demo-section-index-about">
-    It's basic boilerplate for new projects <br>
-    and it's developed in <a href="https://bem.info" target="_blank">BEM</a> notation. <br>
-    Code of project you can find on <a href="https://github.com/PSDCoder/scss-base-set" class="button button_size_large button_style_primary">github</a>
-</section>
-<section class="demo-section demo-index-parts">
-    <div class="grid">
-        <div class="grid__row">
-            <div class="grid__col grid__col_size_6 grid_col_size_md-12">
-                <h3>Base styles</h3>
-                <span>It contains base styles:</span>
-                <ul>
-                    <li>Common styles<br/>(i.e. global <code>box-sizing: border-box;</code>)</li>
-                    <li>
-                        <a href="base.html#typography">Typography styles</a>
-                    </li>
-                    <li>
-                        <a href="base.html#code">Code styles</a>
-                    </li>
-                    <li>
-                        <a href="base.html#tables">Tables styles</a>
-                    </li>
-                    <li>
-                        <a href="base.html#form-elements">Form elements</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="grid__col grid__col_size_6 grid_col_size_md-12">
-                <h3>Modules</h3>
-                <p>This set includes next modules:</p>
-                <ul>
-                    <li>Grid <br/> (it's like bootstrap grid, but in bem-notation)</li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid__row">
-            <div class="grid__col grid__col_size_6 grid_col_size_md-12">
-                <h3>Blocks</h3>
-                <p>This section under development</p>
-            </div>
-            <div class="grid__col grid__col_size_6 grid_col_size_md-12">
-                <h3>Useful things</h3>
-                <p>
-                    Set contains animations from <a href="https://daneden.github.io/animate.css/">Animate.css</a>,
-                    bunch of scss functions and many useful scss-mixins, for example:
-                </p>
-                <ul>
-                    <li>Mixin for calculating vertical rhythm</li>
-                    <li>Mixin for set values of states by sass map</li>
-                    <li>And many others...</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
+        {% block content %}{% endblock %}
         <footer class="demo-footer">
             <p class="demo-footer__github-buttons">
                 <iframe src="http://ghbtns.com/github-btn.html?user=PSDCoder&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>

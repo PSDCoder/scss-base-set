@@ -1,0 +1,35 @@
+@mixin grid() {
+  .#{$grid-block-name} {
+    @include clearfix();
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: ($grid-gutter / 2);
+    padding-right: ($grid-gutter / 2);
+
+    &_fixed {
+      max-width: $grid-container-width;
+    }
+  }
+
+  .#{$grid-block-name}__#{$grid-row-name} {
+    @include clearfix();
+    box-sizing: border-box;
+    margin-left: -($grid-gutter / 2);
+    margin-right: -($grid-gutter / 2);
+    padding:0;
+
+    &_offset {
+      margin-bottom: $grid-offset-margin;
+    }
+  }
+
+  .#{$grid-block-name}__#{$grid-cell-name} {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: $grid-gutter / 2;
+    padding-right: $grid-gutter / 2;
+  }
+}

@@ -1,0 +1,18 @@
+{% extends '../layout.swig.html' %}
+
+{% block title %}{% parent %} - Base styles{% endblock %}
+
+{% block content %}
+<section class="demo-section">
+    <h1 class="demo-section__header">Usage</h1>
+    <p>
+        You can simply load dist css file from <code>dist</code> folder or you can build only necessary components.
+    </p>
+    <p>
+        For that you should include components in your main scss file like in <code>/src/main.scss</code> before your app code.
+    </p>
+    <p>
+        Also you can redefine variables. List of variables you can find in <code>/src/_variables.scss</code>. And modules can has own variables list based on global variables - you can find it in modules folder.
+    </p>
+</section>
+{% endblock %}

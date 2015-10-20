@@ -1,0 +1,23 @@
+//===== COMMON =====
+$controls-height:                                         rhythm(2) !default;
+$controls-paddings-hor:                                   rhythm(0.5) !default;
+$controls-border-color:                                   $global-controls-border-color !default;
+$controls-border-width:                                   1px !default;
+
+//===== BUTTONS =====
+$controls-button-bg:                                      $global-button-bg !default;
+$controls-button-border-width:                            1px !default;
+
+//===== INPUTS =====
+$controls-inputs-bg:                                      $global-controls-bg !default;
+
+//===== LEGEND =====
+$controls-legend-margins-vert:                            rhythm(1) !default;
+$controls-legend-font-size:                               ceil($global-font-root-size * 1.3) !default;
+$controls-legend-line-height:                             rhythm(2) !default;
+$controls-legend-color:                                   #333 !default;
+$controls-legend-border-width:                            1px !default;
+$controls-legend-border-color:                            $global-border-color !default;
+
+//===== LABEL =====
+$controls-label-margins-vert:                             rhythm(0.5) !default;

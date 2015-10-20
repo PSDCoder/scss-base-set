@@ -1,0 +1,4 @@
+@mixin text-level($level) {
+  font-size: text-scale($level);
+  line-height: text-line-height-rhythm($level);
+}

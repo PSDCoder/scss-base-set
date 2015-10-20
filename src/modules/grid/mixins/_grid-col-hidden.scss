@@ -1,0 +1,5 @@
+@mixin grid-col-hidden($offset) {
+  .#{$grid-block-name}__#{$grid-cell-name}_hidden_#{$offset} {
+    display: none;
+  }
+}

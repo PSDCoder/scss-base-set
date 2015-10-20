@@ -1,0 +1,13 @@
+//===== LINKS =====
+$common-link-colors:                              $global-link-colors !default;
+$common-link-decorations:                         (
+                                                    default: underline,
+                                                    hover: underline,
+                                                    focus: underline,
+                                                    active: underline,
+                                                  ) !default;
+
+//===== HR =====
+$common-hr-margins-vert:                          rhythm(2) !default;
+$common-hr-border-width:                          2px !default;
+$common-hr-border-color:                          $global-border-color !default;

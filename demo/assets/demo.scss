@@ -1,0 +1,365 @@
+@import '../../src/variables';
+@import '../../src/common/functions';
+@import '../../src/common/mixins';
+
+$guideline-color: rgba(0, 255, 255, 0.5);
+$sidebar-color: #f1ffff;
+$sidebar-bg: #434851;
+$sidebar-bg-active: #22a3a8;
+$sidebar-sub-bg-active: tint($sidebar-bg, 15%);
+$sidebar-width: 220px;
+$z-indexes: (
+  guidelines: 0,
+  content: 1,
+  sidebar: 100,
+  sidebar-overlay: 99
+);
+
+
+@function calc-colors($base-color) {
+  @return (
+    default: $base-color,
+    hover: shade($base-color, 10%),
+    focus: shade($base-color, 10%),
+    active: shade($base-color, 20%)
+  )
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.svg-sprite {
+  display: none;
+}
+
+.rhythm-guidelines {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: map_get($z-indexes, 'guidelines');
+  background-image: linear-gradient($guideline-color 0%, transparent 5%, transparent 100%);
+  background-repeat: repeat;
+  background-size: 100% $global-rhythm;
+
+  &_disabled {
+    display: none;
+  }
+}
+
+.demo-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: $sidebar-width;
+  background-color: $sidebar-bg;
+  overflow-y: auto;
+  transition: transform .2s ease-out;
+  will-change: transform;
+  z-index: map_get($z-indexes, 'sidebar');
+
+  &_opened {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &_closed {
+    transform: translate3d(-$sidebar-width, 0, 0);
+  }
+}
+
+.demo-sidebar-overlay {
+  display: none;
+}
+
+.demo-sidebar-toggler {
+  display: none;
+}
+
+.demo-content {
+  position: relative;
+  margin-left: $sidebar-width;
+  transition: margin-left .1s ease-out;
+  z-index: map_get($z-indexes, 'content');
+
+  &__width-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: rhythm(1);
+    padding-right: rhythm(1);
+  }
+}
+
+
+@media('max-width: 860px') {
+  .demo-sidebar_opened + .demo-sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: map_get($z-indexes, 'sidebar-overlay');
+  }
+
+  .demo-sidebar-toggler {
+    @include states-values('background-color', calc-colors($sidebar-bg));
+    @include states-values('text-decoration', (all: none));
+    display: block;
+    border: none;
+    position: fixed;
+    top: rhythm(1);
+    left: rhythm(1);
+    z-index: map_get($z-indexes, 'sidebar-overlay');
+
+    &__icon {
+      display: inline-block;
+      width: rhythm(1);
+      height: rhythm(1);
+      margin: rhythm(0.5) 0;
+      fill: $sidebar-color;
+    }
+  }
+
+  .demo-content {
+    margin-left: 0;
+  }
+}
+
+
+
+/////////////////
+//   SIDEBAR   //
+/////////////////
+
+.demo-logo {
+  @include states-values('color', calc-colors($sidebar-color));
+  @include states-values('text-decoration', (all: none));
+
+  display: block;
+  padding: rhythm(1) 0;
+
+  font-size: rhythm(1.3);
+  font-weight: 100;
+  line-height: rhythm(1.5);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.demo-vertical-rhythm-toggler {
+  $button-border-width: 1px;
+  @include states-values('color', calc-colors($sidebar-color));
+
+  display: block;
+  width: 100%;
+  height: rhythm(2);
+  padding: 0 rhythm(0.5);
+  margin-bottom: rhythm(1);
+  border-top-width: $button-border-width;
+  border-bottom-width: $button-border-width;
+  border-style: solid;
+  text-align: left;
+
+  &__icon {
+    display: inline-block;
+    width: rhythm(1);
+    height: rhythm(1);
+    margin: rhythm(0.5) - 1 rhythm(0.5) rhythm(0.5) - 1 0;
+    fill: $sidebar-color;
+  }
+
+  &__text {
+    line-height: rhythm(2);
+    vertical-align: top;
+  }
+
+  &_enabled {
+    @include states-values('background-color', calc-colors($guideline-color));
+    @include states-values('border-color', calc-colors($guideline-color));
+
+    .demo-vertical-rhythm-toggler__icon_type_on {
+      display: inline-block;
+    }
+
+    .demo-vertical-rhythm-toggler__icon_type_off {
+      display: none;
+    }
+  }
+
+  &_disabled {
+    @include states-values('background-color', calc-colors(shade($guideline-color, 20%)));
+    @include states-values('border-color', calc-colors(shade($guideline-color, 20%)));
+
+    .demo-vertical-rhythm-toggler__icon_type_on {
+      display: none;
+    }
+
+    .demo-vertical-rhythm-toggler__icon_type_off {
+      display: inline-block;
+    }
+  }
+}
+
+.demo-navigation {
+  @include list-unstyled();
+
+  &__item {
+    line-height: rhythm(2);
+
+    &_active .demo-navigation__link {
+      @include states-values('color', (all: $sidebar-color));
+      @include states-values('background-color', calc-colors($sidebar-bg-active));
+    }
+
+    &_opened .demo-navigation__icon_type_up {
+      display: inline-block;
+    }
+
+    &_closed .demo-navigation__icon_type_down {
+      display: inline-block;
+    }
+  }
+
+  &__link {
+    display: block;
+    line-height: rhythm(1);
+    padding: rhythm(0.5);
+    @include states-values('color', calc-colors($sidebar-color));
+    @include states-values('background-color', calc-colors($sidebar-bg));
+    @include states-values('text-decoration', (all: none));
+  }
+
+  &__icon {
+    display: none;
+    width: rhythm(1);
+    height: rhythm(1);
+    fill: $sidebar-color;
+    vertical-align: top;
+  }
+}
+
+.demo-sub-navigation {
+  @include list-unstyled();
+
+  &_closed {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.15s ease-out;
+  }
+
+  &_opened {
+    opacity: 1;
+    transition: all 0.15s ease-out;
+  }
+
+  &__item {
+    line-height: rhythm(2);
+
+    &_active .demo-sub-navigation__link {
+      @include states-values('background-color', (all: $sidebar-sub-bg-active));
+      @include states-values('color', (all: $sidebar-color));
+    }
+  }
+
+  &__link {
+    display: block;
+    line-height: rhythm(1);
+    padding: rhythm(0.5);
+    @include states-values('color', calc-colors(shade($sidebar-color, 20%)));
+    @include states-values('background-color', calc-colors(shade($sidebar-bg, 30%)));
+    @include states-values('text-decoration', (all: none));
+  }
+}
+
+.demo-footer {
+  margin: 0;
+  overflow: hidden;
+
+  &__github-buttons,
+  &__created {
+    font-size: 14px;
+    margin: rhythm(1) 0;
+    line-height: rhythm(1);
+    vertical-align: middle;
+  }
+
+  &__github-buttons {
+    float: left;
+    height: rhythm(1);
+    padding-top: (rhythm(1) - 20) / 2;
+  }
+
+  &__created {
+    float: right;
+  }
+}
+
+.demo-section {
+  &__header {
+    color: $sidebar-bg;
+    margin-top: rhythm(3);
+    padding-bottom: rhythm(0.25);
+    border-bottom: 2px solid #f1f1f1;
+    margin-bottom: rhythm(1.75) - 2px;
+  }
+
+  &__subheader {
+    color: tint($sidebar-bg, 15%);
+    padding-left: rhythm(1);
+    border-left: 3px solid #f1f1f1;
+  }
+}
+
+
+
+//////////////////////
+//   PAGES STYLES   //
+//////////////////////
+
+.demo-section-index-about {
+  padding: rhythm(2) 0;
+  margin: 0 auto;
+  font-size: rhythm(1);
+  line-height: rhythm(2);
+  text-align: center;
+}
+
+.demo-section-componenets-grid {
+  $grid-margins: rhythm(1);
+
+  .grid__row .grid__row_offset:last-child {
+    margin-bottom: 0;
+  }
+
+  .grid {
+    [class*="grid__col"] {
+
+    }
+  }
+
+  .grid__col {
+    $border-width: 1px;
+
+    background-color: #e8e8e8;
+    border: $border-width solid #d3d3d3;
+    min-height: rhythm(4);
+    padding: rhythm(1) - $border-width;
+  }
+
+  .grid.grid-demo-header {
+    [class*="grid__col"] {
+      background: none;
+      border: none;
+    }
+  }
+}

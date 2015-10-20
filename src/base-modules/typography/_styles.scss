@@ -1,0 +1,169 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $global-font-family-headers;
+  font-weight: $typography-headings-font-weight;
+  color: $typography-headings-color;
+}
+
+h1,
+h2,
+h3 {
+  small {
+    font-size: 0.65em;
+  }
+}
+
+h4,
+h5,
+h6 {
+  small {
+    font-size: 0.75em;
+  }
+}
+
+h1 {
+  @include text-calc-all($typography-h1);
+}
+h2 {
+  @include text-calc-all($typography-h2);
+}
+h3 {
+  @include text-calc-all($typography-h3);
+}
+h4 {
+  @include text-calc-all($typography-h4);
+}
+h5 {
+  @include text-calc-all($typography-h5);
+}
+h6 {
+  @include text-calc-all($typography-h6);
+}
+
+p {
+  margin: 0 0 $typography-paragraph-margins-vert 0;
+}
+
+small {
+  @include text-calc-all($typography-small);
+  color: $typography-small-color;
+  vertical-align: top;
+}
+
+abbr[title] {
+  cursor: help;
+}
+
+mark {
+  padding: $typography-mark-highlight-padding;
+  background-color: $typography-mark-bg-color;
+}
+
+ul,
+ol {
+  margin: 0 0 $typography-lists-margins-vert 0;
+  line-height: $typography-lists-line-height;
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+dl {
+  margin-bottom: $typography-lists-margins-vert;
+}
+
+dt,
+dd {
+  line-height: $typography-lists-line-height;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+blockquote {
+  @include text-calc-all($typography-blockquote);
+
+  padding: $typography-blockquote-paddings;
+  border-left: $typography-blockquote-border-width solid $typography-blockquote-border-color;
+  color: $typography-blockquote-color;
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+address {
+  margin: 0 0 $typography-address-margins-vert 0;
+  font-style: normal;
+  line-height: $typography-address-line-height;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: $global-font-family-monospace;
+  vertical-align: top;
+}
+
+code {
+  padding: $typography-code-paddings-vert $typography-code-paddings-hor;
+  border-radius: $global-border-radius;
+  font-size: $typography-code-font-size;
+  color: $typography-code-color;
+  background-color: $typography-code-bg-color;
+  vertical-align: top;
+}
+
+kbd {
+  padding: $typography-kbd-paddings-vert $typography-kbd-paddings-hor;
+  font-size: $typography-kdb-font-size;
+  color: $typography-kbd-color;
+  background-color: $typography-kbd-bg-color;
+  border-radius: $global-border-radius;
+  vertical-align: top;
+
+  kbd {
+    padding: 0;
+    font-size: 100%;
+    font-weight: bold;
+  }
+}
+
+pre {
+  display: block;
+  padding: $typography-pre-paddings - $typography-pre-border-width;
+  margin: 0 0 $typography-pre-margins-vert 0;
+  font-size: $typography-pre-font-size;
+  line-height: $typography-pre-line-height;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: $typography-pre-color;
+  background-color: $typography-pre-bg-color;
+  border: $typography-pre-border-width solid $typography-pre-border-color;
+  border-radius: $main-border-radius;
+
+  code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}

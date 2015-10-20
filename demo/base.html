@@ -1,0 +1,382 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>scss-base-set - Base styles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/main.css"/>
+    <link rel="stylesheet" href="assets/demo.css"/>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" class="svg-sprite">
+    <defs>
+        <symbol id="burger" viewBox="0 0 24 24">
+            <path d="M3 6h18v2.016h-18v-2.016zM3 12.984v-1.969h18v1.969h-18zM3 18v-2.016h18v2.016h-18z"></path>
+        </symbol>
+        <symbol id="grid-off" viewBox="0 0 24 24">
+            <path d="M20.016 8.016v-4.031h-4.031v4.031h4.031zM20.016 14.016v-4.031h-4.031v4.031h4.031zM20.016 20.016v-4.031h-4.031v4.031h4.031zM14.016 8.016v-4.031h-4.031v4.031h4.031zM14.016 14.016v-4.031h-4.031v4.031h4.031zM14.016 20.016v-4.031h-4.031v4.031h4.031zM8.016 8.016v-4.031h-4.031v4.031h4.031zM8.016 14.016v-4.031h-4.031v4.031h4.031zM8.016 20.016v-4.031h-4.031v4.031h4.031zM20.016 2.016q0.797 0 1.383 0.586t0.586 1.383v16.031q0 0.797-0.586 1.383t-1.383 0.586h-16.031q-0.797 0-1.383-0.586t-0.586-1.383v-16.031q0-0.797 0.586-1.383t1.383-0.586h16.031z"></path>
+        </symbol>
+        <symbol id="grid-on" viewBox="0 0 24 24">
+            <path d="M15.984 20.016h1.453l-1.453-1.453v1.453zM14.016 20.016v-3.469l-0.563-0.563h-3.469v4.031h4.031zM8.016 14.016v-3.469l-0.563-0.563h-3.469v4.031h4.031zM8.016 20.016v-4.031h-4.031v4.031h4.031zM3.984 6.563v1.453h1.453zM9.984 12.563v1.453h1.453zM1.266 1.266l21.469 21.469-1.266 1.266-2.016-2.016h-15.469q-0.797 0-1.383-0.586t-0.586-1.383v-15.469l-2.016-2.016zM15.984 3.984v4.031h4.031v-4.031h-4.031zM8.016 3.984h-1.453l-2.016-1.969h15.469q0.797 0 1.383 0.586t0.586 1.383v15.469l-1.969-2.016v-1.453h-1.453l-2.016-1.969h3.469v-4.031h-4.031v3.469l-1.969-2.016v-1.453h-1.453l-2.016-1.969h3.469v-4.031h-4.031v3.469l-1.969-2.016v-1.453z"></path>
+        </symbol>
+        <symbol id="corner-down" viewBox="0 0 24 24">
+            <path d="M6.984 9.984h10.031l-5.016 5.016z"></path>
+        </symbol>
+        <symbol id="corner-up" viewBox="0 0 24 24">
+            <path d="M6.984 14.016l5.016-5.016 5.016 5.016h-10.031z"></path>
+        </symbol>
+    </defs>
+</svg>
+<div class="rhythm-guidelines rhythm-guidelines_disabled"></div>
+<nav class="demo-sidebar demo-sidebar_opened">
+    <a href="index.html" class="demo-logo">
+        scss
+        <br/>
+        base set
+    </a>
+    <button class="demo-vertical-rhythm-toggler demo-vertical-rhythm-toggler_disabled">
+        <svg class="demo-vertical-rhythm-toggler__icon demo-vertical-rhythm-toggler__icon_type_off">
+            <use xlink:href="#grid-off"></use>
+        </svg>
+        <svg class="demo-vertical-rhythm-toggler__icon demo-vertical-rhythm-toggler__icon_type_on">
+            <use xlink:href="#grid-on"></use>
+        </svg>
+        <span class="demo-vertical-rhythm-toggler__text">
+            Vertical rhythm
+        </span>
+    </button>
+    <ul class="demo-navigation">
+        <li class="demo-navigation__item">
+            <a class="demo-navigation__link" href="usage.html">Usage</a>
+            <!--<ul class="demo-sub-navigation">-->
+                <!--<li class="demo-sub-navigation__item">-->
+                    <!--<a class="demo-sub-navigation__link" href="#usage-installation">-->
+                        <!--Installation-->
+                    <!--</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        </li>
+        <li class="demo-navigation__item demo-navigation__item_closed">
+            <a class="demo-navigation__link" href="base.html">
+                <svg class="demo-navigation__icon demo-navigation__icon_type_down">
+                    <use xlink:href="#corner-down"></use>
+                </svg>
+                <svg class="demo-navigation__icon demo-navigation__icon_type_up">
+                    <use xlink:href="#corner-up"></use>
+                </svg>
+                Base styles
+            </a>
+            <ul class="demo-sub-navigation demo-sub-navigation_closed">
+                <li class="demo-sub-navigation__item">
+                    <a class="demo-sub-navigation__link" href="base.html#typography">
+                        Typography
+                    </a>
+                </li>
+                <li class="demo-sub-navigation__item">
+                    <a class="demo-sub-navigation__link" href="base.html#code">
+                        Code
+                    </a>
+                </li>
+                <li class="demo-sub-navigation__item">
+                    <a class="demo-sub-navigation__link" href="base.html#tables">
+                        Tables
+                    </a>
+                </li>
+                <li class="demo-sub-navigation__item">
+                    <a class="demo-sub-navigation__link" href="base.html#form-elements">
+                        Form elements
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="demo-navigation__item demo-navigation__item_closed">
+            <a class="demo-navigation__link" href="components.html">
+                <svg class="demo-navigation__icon demo-navigation__icon_type_down">
+                    <use xlink:href="#corner-down"></use>
+                </svg>
+                <svg class="demo-navigation__icon demo-navigation__icon_type_up">
+                    <use xlink:href="#corner-up"></use>
+                </svg>
+                Components
+            </a>
+            <ul class="demo-sub-navigation demo-sub-navigation_closed">
+                <li class="demo-sub-navigation__item">
+                    <a href="components.html#grid" class="demo-sub-navigation__link">Grid</a>
+                </li>
+            </ul>
+        </li>
+        <li class="demo-navigation__item">
+            <a class="demo-navigation__link" href="blocks.html">Blocks</a>
+        </li>
+    </ul>
+</nav>
+<div class="demo-sidebar-overlay"></div>
+<main class="demo-content">
+    <div class="demo-content__width-container">
+        <button class="demo-sidebar-toggler">
+            <svg class="demo-sidebar-toggler__icon">
+                <use xlink:href="#burger"></use>
+            </svg>
+        </button>
+        
+<section class="demo-section" id="demo-typography">
+    <h1 class="demo-section__header"  id="typography">Typography</h1>
+    <h3 class="demo-section__subheader">Headings</h3>
+    <div class="demo-example">
+        <h1>h1. Heading</h1>
+        <h2>h2. Heading</h2>
+        <h3>h3. Heading</h3>
+        <h4>h4. Heading</h4>
+        <h5>h5. Heading</h5>
+        <h6>h6. Heading</h6>
+    </div>
+    <hr/>
+    <h3 class="demo-section__subheader">Marked text aligned to the center</h3>
+    <div class="demo-example">
+        <p class="text text_align_center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eius est facere labore repudiandae. Aliquam aspernatur, <mark>consequuntur corporis deserunt</mark> dolor doloremque eaque, id inventore laudantium nam, neque nulla tenetur? Tempore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consectetur corporis cumque dolorem enim id ipsa nihil non numquam officia praesentium quae, quis reprehenderit repudiandae sapiente unde! Id, placeat.</p>
+    </div>
+    <h3 class="demo-section__subheader">Deleted text aligned to the right</h3>
+    <div class="demo-example">
+        <del class="text text_align_right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias, aliquam consectetur doloribus excepturi harum illo labore modi mollitia nam, pariatur perferendis perspiciatis quae repellendus sapiente totam voluptates! Aspernatur, quisquam!</del>
+    </div>
+    <h3 class="demo-section__subheader">Strikethrough text</h3>
+    <div class="demo-example">
+        <s>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cumque debitis delectus exercitationem ipsam iste libero modi, molestias nemo nisi nostrum optio porro, provident quos sint soluta, veniam vero voluptatibus.</s>
+    </div>
+    <h3 class="demo-section__subheader">Underlined text</h3>
+    <div class="demo-example">
+        <ins>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur autem dolorem eos eum, ex ipsum iure magnam maiores, molestiae nesciunt officiis, quaerat quibusdam repellat rerum sed similique totam ullam?</ins>
+    </div>
+    <h3 class="demo-section__subheader">Small text</h3>
+    <div class="demo-example">
+        <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur distinctio, ducimus eveniet libero molestias nisi? Consequuntur, cupiditate error expedita iure, nihil omnis possimus quam reprehenderit vel vero, voluptas voluptate.</small>
+    </div>
+    <h3 class="demo-section__subheader">Bold</h3>
+    <div class="demo-example">
+        <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum ea enim nostrum odio officia optio quibusdam sed. A delectus doloremque error iure nihil officia quo repellendus similique ullam vitae!</strong>
+    </div>
+    <h3 class="demo-section__subheader">Italics</h3>
+    <div class="demo-example">
+        <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad libero magni minus mollitia pariatur similique temporibus. Eveniet facilis modi numquam, odit qui repellat repudiandae vel. Animi ducimus ipsum modi similique.</em>
+    </div>
+    <h3 class="demo-section__subheader">Addresses</h3>
+    <div class="demo-example">
+        <address>
+            <strong>Some company, Inc.</strong>
+            <br>
+            123 Main ave, Suite 456
+            <br>
+            Los Angeles, CA 78914
+            <br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+        </address>
+    </div>
+    <h3 class="demo-section__subheader">Blockquotes</h3>
+    <div class="demo-example">
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+    </div>
+    <h2>Lists</h2>
+    <h3 class="demo-section__subheader">Unordered</h3>
+    <div class="demo-example">
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+            <li>Facilisis in pretium nisl aliquet</li>
+            <li>Nulla volutpat aliquam velit
+                <ul>
+                    <li>Phasellus iaculis neque</li>
+                    <li>Purus sodales ultricies</li>
+                    <li>Vestibulum laoreet porttitor sem</li>
+                    <li>Ac tristique libero volutpat at</li>
+                </ul>
+            </li>
+            <li>Faucibus porta lacus fringilla vel</li>
+            <li>Aenean sit amet erat nunc</li>
+            <li>Eget porttitor lorem</li>
+        </ul>
+    </div>
+    <h3 class="demo-section__subheader">Ordered</h3>
+    <div class="demo-example">
+        <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+            <li>Facilisis in pretium nisl aliquet</li>
+            <li>Nulla volutpat aliquam velit</li>
+            <li>Faucibus porta lacus fringilla vel</li>
+            <li>Aenean sit amet erat nunc</li>
+            <li>Eget porttitor lorem</li>
+        </ol>
+    </div>
+    <h3 class="demo-section__subheader">Description</h3>
+    <div class="demo-example">
+        <dl>
+            <dt>Description lists</dt>
+            <dd>A description list is perfect for defining terms.</dd>
+            <dt>Euismod</dt>
+            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+            <dt>Malesuada porta</dt>
+            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+        </dl>
+    </div>
+</section>
+<section class="demo-section" id="demo-code">
+    <h1 class="demo-section__header" id="code">Code</h1>
+    <h3 class="demo-section__subheader">Inline</h3>
+    <div class="demo-example">
+        <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+    </div>
+    <h3 class="demo-section__subheader">User input</h3>
+    <div class="demo-example">
+        <p>
+            To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+            To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+        </p>
+    </div>
+    <h3 class="demo-section__subheader">Variables</h3>
+    <div class="demo-example">
+        <p>
+            <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+        </p>
+    </div>
+    <h3 class="demo-section__subheader">Basic block</h3>
+    <div class="demo-example">
+        <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+    </div>
+    <div class="demo-example">
+        <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;</code></pre>
+    </div>
+    <h3 class="demo-section__subheader">Sample output</h3>
+    <div class="demo-example">
+        <p>
+            <samp>This text is meant to be treated as sample output from a computer program.</samp>
+        </p>
+    </div>
+</section>
+<section class="demo-section" id="demo-tables">
+    <h1 class="demo-section__header" id="tables">Tables</h1>
+    <table>
+        <caption>Optional table caption.</caption>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Country</th>
+            <th>Region</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Feb 5, 2015</td>
+            <td>Guernsey</td>
+            <td>NI</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Oct 5, 2014</td>
+            <td>Saint Martin</td>
+            <td>SI</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Mar 27, 2014</td>
+            <td>Bulgaria</td>
+            <td>SI</td>
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+<section class="demo-section" id="demo-forms">
+    <h1 class="demo-section__header" id="form-elements">Form elements</h1>
+    <div class="demo-example">
+        <fieldset>
+            <legend>A compact inline form</legend>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password" disabled>
+            <label for="inline-remember">
+                <input id="inline-remember" type="checkbox"> Remember me
+            </label>
+            <button type="submit" class="button button_style_primary">Sign in</button>
+            <button type="submit" class="button">Cancel</button>
+        </fieldset>
+    </div>
+    <h3 class="demo-section__subheader"></h3>
+    <div class="demo-example">
+        <fieldset>
+            <legend>Form in grid</legend>
+            <div class="grid">
+                <div class="grid__row grid__row_offset">
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-3">
+                        <div class="text text_align_right">
+                            <label class="text_align_right" for="inform-email">Email</label>
+                        </div>
+                    </div>
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-9">
+                        <input id="inform-email" type="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="grid__row grid__row_offset">
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-3">
+                        <div class="text text_align_right">
+                            <label class="text_align_right" for="inform-password">Password</label>
+                        </div>
+                    </div>
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-9">
+                        <input id="inform-password" type="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="grid__row grid__row_offset">
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-3">
+                        <div class="text text_align_right">
+                            <label for="inform-state">State</label>
+                        </div>
+                    </div>
+                    <div class="grid__col grid__col_sm-12 grid__col_md-9">
+                        <select id="inform-state">
+                            <option>AL</option>
+                            <option>CA</option>
+                            <option>IL</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid__row grid__row_offset">
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-9 grid__col_offset_md-3">
+                        <label for="inform-remember">
+                            <input id="inform-remember" type="checkbox"> Remember me
+                        </label>
+                    </div>
+                </div>
+                <div class="grid__row grid__row_offset">
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-9 grid__col_offset_md-3">
+                        <button type="submit" class="button button_style_primary">Sign in</button>
+                        <button type="submit" class="button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</section>
+
+        <footer class="demo-footer">
+            <p class="demo-footer__github-buttons">
+                <iframe src="http://ghbtns.com/github-btn.html?user=PSDCoder&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=PSDCoder&repo=scss-base-set&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+            </p>
+            <p class="demo-footer__created">
+                Created by <a href="https://github.com/PSDCoder" target="_blank">Pavel Grinchenko</a>
+            </p>
+        </footer>
+    </div>
+</main>
+<script src="assets/demo.js"></script>
+<!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24754154 = new Ya.Metrika({id:24754154, webvisor:true, clickmap:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/24754154" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

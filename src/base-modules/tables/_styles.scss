@@ -1,0 +1,38 @@
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $tables-margins-vert;
+  background-color: $tables-bg;
+}
+
+caption {
+  padding-top: $tables-caption-padding;
+  padding-bottom: $tables-caption-padding;
+  color: $tables-caption-color;
+  text-align: left;
+}
+
+thead {
+  border-bottom: $tables-head-border-bottom-width solid $tables-border-color;
+}
+
+th {
+  border-top: 0;
+  padding: $tables-head-padding-vert $tables-head-padding-hor if($tables-head-padding-vert == 0, 0, $tables-head-padding-vert - $tables-head-border-bottom-width);
+  line-height: if($tables-head-padding-vert == 0, $tables-head-line-height - $tables-head-border-bottom-width, $tables-head-line-height);
+  text-align: left;
+  color: $tables-head-color;
+}
+
+td {
+  border-bottom: $tables-cell-border-top-width solid $tables-border-color;
+  padding: $tables-cell-padding-vert $tables-cell-padding-hor if($tables-cell-padding-vert == 0, 0, $tables-cell-padding-vert - $tables-cell-border-top-width);
+  line-height: if($tables-cell-padding-vert == 0, $tables-cell-line-height - $tables-cell-border-top-width, $tables-cell-line-height);
+  vertical-align: top;
+}
+
+tr:last-child > td {
+  border-bottom: 0;
+  padding-bottom: $tables-cell-padding-vert;
+  line-height: $tables-cell-line-height;
+}

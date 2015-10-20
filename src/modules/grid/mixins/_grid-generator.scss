@@ -1,0 +1,12 @@
+@mixin grid-generator() {
+  @include grid();
+
+  //generate breakpoints
+  @each $breakpoint-name, $breakpoint-size in $grid-breakpoints {
+    @include grid-breakpoint-generator($breakpoint-name, $breakpoint-size)
+  }
+
+  //generate base
+  @include grid-breakpoint-generator();
+}
+

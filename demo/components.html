@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>scss-base-set - Main page</title>
+    <title>scss-base-set - Base styles</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../dist/main.css"/>
     <link rel="stylesheet" href="assets/demo.css"/>
@@ -119,61 +119,149 @@
             </svg>
         </button>
         
-<section class="demo-section demo-section-index-about">
-    It's basic boilerplate for new projects <br>
-    and it's developed in <a href="https://bem.info" target="_blank">BEM</a> notation. <br>
-    Code of project you can find on <a href="https://github.com/PSDCoder/scss-base-set" class="button button_size_large button_style_primary">github</a>
-</section>
-<section class="demo-section demo-index-parts">
+<section class="demo-section demo-section-componenets-grid">
+    <h1 class="demo-section__header" id="grid">Grid</h1>
+    <p>
+        This grid is like grid from bootstrap, but in BEM-notation.
+        <br/>
+        Description:
+    </p>
+    <ul>
+        <li>Grid has 12 columns</li>
+        <li>Container class: <code>.grid</code></li>
+        <li>Row class: <code>.grid__row</code></li>
+        <li>Column class: <code>grid__col</code></li>
+        <li>Column size class: <code>.grid__col_size_%breakpoint%-%size%</code></li>
+        <li>Column offset class: <code>.grid__col_offset_%breakpoint%-%size%</code></li>
+        <li>Column pull class: <code>.grid__col_pull_%breakpoint%-%size%</code></li>
+        <li>Column push class: <code>.grid__col_push_%breakpoint%-%size%</code></li>
+    </ul>
+    <h2 class="demo-section__subheader">Stacked columns</h2>
     <div class="grid">
-        <div class="grid__row">
-            <div class="grid__col grid__col_size_6 grid_col_size_md-12">
-                <h3>Base styles</h3>
-                <span>It contains base styles:</span>
-                <ul>
-                    <li>Common styles<br/>(i.e. global <code>box-sizing: border-box;</code>)</li>
-                    <li>
-                        <a href="base.html#typography">Typography styles</a>
-                    </li>
-                    <li>
-                        <a href="base.html#code">Code styles</a>
-                    </li>
-                    <li>
-                        <a href="base.html#tables">Tables styles</a>
-                    </li>
-                    <li>
-                        <a href="base.html#form-elements">Form elements</a>
-                    </li>
-                </ul>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
             </div>
-            <div class="grid__col grid__col_size_6 grid_col_size_md-12">
-                <h3>Modules</h3>
-                <p>This set includes next modules:</p>
-                <ul>
-                    <li>Grid <br/> (it's like bootstrap grid, but in bem-notation)</li>
-                </ul>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
             </div>
         </div>
-        <div class="grid__row">
-            <div class="grid__col grid__col_size_6 grid_col_size_md-12">
-                <h3>Blocks</h3>
-                <p>This section under development</p>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-8">
+                grid__col grid__col_size_md-8
             </div>
-            <div class="grid__col grid__col_size_6 grid_col_size_md-12">
-                <h3>Useful things</h3>
-                <p>
-                    Set contains animations from <a href="https://daneden.github.io/animate.css/">Animate.css</a>,
-                    bunch of scss functions and many useful scss-mixins, for example:
-                </p>
-                <ul>
-                    <li>Mixin for calculating vertical rhythm</li>
-                    <li>Mixin for set values of states by sass map</li>
-                    <li>And many others...</li>
-                </ul>
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+        </div>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+        </div>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-6">
+                grid__col grid__col_size_md-6
+            </div>
+            <div class="grid__col grid__col_size_md-6">
+                grid__col grid__col_size_md-6
+            </div>
+        </div>
+    </div>
+    <h2 class="demo-section__subheader">Offseting columns</h2>
+    <div class="grid">
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+            <div class="grid__col grid__col_size_md-4 grid__col_offset_md-4">
+                grid__col grid__col_size_md-4 grid__col_offset_md-4
+            </div>
+        </div>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-3 grid__col_offset_md-3">
+                grid__col grid__col_size_md-3 grid__col_offset_md-3
+            </div>
+            <div class="grid__col grid__col_size_md-3 grid__col_offset_md-3">
+                grid__col grid__col_size_md-3 grid__col_offset_md-3
+            </div>
+        </div>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-6 grid__col_offset_md-3 grid__col_offset_lg-6">
+                grid__col grid__col_size_md-6 grid__col_offset_md-3 grid__col_offset_lg-6
+            </div>
+        </div>
+    </div>
+    <h2 class="demo-section__subheader">Ordering columns</h2>
+    <div class="grid">
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col grid__col_size_md-9 grid__col_push_md-3">
+                grid__col grid__col grid__col_size_md-9 grid__col_push_md-3
+            </div>
+            <div class="grid__col grid__col grid__col_size_md-3 grid__col_pull_md-9">
+                grid__col grid__col grid__col_size_md-3 grid__col_pull_md-9
+            </div>
+        </div>
+    </div>
+    <h2 class="demo-section__subheader">Fixed width grid</h2>
+    <div class="grid grid_fixed">
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+        </div>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-8">
+                grid__col grid__col_size_md-8
+            </div>
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+        </div>
+    </div>
+    <h2 class="demo-section__subheader">Nesting columns && fixed width grid</h2>
+    <div class="grid grid_fixed">
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-8">
+                <div class="grid">
+                    <div class="grid__row grid__row_offset">
+                        <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                            grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+                        </div>
+                        <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_md-only-offset-4 grid__col_size_lg-6">
+                            grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_md-only-offset-4 grid__col_size_lg-6
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
             </div>
         </div>
     </div>
 </section>
+
 
         <footer class="demo-footer">
             <p class="demo-footer__github-buttons">

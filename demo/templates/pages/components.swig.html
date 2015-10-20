@@ -1,0 +1,149 @@
+{% extends '../layout.swig.html' %}
+
+{% block title %}{% parent %} - Base styles{% endblock %}
+
+{% block content %}
+<section class="demo-section demo-section-componenets-grid">
+    <h1 class="demo-section__header" id="grid">Grid</h1>
+    <p>
+        This grid is like grid from bootstrap, but in BEM-notation.
+        <br/>
+        Description:
+    </p>
+    <ul>
+        <li>Grid has 12 columns</li>
+        <li>Container class: <code>.grid</code></li>
+        <li>Row class: <code>.grid__row</code></li>
+        <li>Column class: <code>grid__col</code></li>
+        <li>Column size class: <code>.grid__col_size_%breakpoint%-%size%</code></li>
+        <li>Column offset class: <code>.grid__col_offset_%breakpoint%-%size%</code></li>
+        <li>Column pull class: <code>.grid__col_pull_%breakpoint%-%size%</code></li>
+        <li>Column push class: <code>.grid__col_push_%breakpoint%-%size%</code></li>
+    </ul>
+    <h2 class="demo-section__subheader">Stacked columns</h2>
+    <div class="grid">
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+        </div>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-8">
+                grid__col grid__col_size_md-8
+            </div>
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+        </div>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+        </div>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-6">
+                grid__col grid__col_size_md-6
+            </div>
+            <div class="grid__col grid__col_size_md-6">
+                grid__col grid__col_size_md-6
+            </div>
+        </div>
+    </div>
+    <h2 class="demo-section__subheader">Offseting columns</h2>
+    <div class="grid">
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+            <div class="grid__col grid__col_size_md-4 grid__col_offset_md-4">
+                grid__col grid__col_size_md-4 grid__col_offset_md-4
+            </div>
+        </div>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-3 grid__col_offset_md-3">
+                grid__col grid__col_size_md-3 grid__col_offset_md-3
+            </div>
+            <div class="grid__col grid__col_size_md-3 grid__col_offset_md-3">
+                grid__col grid__col_size_md-3 grid__col_offset_md-3
+            </div>
+        </div>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-6 grid__col_offset_md-3 grid__col_offset_lg-6">
+                grid__col grid__col_size_md-6 grid__col_offset_md-3 grid__col_offset_lg-6
+            </div>
+        </div>
+    </div>
+    <h2 class="demo-section__subheader">Ordering columns</h2>
+    <div class="grid">
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col grid__col_size_md-9 grid__col_push_md-3">
+                grid__col grid__col grid__col_size_md-9 grid__col_push_md-3
+            </div>
+            <div class="grid__col grid__col grid__col_size_md-3 grid__col_pull_md-9">
+                grid__col grid__col grid__col_size_md-3 grid__col_pull_md-9
+            </div>
+        </div>
+    </div>
+    <h2 class="demo-section__subheader">Fixed width grid</h2>
+    <div class="grid grid_fixed">
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+            <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+            </div>
+        </div>
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-8">
+                grid__col grid__col_size_md-8
+            </div>
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+        </div>
+    </div>
+    <h2 class="demo-section__subheader">Nesting columns && fixed width grid</h2>
+    <div class="grid grid_fixed">
+        <div class="grid__row grid__row_offset">
+            <div class="grid__col grid__col_size_md-8">
+                <div class="grid">
+                    <div class="grid__row grid__row_offset">
+                        <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6">
+                            grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_size_lg-6
+                        </div>
+                        <div class="grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_md-only-offset-4 grid__col_size_lg-6">
+                            grid__col grid__col_size_sm-12 grid__col_size_md-4 grid__col_md-only-offset-4 grid__col_size_lg-6
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid__col grid__col_size_md-4">
+                grid__col grid__col_size_md-4
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+
+  font-size: $global-font-root-size;
+  line-height: $global-font-root-line-height;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  outline: none; // You need implement own focus styles
+}
+
+body {
+  font-family: $global-font-family-main;
+  color: $global-color-text-main;
+  background-color: $global-bg-main;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width:100%;
+  height:auto;
+
+  vertical-align: middle;
+}
+
+hr {
+  $hr-width-half: $common-hr-border-width / 2;
+
+  margin-top: $common-hr-margins-vert - floor($hr-width-half);
+  margin-bottom: $common-hr-margins-vert - ceil($hr-width-half);
+  border: 0;
+  border-top: $common-hr-border-width solid $common-hr-border-color;
+}
+
+a {
+  @include states-values('color', $common-link-colors);
+  @include states-values('text-decoration', $common-link-decorations);
+}

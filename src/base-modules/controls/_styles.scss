@@ -1,0 +1,139 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  @include states-values('background-color', $controls-button-bg);
+  @include states-values('border-color', $controls-border-color);
+
+  display: inline-block;
+  height: $controls-height;
+  padding-left: $controls-paddings-hor;
+  padding-right: $controls-paddings-hor;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: top;
+  touch-action: manipulation;
+  background-image: none;
+  border: $controls-button-border-width solid transparent;
+  white-space: nowrap;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+
+input,
+button,
+select,
+textarea {
+  @include states-values('border-color', $controls-border-color);
+
+  border-width: $controls-border-width;
+  border-style: solid;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  margin: 0 0 $controls-legend-margins-vert 0;
+  padding: 0;
+  font-size: $controls-legend-font-size;
+  line-height: $controls-legend-line-height - $controls-legend-border-width;
+  color: $legend-color;
+  border: 0;
+  border-bottom: $controls-legend-border-width solid $controls-legend-border-color
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 $controls-label-margins-vert 0;
+  max-width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  @include states-values('background-color', $controls-inputs-bg);
+
+  height: $controls-height;
+  padding-left: $controls-paddings-hor;
+  padding-right: $controls-paddings-hor;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  line-height: normal;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+select {
+  @include states-values('background-color', $controls-inputs-bg);
+  height: $controls-height;
+  padding-left: $controls-paddings-hor;
+  padding-right: $controls-paddings-hor;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+output {
+  display: block;
+  padding-top: ($main-padding-base-vertical + 1);
+  font-size: $typography-font-size-base;
+  line-height: $typography-line-height-base;
+  color: $input-color;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+}
