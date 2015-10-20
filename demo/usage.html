@@ -42,7 +42,7 @@
             <use xlink:href="#grid-on"></use>
         </svg>
         <span class="demo-vertical-rhythm-toggler__text">
-            Guidelines
+            Vertical rhythm
         </span>
     </button>
     <ul class="demo-navigation">
@@ -68,29 +68,42 @@
             </a>
             <ul class="demo-sub-navigation demo-sub-navigation_closed">
                 <li class="demo-sub-navigation__item">
-                    <a class="demo-sub-navigation__link" href="base.html#base-typography">
+                    <a class="demo-sub-navigation__link" href="base.html#typography">
                         Typography
                     </a>
                 </li>
                 <li class="demo-sub-navigation__item">
-                    <a class="demo-sub-navigation__link" href="base.html#base-code">
+                    <a class="demo-sub-navigation__link" href="base.html#code">
                         Code
                     </a>
                 </li>
                 <li class="demo-sub-navigation__item">
-                    <a class="demo-sub-navigation__link" href="base.html#base-tables">
+                    <a class="demo-sub-navigation__link" href="base.html#tables">
                         Tables
                     </a>
                 </li>
                 <li class="demo-sub-navigation__item">
-                    <a class="demo-sub-navigation__link" href="base.html#base-form-elements">
+                    <a class="demo-sub-navigation__link" href="base.html#form-elements">
                         Form elements
                     </a>
                 </li>
             </ul>
         </li>
-        <li class="demo-navigation__item">
-            <a class="demo-navigation__link" href="components.html">Components</a>
+        <li class="demo-navigation__item demo-navigation__item_closed">
+            <a class="demo-navigation__link" href="components.html">
+                <svg class="demo-navigation__icon demo-navigation__icon_type_down">
+                    <use xlink:href="#corner-down"></use>
+                </svg>
+                <svg class="demo-navigation__icon demo-navigation__icon_type_up">
+                    <use xlink:href="#corner-up"></use>
+                </svg>
+                Components
+            </a>
+            <ul class="demo-sub-navigation demo-sub-navigation_closed">
+                <li class="demo-sub-navigation__item">
+                    <a href="components.html#grid" class="demo-sub-navigation__link">Grid</a>
+                </li>
+            </ul>
         </li>
         <li class="demo-navigation__item">
             <a class="demo-navigation__link" href="blocks.html">Blocks</a>
@@ -106,7 +119,18 @@
             </svg>
         </button>
         
-<h1>Usage</h1>
+<section class="demo-section">
+    <h1 class="demo-section__header">Usage</h1>
+    <p>
+        You can simply load dist css file from <code>dist</code> folder or you can build only necessary components.
+    </p>
+    <p>
+        For that you should include components in your main scss file like in <code>/src/main.scss</code> before your app code.
+    </p>
+    <p>
+        Also you can redefine variables. List of variables you can find in <code>/src/_variables.scss</code>. And modules can has own variables list based on global variables - you can find it in modules folder.
+    </p>
+</section>
 
         <footer class="demo-footer">
             <p class="demo-footer__github-buttons">

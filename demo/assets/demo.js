@@ -130,6 +130,8 @@ function highlightCurrentPage() {
             submenuItems = submenu && submenu.querySelectorAll('.' + NAVIGATION_SUBITEM_CLASS);
 
             item.classList.add(NAVIGATION_ITEM_CLASS + ACTIVE_SUFFIX);
+            item.classList.add(NAVIGATION_ITEM_CLASS + OPENED_SUFFIX);
+            item.classList.remove(NAVIGATION_ITEM_CLASS + CLOSED_SUFFIX);
 
             if (link) {
                 link.classList.add(NAVIGATION_LINK_CLASS + OPENED_SUFFIX);
@@ -154,7 +156,9 @@ function highlightCurrentPage() {
                 }
             }
         } else {
-            item.classList.remove(NAVIGATION_ITEM_CLASS + ACTIVE_SUFFIX);
+            if (item) {
+                item.classList.remove(NAVIGATION_ITEM_CLASS + ACTIVE_SUFFIX);
+            }
         }
     }
 }

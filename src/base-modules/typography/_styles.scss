@@ -127,7 +127,7 @@ code {
   font-size: $typography-code-font-size;
   color: $typography-code-color;
   background-color: $typography-code-bg-color;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 kbd {
@@ -136,7 +136,7 @@ kbd {
   color: $typography-kbd-color;
   background-color: $typography-kbd-bg-color;
   border-radius: $global-border-radius;
-  vertical-align: middle;
+  vertical-align: top;
 
   kbd {
     padding: 0;

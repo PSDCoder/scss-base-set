@@ -3,5 +3,247 @@
 {% block title %}{% parent %} - Base styles{% endblock %}
 
 {% block content %}
-<h1>TYPOGRAPHY</h1>
+<section class="demo-section" id="demo-typography">
+    <h1 class="demo-section__header"  id="typography">Typography</h1>
+    <h3 class="demo-section__subheader">Headings</h3>
+    <div class="demo-example">
+        <h1>h1. Heading</h1>
+        <h2>h2. Heading</h2>
+        <h3>h3. Heading</h3>
+        <h4>h4. Heading</h4>
+        <h5>h5. Heading</h5>
+        <h6>h6. Heading</h6>
+    </div>
+    <hr/>
+    <h3 class="demo-section__subheader">Marked text aligned to the center</h3>
+    <div class="demo-example">
+        <p class="text text_align_center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eius est facere labore repudiandae. Aliquam aspernatur, <mark>consequuntur corporis deserunt</mark> dolor doloremque eaque, id inventore laudantium nam, neque nulla tenetur? Tempore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consectetur corporis cumque dolorem enim id ipsa nihil non numquam officia praesentium quae, quis reprehenderit repudiandae sapiente unde! Id, placeat.</p>
+    </div>
+    <h3 class="demo-section__subheader">Deleted text aligned to the right</h3>
+    <div class="demo-example">
+        <del class="text text_align_right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias, aliquam consectetur doloribus excepturi harum illo labore modi mollitia nam, pariatur perferendis perspiciatis quae repellendus sapiente totam voluptates! Aspernatur, quisquam!</del>
+    </div>
+    <h3 class="demo-section__subheader">Strikethrough text</h3>
+    <div class="demo-example">
+        <s>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cumque debitis delectus exercitationem ipsam iste libero modi, molestias nemo nisi nostrum optio porro, provident quos sint soluta, veniam vero voluptatibus.</s>
+    </div>
+    <h3 class="demo-section__subheader">Underlined text</h3>
+    <div class="demo-example">
+        <ins>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur autem dolorem eos eum, ex ipsum iure magnam maiores, molestiae nesciunt officiis, quaerat quibusdam repellat rerum sed similique totam ullam?</ins>
+    </div>
+    <h3 class="demo-section__subheader">Small text</h3>
+    <div class="demo-example">
+        <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur distinctio, ducimus eveniet libero molestias nisi? Consequuntur, cupiditate error expedita iure, nihil omnis possimus quam reprehenderit vel vero, voluptas voluptate.</small>
+    </div>
+    <h3 class="demo-section__subheader">Bold</h3>
+    <div class="demo-example">
+        <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum ea enim nostrum odio officia optio quibusdam sed. A delectus doloremque error iure nihil officia quo repellendus similique ullam vitae!</strong>
+    </div>
+    <h3 class="demo-section__subheader">Italics</h3>
+    <div class="demo-example">
+        <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad libero magni minus mollitia pariatur similique temporibus. Eveniet facilis modi numquam, odit qui repellat repudiandae vel. Animi ducimus ipsum modi similique.</em>
+    </div>
+    <h3 class="demo-section__subheader">Addresses</h3>
+    <div class="demo-example">
+        <address>
+            <strong>Some company, Inc.</strong>
+            <br>
+            123 Main ave, Suite 456
+            <br>
+            Los Angeles, CA 78914
+            <br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+        </address>
+    </div>
+    <h3 class="demo-section__subheader">Blockquotes</h3>
+    <div class="demo-example">
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+    </div>
+    <h2>Lists</h2>
+    <h3 class="demo-section__subheader">Unordered</h3>
+    <div class="demo-example">
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+            <li>Facilisis in pretium nisl aliquet</li>
+            <li>Nulla volutpat aliquam velit
+                <ul>
+                    <li>Phasellus iaculis neque</li>
+                    <li>Purus sodales ultricies</li>
+                    <li>Vestibulum laoreet porttitor sem</li>
+                    <li>Ac tristique libero volutpat at</li>
+                </ul>
+            </li>
+            <li>Faucibus porta lacus fringilla vel</li>
+            <li>Aenean sit amet erat nunc</li>
+            <li>Eget porttitor lorem</li>
+        </ul>
+    </div>
+    <h3 class="demo-section__subheader">Ordered</h3>
+    <div class="demo-example">
+        <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+            <li>Facilisis in pretium nisl aliquet</li>
+            <li>Nulla volutpat aliquam velit</li>
+            <li>Faucibus porta lacus fringilla vel</li>
+            <li>Aenean sit amet erat nunc</li>
+            <li>Eget porttitor lorem</li>
+        </ol>
+    </div>
+    <h3 class="demo-section__subheader">Description</h3>
+    <div class="demo-example">
+        <dl>
+            <dt>Description lists</dt>
+            <dd>A description list is perfect for defining terms.</dd>
+            <dt>Euismod</dt>
+            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+            <dt>Malesuada porta</dt>
+            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+        </dl>
+    </div>
+</section>
+<section class="demo-section" id="demo-code">
+    <h1 class="demo-section__header" id="code">Code</h1>
+    <h3 class="demo-section__subheader">Inline</h3>
+    <div class="demo-example">
+        <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+    </div>
+    <h3 class="demo-section__subheader">User input</h3>
+    <div class="demo-example">
+        <p>
+            To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+            To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+        </p>
+    </div>
+    <h3 class="demo-section__subheader">Variables</h3>
+    <div class="demo-example">
+        <p>
+            <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+        </p>
+    </div>
+    <h3 class="demo-section__subheader">Basic block</h3>
+    <div class="demo-example">
+        <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+    </div>
+    <div class="demo-example">
+        <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;</code></pre>
+    </div>
+    <h3 class="demo-section__subheader">Sample output</h3>
+    <div class="demo-example">
+        <p>
+            <samp>This text is meant to be treated as sample output from a computer program.</samp>
+        </p>
+    </div>
+</section>
+<section class="demo-section" id="demo-tables">
+    <h1 class="demo-section__header" id="tables">Tables</h1>
+    <table>
+        <caption>Optional table caption.</caption>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Country</th>
+            <th>Region</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Feb 5, 2015</td>
+            <td>Guernsey</td>
+            <td>NI</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Oct 5, 2014</td>
+            <td>Saint Martin</td>
+            <td>SI</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Mar 27, 2014</td>
+            <td>Bulgaria</td>
+            <td>SI</td>
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+<section class="demo-section" id="demo-forms">
+    <h1 class="demo-section__header" id="form-elements">Form elements</h1>
+    <div class="demo-example">
+        <fieldset>
+            <legend>A compact inline form</legend>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password" disabled>
+            <label for="inline-remember">
+                <input id="inline-remember" type="checkbox"> Remember me
+            </label>
+            <button type="submit" class="button button_style_primary">Sign in</button>
+            <button type="submit" class="button">Cancel</button>
+        </fieldset>
+    </div>
+    <h3 class="demo-section__subheader"></h3>
+    <div class="demo-example">
+        <fieldset>
+            <legend>Form in grid</legend>
+            <div class="grid">
+                <div class="grid__row grid__row_offset">
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-3">
+                        <div class="text text_align_right">
+                            <label class="text_align_right" for="inform-email">Email</label>
+                        </div>
+                    </div>
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-9">
+                        <input id="inform-email" type="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="grid__row grid__row_offset">
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-3">
+                        <div class="text text_align_right">
+                            <label class="text_align_right" for="inform-password">Password</label>
+                        </div>
+                    </div>
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-9">
+                        <input id="inform-password" type="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="grid__row grid__row_offset">
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-3">
+                        <div class="text text_align_right">
+                            <label for="inform-state">State</label>
+                        </div>
+                    </div>
+                    <div class="grid__col grid__col_sm-12 grid__col_md-9">
+                        <select id="inform-state">
+                            <option>AL</option>
+                            <option>CA</option>
+                            <option>IL</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid__row grid__row_offset">
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-9 grid__col_offset_md-3">
+                        <label for="inform-remember">
+                            <input id="inform-remember" type="checkbox"> Remember me
+                        </label>
+                    </div>
+                </div>
+                <div class="grid__row grid__row_offset">
+                    <div class="grid__col grid__col_size_sm-12 grid__col_size_md-9 grid__col_offset_md-3">
+                        <button type="submit" class="button button_style_primary">Sign in</button>
+                        <button type="submit" class="button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</section>
 {% endblock %}
