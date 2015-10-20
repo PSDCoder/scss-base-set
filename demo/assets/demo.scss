@@ -5,7 +5,8 @@
 $guideline-color: rgba(0, 255, 255, 0.5);
 $sidebar-color: #f1ffff;
 $sidebar-bg: #434851;
-$sidebar-bg-active: tint($sidebar-bg, 10%);
+$sidebar-bg-active: #22a3a8;
+$sidebar-sub-bg-active: tint($sidebar-bg, 15%);
 $sidebar-width: 220px;
 $z-indexes: (
   guidelines: 0,
@@ -22,6 +23,15 @@ $z-indexes: (
     focus: shade($base-color, 10%),
     active: shade($base-color, 20%)
   )
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
 }
 
 .svg-sprite {
@@ -186,8 +196,8 @@ $z-indexes: (
   }
 
   &_disabled {
-    @include states-values('background-color', calc-colors(shade($sidebar-bg, 15%)));
-    @include states-values('border-color', calc-colors(shade($sidebar-bg, 15%)));
+    @include states-values('background-color', calc-colors(shade($guideline-color, 20%)));
+    @include states-values('border-color', calc-colors(shade($guideline-color, 20%)));
 
     .demo-vertical-rhythm-toggler__icon_type_on {
       display: none;
@@ -206,15 +216,16 @@ $z-indexes: (
     line-height: rhythm(2);
 
     &_active .demo-navigation__link {
-      background-color: $sidebar-bg-active;
+      @include states-values('color', (all: $sidebar-color));
+      @include states-values('background-color', calc-colors($sidebar-bg-active));
     }
 
-    &_closed .demo-navigation__icon_type_up {
-      display: none;
+    &_opened .demo-navigation__icon_type_up {
+      display: inline-block;
     }
 
-    &_opened .demo-navigation__icon_type_down {
-      display: none;
+    &_closed .demo-navigation__icon_type_down {
+      display: inline-block;
     }
   }
 
@@ -228,10 +239,10 @@ $z-indexes: (
   }
 
   &__icon {
-    display: inline-block;
+    display: none;
     width: rhythm(1);
     height: rhythm(1);
-    fill: shade($sidebar-bg, 50%);
+    fill: $sidebar-color;
     vertical-align: top;
   }
 }
@@ -255,7 +266,8 @@ $z-indexes: (
     line-height: rhythm(2);
 
     &_active .demo-sub-navigation__link {
-      background-color: $sidebar-bg-active;
+      @include states-values('background-color', (all: $sidebar-sub-bg-active));
+      @include states-values('color', (all: $sidebar-color));
     }
   }
 
@@ -264,7 +276,7 @@ $z-indexes: (
     line-height: rhythm(1);
     padding: rhythm(0.5);
     @include states-values('color', calc-colors(shade($sidebar-color, 20%)));
-    @include states-values('background-color', calc-colors(shade($sidebar-bg, 20%)));
+    @include states-values('background-color', calc-colors(shade($sidebar-bg, 30%)));
     @include states-values('text-decoration', (all: none));
   }
 }

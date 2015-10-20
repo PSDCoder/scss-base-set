@@ -9,16 +9,20 @@ var GUIDELINES_CLASS = 'rhythm-guidelines';
 var SIDEBAR_CLASS = 'demo-sidebar';
 var SIDEBAR_TOGGLER_CLASS = 'demo-sidebar-toggler';
 var SIDEBAR_OVERLAY_CLASS = 'demo-sidebar-overlay';
+var GUIDELINES_LS_KEY = 'guidelines';
 
-var ENABLED_PREFIX = '_enabled';
-var DISABLED_PREFIX = '_disabled';
-var OPENED_PREFIX = '_opened';
-var CLOSED_PREFIX = '_closed';
-var ACTIVE_PREFIX = '_active';
+var ENABLED_SUFFIX = '_enabled';
+var DISABLED_SUFFIX = '_disabled';
+var OPENED_SUFFIX = '_opened';
+var CLOSED_SUFFIX = '_closed';
+var ACTIVE_SUFFIX = '_active';
 
 var sidebar = document.querySelector('.' + SIDEBAR_CLASS); //cache optimization
+var guidelinesToggler = document.querySelector('.' + GUIDELINES_TOGGLER_CLASS);
+var guidelines = document.querySelector('.' + GUIDELINES_CLASS);
 
 window.addEventListener('DOMContentLoaded', function () {
+    checkGuidelinesStorage(guidelinesToggler, guidelines);
     calcSidebarVisibility(sidebar);
     highlightCurrentPage();
     generateMaxHeightClasses();
@@ -26,6 +30,11 @@ window.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('resize', throttle(function () {
     calcSidebarVisibility(sidebar)
 }, 200));
+window.addEventListener('hashchange', function () {
+    console.log('hash changed', arguments[0]);
+    highlightCurrentPage();
+});
+
 
 // ==========================================================================
 // ============================ SIDEBAR TOGGLER =============================
@@ -34,28 +43,40 @@ var sidebarToggler = document.querySelector('.' + SIDEBAR_TOGGLER_CLASS);
 var sidebarOverlay = document.querySelector('.' + SIDEBAR_OVERLAY_CLASS);
 
 sidebarToggler.addEventListener('click', function () {
-    sidebar.classList.add(SIDEBAR_CLASS + OPENED_PREFIX);
-    sidebar.classList.remove(SIDEBAR_CLASS + CLOSED_PREFIX);
+    sidebar.classList.add(SIDEBAR_CLASS + OPENED_SUFFIX);
+    sidebar.classList.remove(SIDEBAR_CLASS + CLOSED_SUFFIX);
 });
 
 sidebarOverlay.addEventListener('click', function () {
-    sidebar.classList.add(SIDEBAR_CLASS + CLOSED_PREFIX);
-    sidebar.classList.remove(SIDEBAR_CLASS + OPENED_PREFIX);
+    sidebar.classList.add(SIDEBAR_CLASS + CLOSED_SUFFIX);
+    sidebar.classList.remove(SIDEBAR_CLASS + OPENED_SUFFIX);
 });
 
 
 // ==========================================================================
 // =============================== GUIDLINES ================================
 // ==========================================================================
-var guidelinesToggler = document.querySelector('.' + GUIDELINES_TOGGLER_CLASS);
-var guidelines = document.querySelector('.' + GUIDELINES_CLASS);
-
 guidelinesToggler.addEventListener('click', function () {
-    guidelinesToggler.classList.toggle(GUIDELINES_TOGGLER_CLASS + ENABLED_PREFIX);
-    guidelinesToggler.classList.toggle(GUIDELINES_TOGGLER_CLASS + DISABLED_PREFIX);
-    guidelines.classList.toggle(GUIDELINES_CLASS + ENABLED_PREFIX);
-    guidelines.classList.toggle(GUIDELINES_CLASS + DISABLED_PREFIX);
+    window.localStorage.setItem(
+        GUIDELINES_LS_KEY,
+        guidelinesToggler.classList.contains(GUIDELINES_TOGGLER_CLASS + DISABLED_SUFFIX)
+    );
+
+    guidelinesToggler.classList.toggle(GUIDELINES_TOGGLER_CLASS + ENABLED_SUFFIX);
+    guidelinesToggler.classList.toggle(GUIDELINES_TOGGLER_CLASS + DISABLED_SUFFIX);
+    guidelines.classList.toggle(GUIDELINES_CLASS + ENABLED_SUFFIX);
+    guidelines.classList.toggle(GUIDELINES_CLASS + DISABLED_SUFFIX);
 });
+
+function checkGuidelinesStorage(guidelinesToggler, guidelines) {
+    if (window.localStorage.getItem(GUIDELINES_LS_KEY) === 'true') {
+        guidelinesToggler.classList.add(GUIDELINES_TOGGLER_CLASS + ENABLED_SUFFIX);
+        guidelinesToggler.classList.remove(GUIDELINES_TOGGLER_CLASS + DISABLED_SUFFIX);
+        guidelines.classList.add(GUIDELINES_CLASS + ENABLED_SUFFIX);
+        guidelines.classList.remove(GUIDELINES_CLASS + DISABLED_SUFFIX);
+    }
+}
+
 
 // ==========================================================================
 // ========================== NESTED MENU TOGGLING ==========================
@@ -63,18 +84,18 @@ guidelinesToggler.addEventListener('click', function () {
 var menu = document.querySelector('.' + NAVIGATION_MENU_CLASS);
 
 menu.addEventListener('click', function (event) {
-    var anchor = closestNodeByClass(event.target, NAVIGATION_LINK_CLASS);
-    var item = anchor && closestNodeByClass(anchor, NAVIGATION_ITEM_CLASS);
+    var anchor = closestNode(event.target, '.' + NAVIGATION_LINK_CLASS);
+    var item = anchor && closestNode(anchor, '.' + NAVIGATION_ITEM_CLASS);
     var subMenu = item && item.querySelector('.' + NAVIGATION_SUBMENU_CLASS);
 
 
     if (anchor && item && subMenu) {
         event.preventDefault();
 
-        item.classList.toggle(NAVIGATION_ITEM_CLASS + CLOSED_PREFIX);
-        item.classList.toggle(NAVIGATION_ITEM_CLASS + OPENED_PREFIX);
-        subMenu.classList.toggle(NAVIGATION_SUBMENU_CLASS + CLOSED_PREFIX);
-        subMenu.classList.toggle(NAVIGATION_SUBMENU_CLASS + OPENED_PREFIX);
+        item.classList.toggle(NAVIGATION_ITEM_CLASS + CLOSED_SUFFIX);
+        item.classList.toggle(NAVIGATION_ITEM_CLASS + OPENED_SUFFIX);
+        subMenu.classList.toggle(NAVIGATION_SUBMENU_CLASS + CLOSED_SUFFIX);
+        subMenu.classList.toggle(NAVIGATION_SUBMENU_CLASS + OPENED_SUFFIX);
     }
 });
 
@@ -87,11 +108,11 @@ menu.addEventListener('click', function (event) {
 
 function calcSidebarVisibility(sidebar) {
     if (window.outerWidth > 870) {
-        sidebar.classList.add(SIDEBAR_CLASS + OPENED_PREFIX);
-        sidebar.classList.remove(SIDEBAR_CLASS + CLOSED_PREFIX);
-    } else if (sidebar.classList.contains(SIDEBAR_CLASS + OPENED_PREFIX)) {
-        sidebar.classList.add(SIDEBAR_CLASS + CLOSED_PREFIX);
-        sidebar.classList.remove(SIDEBAR_CLASS + OPENED_PREFIX);
+        sidebar.classList.add(SIDEBAR_CLASS + OPENED_SUFFIX);
+        sidebar.classList.remove(SIDEBAR_CLASS + CLOSED_SUFFIX);
+    } else if (sidebar.classList.contains(SIDEBAR_CLASS + OPENED_SUFFIX)) {
+        sidebar.classList.add(SIDEBAR_CLASS + CLOSED_SUFFIX);
+        sidebar.classList.remove(SIDEBAR_CLASS + OPENED_SUFFIX);
     }
 }
 
@@ -100,25 +121,24 @@ function highlightCurrentPage() {
 
     for (var i = 0, ii = nodes.length; i < ii; i++) {
         var link = nodes[i];
-        var item;
+        var item = closestNode(link, '.' + NAVIGATION_ITEM_CLASS);
         var submenu;
         var submenuItems;
 
         if (window.location.pathname.indexOf(nodes[i].getAttribute('href')) !== -1) {
-            item = closestNodeByClass(link, NAVIGATION_ITEM_CLASS);
             submenu = item && item.querySelector('.' + NAVIGATION_SUBMENU_CLASS);
             submenuItems = submenu && submenu.querySelectorAll('.' + NAVIGATION_SUBITEM_CLASS);
 
-            item.classList.add(NAVIGATION_ITEM_CLASS + ACTIVE_PREFIX);
+            item.classList.add(NAVIGATION_ITEM_CLASS + ACTIVE_SUFFIX);
 
             if (link) {
-                link.classList.add(NAVIGATION_LINK_CLASS + OPENED_PREFIX);
-                link.classList.remove(NAVIGATION_LINK_CLASS + CLOSED_PREFIX);
+                link.classList.add(NAVIGATION_LINK_CLASS + OPENED_SUFFIX);
+                link.classList.remove(NAVIGATION_LINK_CLASS + CLOSED_SUFFIX);
             }
 
             if (submenu) {
-                submenu.classList.add(NAVIGATION_SUBMENU_CLASS + OPENED_PREFIX);
-                submenu.classList.remove(NAVIGATION_SUBMENU_CLASS + CLOSED_PREFIX);
+                submenu.classList.add(NAVIGATION_SUBMENU_CLASS + OPENED_SUFFIX);
+                submenu.classList.remove(NAVIGATION_SUBMENU_CLASS + CLOSED_SUFFIX);
             }
 
             if (submenuItems) {
@@ -127,13 +147,14 @@ function highlightCurrentPage() {
                     var subLink = subItem.querySelector('.' + NAVIGATION_SUBLINK_CLASS);
 
                     if (subLink &&  subLink.getAttribute('href').indexOf(window.location.hash) !== -1) {
-                        subItem.classList.add(NAVIGATION_SUBITEM_CLASS + ACTIVE_PREFIX);
-                        break;
+                        subItem.classList.add(NAVIGATION_SUBITEM_CLASS + ACTIVE_SUFFIX);
+                    } else {
+                        subItem.classList.remove(NAVIGATION_SUBITEM_CLASS + ACTIVE_SUFFIX);
                     }
                 }
             }
-
-            break;
+        } else {
+            item.classList.remove(NAVIGATION_ITEM_CLASS + ACTIVE_SUFFIX);
         }
     }
 }
@@ -146,7 +167,7 @@ function generateMaxHeightClasses() {
     for (var i = 0, ii = nodes.length; i < ii; i++) {
         var generatedClass = 'dynamically-generated-class-name-' + i;
 
-        classes += ('.' + NAVIGATION_SUBMENU_CLASS  + OPENED_PREFIX + '.' + generatedClass + '{ max-height: ' +
+        classes += ('.' + NAVIGATION_SUBMENU_CLASS  + OPENED_SUFFIX + '.' + generatedClass + '{ max-height: ' +
             calcBlockElementHeight(nodes[i]) + '}\n');
         nodes[i].classList.add(generatedClass);
     }
@@ -173,11 +194,11 @@ function calcBlockElementHeight(node) {
     return height + 'px';
 }
 
-function closestNodeByClass(node, className) {
+function closestNode(node, selector) {
     var parent = node;
 
     while (parent) {
-        if (parent.classList && parent.classList.contains(className)) {
+        if (parent.classList && parent.matches(selector)) {
             return parent;
         }
 

@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>scss-base-set - Base styles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/main.css"/>
+    <link rel="stylesheet" href="assets/demo.css"/>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" class="svg-sprite">
+    <defs>
+        <symbol id="burger" viewBox="0 0 24 24">
+            <path d="M3 6h18v2.016h-18v-2.016zM3 12.984v-1.969h18v1.969h-18zM3 18v-2.016h18v2.016h-18z"></path>
+        </symbol>
+        <symbol id="grid-off" viewBox="0 0 24 24">
+            <path d="M20.016 8.016v-4.031h-4.031v4.031h4.031zM20.016 14.016v-4.031h-4.031v4.031h4.031zM20.016 20.016v-4.031h-4.031v4.031h4.031zM14.016 8.016v-4.031h-4.031v4.031h4.031zM14.016 14.016v-4.031h-4.031v4.031h4.031zM14.016 20.016v-4.031h-4.031v4.031h4.031zM8.016 8.016v-4.031h-4.031v4.031h4.031zM8.016 14.016v-4.031h-4.031v4.031h4.031zM8.016 20.016v-4.031h-4.031v4.031h4.031zM20.016 2.016q0.797 0 1.383 0.586t0.586 1.383v16.031q0 0.797-0.586 1.383t-1.383 0.586h-16.031q-0.797 0-1.383-0.586t-0.586-1.383v-16.031q0-0.797 0.586-1.383t1.383-0.586h16.031z"></path>
+        </symbol>
+        <symbol id="grid-on" viewBox="0 0 24 24">
+            <path d="M15.984 20.016h1.453l-1.453-1.453v1.453zM14.016 20.016v-3.469l-0.563-0.563h-3.469v4.031h4.031zM8.016 14.016v-3.469l-0.563-0.563h-3.469v4.031h4.031zM8.016 20.016v-4.031h-4.031v4.031h4.031zM3.984 6.563v1.453h1.453zM9.984 12.563v1.453h1.453zM1.266 1.266l21.469 21.469-1.266 1.266-2.016-2.016h-15.469q-0.797 0-1.383-0.586t-0.586-1.383v-15.469l-2.016-2.016zM15.984 3.984v4.031h4.031v-4.031h-4.031zM8.016 3.984h-1.453l-2.016-1.969h15.469q0.797 0 1.383 0.586t0.586 1.383v15.469l-1.969-2.016v-1.453h-1.453l-2.016-1.969h3.469v-4.031h-4.031v3.469l-1.969-2.016v-1.453h-1.453l-2.016-1.969h3.469v-4.031h-4.031v3.469l-1.969-2.016v-1.453z"></path>
+        </symbol>
+        <symbol id="corner-down" viewBox="0 0 24 24">
+            <path d="M6.984 9.984h10.031l-5.016 5.016z"></path>
+        </symbol>
+        <symbol id="corner-up" viewBox="0 0 24 24">
+            <path d="M6.984 14.016l5.016-5.016 5.016 5.016h-10.031z"></path>
+        </symbol>
+    </defs>
+</svg>
+<div class="rhythm-guidelines rhythm-guidelines_disabled"></div>
+<nav class="demo-sidebar demo-sidebar_opened">
+    <a href="index.html" class="demo-logo">
+        scss
+        <br/>
+        base set
+    </a>
+    <button class="demo-vertical-rhythm-toggler demo-vertical-rhythm-toggler_disabled">
+        <svg class="demo-vertical-rhythm-toggler__icon demo-vertical-rhythm-toggler__icon_type_off">
+            <use xlink:href="#grid-off"></use>
+        </svg>
+        <svg class="demo-vertical-rhythm-toggler__icon demo-vertical-rhythm-toggler__icon_type_on">
+            <use xlink:href="#grid-on"></use>
+        </svg>
+        <span class="demo-vertical-rhythm-toggler__text">
+            Guidelines
+        </span>
+    </button>
+    <ul class="demo-navigation">
+        <li class="demo-navigation__item">
+            <a class="demo-navigation__link" href="usage.html">Usage</a>
+            <!--<ul class="demo-sub-navigation">-->
+                <!--<li class="demo-sub-navigation__item">-->
+                    <!--<a class="demo-sub-navigation__link" href="#usage-installation">-->
+                        <!--Installation-->
+                    <!--</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        </li>
+        <li class="demo-navigation__item demo-navigation__item_closed">
+            <a class="demo-navigation__link" href="base.html">
+                <svg class="demo-navigation__icon demo-navigation__icon_type_down">
+                    <use xlink:href="#corner-down"></use>
+                </svg>
+                <svg class="demo-navigation__icon demo-navigation__icon_type_up">
+                    <use xlink:href="#corner-up"></use>
+                </svg>
+                Base styles
+            </a>
+            <ul class="demo-sub-navigation demo-sub-navigation_closed">
+                <li class="demo-sub-navigation__item">
+                    <a class="demo-sub-navigation__link" href="base.html#base-typography">
+                        Typography
+                    </a>
+                </li>
+                <li class="demo-sub-navigation__item">
+                    <a class="demo-sub-navigation__link" href="base.html#base-code">
+                        Code
+                    </a>
+                </li>
+                <li class="demo-sub-navigation__item">
+                    <a class="demo-sub-navigation__link" href="base.html#base-tables">
+                        Tables
+                    </a>
+                </li>
+                <li class="demo-sub-navigation__item">
+                    <a class="demo-sub-navigation__link" href="base.html#base-form-elements">
+                        Form elements
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="demo-navigation__item">
+            <a class="demo-navigation__link" href="components.html">Components</a>
+        </li>
+        <li class="demo-navigation__item">
+            <a class="demo-navigation__link" href="blocks.html">Blocks</a>
+        </li>
+    </ul>
+</nav>
+<div class="demo-sidebar-overlay"></div>
+<main class="demo-content">
+    <div class="demo-content__width-container">
+        <button class="demo-sidebar-toggler">
+            <svg class="demo-sidebar-toggler__icon">
+                <use xlink:href="#burger"></use>
+            </svg>
+        </button>
+        
+<h1>Blocks</h1>
+
+        <footer class="demo-footer">
+            <p class="demo-footer__github-buttons">
+                <iframe src="http://ghbtns.com/github-btn.html?user=PSDCoder&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=PSDCoder&repo=scss-base-set&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+            </p>
+            <p class="demo-footer__created">
+                Created by <a href="https://github.com/PSDCoder" target="_blank">Pavel Grinchenko</a>
+            </p>
+        </footer>
+    </div>
+</main>
+<script src="assets/demo.js"></script>
+<!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24754154 = new Ya.Metrika({id:24754154, webvisor:true, clickmap:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/24754154" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

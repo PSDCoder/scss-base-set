@@ -1,3 +1,10 @@
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  height: 100%; }
+
 .svg-sprite {
   display: none; }
 
@@ -160,20 +167,20 @@
     .demo-vertical-rhythm-toggler_enabled .demo-vertical-rhythm-toggler__icon_type_off {
       display: none; }
   .demo-vertical-rhythm-toggler_disabled {
-    background-color: #393d45;
-    border-color: #393d45; }
+    background-color: rgba(0, 146, 146, 0.6);
+    border-color: rgba(0, 146, 146, 0.6); }
     .demo-vertical-rhythm-toggler_disabled:hover {
-      background-color: #33373e; }
+      background-color: rgba(0, 116, 116, 0.64); }
     .demo-vertical-rhythm-toggler_disabled:focus {
-      background-color: #33373e; }
+      background-color: rgba(0, 116, 116, 0.64); }
     .demo-vertical-rhythm-toggler_disabled:active {
-      background-color: #2e3137; }
+      background-color: rgba(0, 92, 92, 0.68); }
     .demo-vertical-rhythm-toggler_disabled:hover {
-      border-color: #33373e; }
+      border-color: rgba(0, 116, 116, 0.64); }
     .demo-vertical-rhythm-toggler_disabled:focus {
-      border-color: #33373e; }
+      border-color: rgba(0, 116, 116, 0.64); }
     .demo-vertical-rhythm-toggler_disabled:active {
-      border-color: #2e3137; }
+      border-color: rgba(0, 92, 92, 0.68); }
     .demo-vertical-rhythm-toggler_disabled .demo-vertical-rhythm-toggler__icon_type_on {
       display: none; }
     .demo-vertical-rhythm-toggler_disabled .demo-vertical-rhythm-toggler__icon_type_off {
@@ -185,11 +192,23 @@
   .demo-navigation__item {
     line-height: 48px; }
     .demo-navigation__item_active .demo-navigation__link {
-      background-color: #565a62; }
-    .demo-navigation__item_closed .demo-navigation__icon_type_up {
-      display: none; }
-    .demo-navigation__item_opened .demo-navigation__icon_type_down {
-      display: none; }
+      color: #f1ffff;
+      background-color: #22a3a8; }
+      .demo-navigation__item_active .demo-navigation__link:hover,
+      .demo-navigation__item_active .demo-navigation__link:focus,
+      .demo-navigation__item_active .demo-navigation__link:active,
+      .demo-navigation__item_active .demo-navigation__link[disabled] {
+        color: #f1ffff; }
+      .demo-navigation__item_active .demo-navigation__link:hover {
+        background-color: #1f9397; }
+      .demo-navigation__item_active .demo-navigation__link:focus {
+        background-color: #1f9397; }
+      .demo-navigation__item_active .demo-navigation__link:active {
+        background-color: #1b8286; }
+    .demo-navigation__item_opened .demo-navigation__icon_type_up {
+      display: inline-block; }
+    .demo-navigation__item_closed .demo-navigation__icon_type_down {
+      display: inline-block; }
   .demo-navigation__link {
     display: block;
     line-height: 24px;
@@ -215,10 +234,10 @@
     .demo-navigation__link[disabled] {
       text-decoration: none; }
   .demo-navigation__icon {
-    display: inline-block;
+    display: none;
     width: 24px;
     height: 24px;
-    fill: #222429;
+    fill: #f1ffff;
     vertical-align: top; }
 
 .demo-sub-navigation {
@@ -237,13 +256,24 @@
   .demo-sub-navigation__item {
     line-height: 48px; }
     .demo-sub-navigation__item_active .demo-sub-navigation__link {
-      background-color: #565a62; }
+      background-color: #5f636b;
+      color: #f1ffff; }
+      .demo-sub-navigation__item_active .demo-sub-navigation__link:hover,
+      .demo-sub-navigation__item_active .demo-sub-navigation__link:focus,
+      .demo-sub-navigation__item_active .demo-sub-navigation__link:active,
+      .demo-sub-navigation__item_active .demo-sub-navigation__link[disabled] {
+        background-color: #5f636b; }
+      .demo-sub-navigation__item_active .demo-sub-navigation__link:hover,
+      .demo-sub-navigation__item_active .demo-sub-navigation__link:focus,
+      .demo-sub-navigation__item_active .demo-sub-navigation__link:active,
+      .demo-sub-navigation__item_active .demo-sub-navigation__link[disabled] {
+        color: #f1ffff; }
   .demo-sub-navigation__link {
     display: block;
     line-height: 24px;
     padding: 12px;
     color: #c1cccc;
-    background-color: #363a41;
+    background-color: #2f3239;
     text-decoration: none; }
     .demo-sub-navigation__link:hover {
       color: #aeb8b8; }
@@ -252,11 +282,11 @@
     .demo-sub-navigation__link:active {
       color: #9aa3a3; }
     .demo-sub-navigation__link:hover {
-      background-color: #31343b; }
+      background-color: #2a2d33; }
     .demo-sub-navigation__link:focus {
-      background-color: #31343b; }
+      background-color: #2a2d33; }
     .demo-sub-navigation__link:active {
-      background-color: #2b2e34; }
+      background-color: #26282e; }
     .demo-sub-navigation__link:hover,
     .demo-sub-navigation__link:focus,
     .demo-sub-navigation__link:active,
