@@ -156,7 +156,7 @@ pre {
   color: $typography-pre-color;
   background-color: $typography-pre-bg-color;
   border: $typography-pre-border-width solid $typography-pre-border-color;
-  border-radius: $main-border-radius;
+  border-radius: $global-border-radius;
 
   code {
     padding: 0;
