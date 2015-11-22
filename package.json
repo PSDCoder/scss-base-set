@@ -13,14 +13,7 @@
   ],
   "author": "Pavel Grinchenko <psdcoder@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "colors": "1.1.2",
-    "gulp-autoprefixer": "3.0.2",
-    "gulp-load-plugins": "0.10.0",
-    "gulp-plumber": "1.0.1",
-    "gulp-sass": "2.0.4",
-    "gulp-sourcemaps": "1.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "2.9.11",
     "gulp": "3.9.0",
@@ -28,6 +21,12 @@
     "gulp-swig": "0.7.4",
     "gulp-watch": "4.3.5",
     "minimist": "1.2.0",
-    "run-sequence": "1.1.4"
+    "run-sequence": "1.1.4",
+    "colors": "1.1.2",
+    "gulp-autoprefixer": "3.0.2",
+    "gulp-load-plugins": "0.10.0",
+    "gulp-plumber": "1.0.1",
+    "gulp-sass": "2.0.4",
+    "gulp-sourcemaps": "1.6.0"
   }
 }
